@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Famous Sum - Problem Statement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        h3 {
+            color: #34495e;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧮 The Famous Sum</h1>
+
+        <h3>Description</h3>
+        <p>
+            You are given two numbers <code>n</code> and <code>k</code>. The number <code>p</code> is created by
+            concatenating the string <code>n</code> <code>k</code> times.
+            <br>
+            You need to find the <strong>super-digit</strong> of the integer <code>p</code>.
+        </p>
+
+        <p>
+            We define <strong>superDigit</strong> of an integer <code>p</code> using the following rules:
+        <ul>
+            <li>If <code>p</code> has only 1 digit, then <code>superDigit(p)</code> is <code>p</code> itself.</li>
+            <li>Otherwise, <code>superDigit(p)</code> is equal to <code>superDigit(sum of the digits of p)</code>.</li>
+        </ul>
+        <strong>Read the sample input explanation for better understanding.</strong>
+        </p>
+
+        <h3>Input Description</h3>
+        <p><strong>Input Format:</strong></p>
+        <p>
+            The first line contains two space-separated integers:
+            <code>n</code> - a string representation of an integer
+            <code>k</code> - an integer, the number of times to concatenate <code>n</code> to form <code>p</code>
+        </p>
+
+        <p><strong>Constraints:</strong></p>
+        <ul>
+            <li>1 ≤ length of n ≤ 10<sup>100000</sup></li>
+            <li>1 ≤ k ≤ 10<sup>5</sup></li>
+        </ul>
+
+        <h3>Output Description</h3>
+        <p>Print the super-digit of the integer <code>p</code>.</p>
+
+        <h3>Sample Input 1</h3>
+        <pre>148 3</pre>
+
+        <h3>Sample Output 1</h3>
+        <pre>3</pre>
+
+        <h3>Explanation</h3>
+        <p>
+            <code>p = 148148148</code> (i.e., 148 concatenated 3 times)<br>
+            Sum of digits: 1+4+8+1+4+8+1+4+8 = 39<br>
+            Then: 3 + 9 = 12<br>
+            Then: 1 + 2 = <strong>3</strong>
+        </p>
+    </div>
+</body>
+
+</html>

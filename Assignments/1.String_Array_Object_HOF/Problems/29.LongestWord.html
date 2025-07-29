@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Find the Longest Word</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        button {
+            padding: 0.6rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .output {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #2b6cb0;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧠 Find the Longest Word in a Sentence</h1>
+        <p>
+            Given a sentence, find and return the <strong>first longest word</strong> in it.
+        </p>
+
+        <h3>🔍 Input:</h3>
+        <p>A string containing words separated by spaces (no punctuation).</p>
+
+        <h3>🎯 Output:</h3>
+        <p>The first longest word in the sentence.</p>
+
+        <h3>💡 Examples:</h3>
+        <pre>
+Input: "The quick brown fox jumps over the lazy dog"
+Output: "quick"
+
+Input: "I love programming in JavaScript"
+Output: "programming"
+    </pre>
+
+        <h3>🧪 Try it Yourself:</h3>
+        <input type="text" id="sentenceInput" placeholder="Enter a sentence..." />
+        <button onclick="handleCheck()">Find Longest Word</button>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function findLongestWord(str) {
+            let arr = str.trim().split(' ');
+            let maxLen = 0;
+            let maxWord = '';
+            arr.forEach(word => {
+                if (word.length > maxLen) {
+                    maxLen = word.length;
+                    maxWord = word;
+                }
+            });
+            return maxWord;
+        }
+
+        function handleCheck() {
+            const input = document.getElementById("sentenceInput").value;
+            const result = findLongestWord(input);
+            document.getElementById("output").innerText = `Longest Word: ${result}`;
+        }
+    </script>
+</body>
+
+</html>

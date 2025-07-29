@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>L0 - Basic Closure Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code, pre {
+      background: #eee;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      display: block;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #155ab6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>L0 - Basic Closure Example</h1>
+
+  <h2>🧠 Problem Statement:</h2>
+  <p>
+    Create a simple function <code>outerFunction</code> that defines a variable <code>message</code> within its scope. Return an inner function that logs the message when invoked.
+  </p>
+  <p>
+    Demonstrate the concept of <strong>closure</strong> by invoking the outer function and storing the result in a variable. Call the stored function and ensure that it logs the correct message even after the outer function has completed its execution.
+  </p>
+
+  <h2>💻 JavaScript Code:</h2>
+  <pre><code>function outerFunction() {
+  const message = "Hello from the closure!";
+  
+  function innerFunction() {
+    console.log(message);
+  }
+
+  return innerFunction;
+}
+
+const closureFunc = outerFunction();
+closureFunc(); // Output: Hello from the closure!
+</code></pre>
+
+  <h2>🚀 Try It:</h2>
+  <button onclick="runClosure()">Run Closure Function</button>
+
+  <script>
+    function outerFunction() {
+      const message = "Hello from the closure!";
+      function innerFunction() {
+        console.log(message);
+        alert(message); // Also show on screen
+      }
+      return innerFunction;
+    }
+
+    const closureFunc = outerFunction();
+
+    function runClosure() {
+      closureFunc();
+    }
+  </script>
+
+</body>
+</html>

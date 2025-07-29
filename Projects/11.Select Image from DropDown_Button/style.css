@@ -1,0 +1,56 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.box1 {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./Assest/sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box1 select {
+  appearance: none;
+  width: 30%;
+  font-size: 24px;
+  padding: 10px;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(183, 234, 235);
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 400;
+  border: 0px;
+}
+
+.box1 select option {
+  background-color: rgb(218, 245, 236);
+}
+
+.box2 {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./Assest/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.box2 img {
+  height: 400px;
+  width: 800px;
+  object-fit: cover;
+  border-radius: 20px;
+}

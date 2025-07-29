@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #f8f8f8;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Task Manager</h2>
+    <button onclick="sortAndDisplayTasks()">Sort & Filter Tasks</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        let tasks = [
+            { description: "Complete JavaScript assignment", completed: true },
+            { description: "Read about React components", completed: false },
+            { description: "Exercise for 30 minutes", completed: false },
+            { description: "Prepare for the meeting", completed: true }
+        ];
+
+        function displayTasks(taskArray) {
+            const taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+            taskArray.forEach(task => {
+                let li = document.createElement("li");
+                li.textContent = `${task.description} - ${task.completed ? "Completed" : "Incomplete"}`;
+                taskList.appendChild(li);
+            });
+        }
+
+        function sortAndDisplayTasks() {
+            const sortedTasks = tasks
+                .filter(task => !task.completed) // Remove completed tasks
+                .sort((a, b) => a.completed - b.completed); // Sort incomplete first
+            displayTasks(sortedTasks);
+        }
+
+        // Initial display of tasks
+        displayTasks(tasks);
+    </script>
+
+</body>
+
+</html>

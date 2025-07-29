@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+
+            padding-inline: 300px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <h2>Overview</h2>
+        <hr>
+        <p>In this assignment, you will implement constructor function and also .call() , .apply()</p>
+        <h2>Detailed Explanation</h2>
+        <hr>
+
+        <h3>Topics</h3>
+        <ul>
+            <li>constructor function</li>
+            <li>.call()</li>
+            <li>.apply()</li>
+            <li>write a constructor function iPhone3 to create iPhone objects in bulk quantity</li>
+            <li>define a iPhone3 function that takes input as</li>
+            <ul>
+                <li>ASIN</li>
+                <li>color</li>
+                <li>display</li>
+                <li>camera</li>
+                <li>bluetooth</li>
+            </ul>
+            <li>the object it creates has the following</li>
+            <ul>
+                <li>properties: ASIN, color, display, camera, bluetooth</li>
+                <li>methods:</li>
+                <ul>
+                    <li>dial - return "tring.. tring..."</li>
+                    <li>sendMessage - return "Sending message..."</li>
+                    <li>cameraClick - return "Camera clicked"</li>
+                    <li>connectBluetooth - return "Bluetooth connected successfully..."</li>
+                </ul>
+            </ul>
+            <li>iPhone3 return object</li>
+        </ul>
+        <p style="background-color: rgb(227, 227, 227);font-style: italic;">refer below given example carefully to use .call() method is mandatory</p>
+        <div style="border: 1px solid black;background-color: rgb(237, 237, 237); padding: 20px;">
+            let i3 = {}; <br>
+            iPhone3.call(i3, "B09X67JBQV", "Gray", 7.8, "2.0 MP", "Bluetooth 5.1"); <br>
+            ---- properties <br>
+            console.log(i3.ASIN); // 1 <br>
+            console.log(i3.color); // B09X67JBQV <br>
+            console.log(i3.display); // 7.8 <br>
+            console.log(i3.camera); // IOS <br>
+            console.log(i3.bluetooth); // 128mb <br>
+
+            ---- methods <br>
+            console.log(i3.dial()); // "tring.. tring..." <br>
+            console.log(i3.sendMessage()); // "Sending message..." <br>
+            console.log(i3.cameraClick()); // "Camera clicked" <br>
+            console.log(i3.connectBluetooth()); // "Bluetooth connected successfully..." <br>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

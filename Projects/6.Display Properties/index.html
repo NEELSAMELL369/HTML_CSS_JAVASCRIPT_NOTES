@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Display Properties</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #block-element {
+            display: block;
+            width: 100%;
+            border: 2px solid #0000ff;
+            background-color: #e0f0ff;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #inline-element {
+            display: inline;
+            background-color: #ffddcc;
+            padding: 5px;
+            border: 1px solid #ff6600;
+            margin-right: 10px;
+        }
+
+        #inline-block-element {
+            display: inline-block;
+            width: 150px;
+            height: 60px;
+            background-color: #ccffcc;
+            border: 2px solid #33aa33;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        #hidden-element {
+            display: none;
+            background-color: #f9c2ff;
+            border: 2px dashed #cc33cc;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Display Property Demo</h1>
+    <p>This page demonstrates how different CSS display values behave.</p>
+
+    <div id="block-element">Block Element</div>
+    <span id="inline-element">Inline Element</span>
+    <div id="inline-block-element">Inline-Block Element</div>
+    <div id="hidden-element">This is a hidden element (display: none)</div>
+
+    <button onclick="toggleHidden()">Toggle Hidden Element</button>
+
+    <script>
+        function toggleHidden() {
+            const el = document.getElementById("hidden-element");
+            el.style.display = (el.style.display === "none") ? "block" : "none";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+Task: Search and Display
+
+You have an array of objects representing books with their titles and authors. Implement JavaScript code to:
+
+Filter out books by a specific author.
+Use a promise to simulate an asynchronous operation that resolves with the filtered list of books after a delay.
+
+Display the filtered list of books on a web page when the promise is resolved.
+
+Requirements:
+A search bar and button to initiate the filtering process.
+Display the list of filtered books with their titles and authors. 

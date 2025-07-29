@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery with Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    section {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      width: 30%;
+      min-width: 250px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Small Image Gallery</h1>
+
+  <div class="gallery">
+
+    <section>
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=500&q=60" alt="A scenic mountain view">
+      <a href="https://en.wikipedia.org/wiki/Mountain" target="_blank">Learn more about Mountains</a>
+    </section>
+
+    <section>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=60" alt="A sunny beach scene">
+      <a href="https://en.wikipedia.org/wiki/Beach" target="_blank">Learn more about Beaches</a>
+    </section>
+
+    <section>
+      <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=500&q=60" alt="A lush green forest">
+      <a href="https://en.wikipedia.org/wiki/Forest" target="_blank">Learn more about Forests</a>
+    </section>
+
+  </div>
+
+</body>
+</html>

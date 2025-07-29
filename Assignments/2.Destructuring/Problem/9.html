@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Problem : Multi-Level Destructuring & Spreading</h2>
+        <hr>
+        <h3>Task </h3>
+        <hr>
+        <p>Given the deeply nested configuration object below, write a function flattenConfig(cfg) that:
+
+        </p>
+        <ol>
+            <li>Extracts title, theme.primary, and authors[1] via a single destructuring declaration.</li>
+            <li>Returns a new object using the spread operator that merges:</li>
+            <div style="background-color: silver;padding: 20px;">
+                Extracts title, theme.primary, and authors[1] via a single destructuring declaration.
+                Returns a new object using the spread operator that merges:
+            </div>
+            <li>​Leaves the original cfg untouched.
+
+            </li>
+        </ol>
+
+        <p>Example Input</p>
+        <div style="background-color: silver;padding: 20px;">
+            const blogCfg = { <br>
+            meta: { title: "JS Wizardry" }, <br>
+            theme: { primary: "#3498db", secondary: "#2ecc71" }, <br>
+            authors: ["Alice", "Bob", "Charlie"] <br>
+            }; <br>
+
+            console.log(flattenConfig(blogCfg)); <br>
+            console.log(blogCfg === blogCfg); // sanity: original must remain unchanged <br>
+
+
+        </div>
+        <p>​Expected Output </p>
+        <div style="background-color: silver;padding: 20px;">{ title: "JS Wizardry", primaryColor: "#3498db",
+            featuredAuthor: "Bob" } <br>
+            true
+
+        </div>
+    </div>
+</body>
+
+</html>

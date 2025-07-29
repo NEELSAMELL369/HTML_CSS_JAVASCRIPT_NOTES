@@ -1,0 +1,4 @@
+You have an array of 50 items, and you want to display them in a paginated manner on a web page.
+Each page should show 10 items, and there should be "Previous" and "Next" buttons to navigate between pages.
+
+Create a simple HTML structure and JavaScript code to implement this pagination functionality.

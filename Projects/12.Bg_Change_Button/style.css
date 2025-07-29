@@ -1,0 +1,44 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  text-align: center;
+}
+.dropdown {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown button {
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 0px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.dropdown button:hover{
+  background-color: burlywood;
+}
+.dropdownContent {
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+.dropdownContent div {
+  background-color: azure;
+  border: 0.3px solid gainsboro;
+  border-radius: 20px;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.dropdownContent div:hover{
+  background-color: rgb(152, 152, 152);
+}
+.dropdown:hover .dropdownContent {
+  display: block;
+}

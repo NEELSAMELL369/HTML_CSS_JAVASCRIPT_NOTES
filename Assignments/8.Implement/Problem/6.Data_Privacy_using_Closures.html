@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>L0 - Data Privacy using Closures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 40px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    pre, code {
+      background: #eee;
+      padding: 12px;
+      border-radius: 6px;
+      display: block;
+      overflow-x: auto;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #155ab6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>L0 - Data Privacy using Closures</h1>
+
+  <h2>🧠 Problem Statement:</h2>
+  <p>
+    Create a closure that simulates a simple counter. Implement a function <code>createCounter</code> that has a private <code>count</code> variable.
+    The function should return two methods:
+  </p>
+  <ul>
+    <li><code>increment</code>: increases the count by 1</li>
+    <li><code>getCount</code>: returns the current value</li>
+  </ul>
+  <p>
+    Ensure that <code>count</code> cannot be accessed directly from outside the closure.
+  </p>
+
+  <h2>📌 Example:</h2>
+  <pre><code>const counter = createCounter();
+
+console.log(counter.increment()); // Output: 1
+console.log(counter.increment()); // Output: 2
+console.log(counter.getCount());  // Output: 2</code></pre>
+
+  <h2>🚀 Try It:</h2>
+  <button onclick="testCounter()">Run Counter Demo</button>
+
+  <script>
+    function createCounter() {
+      let count = 0;
+
+      return {
+        increment: function () {
+          count += 1;
+          console.log("Incremented:", count);
+          return count;
+        },
+        getCount: function () {
+          console.log("Current count:", count);
+          return count;
+        }
+      };
+    }
+
+    const counter = createCounter();
+
+    function testCounter() {
+      counter.increment();
+      counter.increment();
+      counter.getCount();
+    }
+  </script>
+
+</body>
+</html>

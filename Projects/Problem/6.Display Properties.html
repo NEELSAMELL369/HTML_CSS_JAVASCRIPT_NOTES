@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L0 - Mastering CSS Display Properties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 90%;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .note {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>📐 L0 - Mastering CSS Display Properties</h1>
+
+        <h2>📝 Problem Statement:</h2>
+        <p>
+            Design a webpage that demonstrates the different <strong>CSS display properties</strong>:
+            <code>block</code>, <code>inline</code>, <code>inline-block</code>, and <code>none</code>.
+        </p>
+
+        <h3>🎯 Requirements:</h3>
+        <ul>
+            <li>Create four elements using <code>&lt;div&gt;</code> or <code>&lt;button&gt;</code>, each with a unique
+                <code>id</code> or <code>class</code>:
+                <ul>
+                    <li><code>block-element</code></li>
+                    <li><code>inline-element</code></li>
+                    <li><code>inline-block-element</code></li>
+                    <li><code>hidden-element</code></li>
+                </ul>
+            </li>
+            <li>Apply the following styles to each:
+                <ul>
+                    <li><strong>block</strong>: Full-width, with a visible border.</li>
+                    <li><strong>inline</strong>: Appears inline, styled with a background color.</li>
+                    <li><strong>inline-block</strong>: Box with fixed dimensions, sits inline but respects width/height.
+                    </li>
+                    <li><strong>none</strong>: Initially hidden (with <code>display: none</code>); optionally toggle
+                        visibility using a button (JavaScript optional).</li>
+                </ul>
+            </li>
+            <li>Add some sample text around or inside each element to observe its display behavior in context.</li>
+        </ul>
+
+        <h3>✅ Expected Output:</h3>
+        <p>
+            A clear visual comparison of how <code>block</code>, <code>inline</code>, and <code>inline-block</code>
+            behave. The element with <code>display: none</code> should be hidden and optionally revealed using a button.
+        </p>
+
+        <p class="note">💡 Tip: Use a paragraph or heading next to each element to observe how they behave in normal
+            document flow.</p>
+    </div>
+
+</body>
+
+</html>

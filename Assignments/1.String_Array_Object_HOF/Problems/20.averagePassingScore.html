@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Problem : Chained .map → filter → reduce</h2>
+        <hr>
+        <h3>Task </h3>
+        <hr>
+        <p>Create averagePassingScore(scores) that:</p>
+
+        <ol>
+            <li>maps each student record { name, marks } to its numeric marks,</li>
+            <li>filters marks ≥ 40 (pass),</li>
+            <li>reduces to the arithmetic mean (rounded to one decimal).</li>
+        </ol>
+
+        <p>All steps must be chained in a single expression—no intermediate variables.</p>
+
+        <p>Example Input</p>
+        <div style="background-color: silver;padding: 20px;">
+            let scores = [ <br>
+            { name: "A", marks: 35 }, <br>
+            { name: "B", marks: 65 }, <br>
+            { name: "C", marks: 85 }, <br>
+            { name: "D", marks: 42 } <br>
+            ] <br>
+
+            let res = averagePassingScore(scores) <br>
+            console.log(res) <br>
+
+
+        </div>
+        <p>​Expected Output </p>
+        <div style="background-color: silver;padding: 20px;">[
+            64.0]
+
+
+        </div>
+    </div>
+</body>
+
+</html>

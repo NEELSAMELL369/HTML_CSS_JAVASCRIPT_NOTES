@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q13 - ES6 Syntax Errors and Type Coercion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code, pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 6px;
+      display: block;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Q: 13 - L1: ES6 Syntax Errors and Type Coercion</h1>
+
+  <div class="section">
+    <h2>🧠 Problem Statement</h2>
+    <p>
+      You must correct a script that is intended to handle calculations for a small e-commerce checkout system. The script includes functions using ES6 syntax but suffers from issues related to <strong>type coercion</strong> and <strong>syntax errors</strong>.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>💻 Code Sample (Original)</h2>
+    <pre><code>const checkout = {
+  items: [],
+  total: 0,
+
+  addItem(item) {
+    if (typeof item.price !== 'number' || isNaN(item.price)) {
+      console.log("Invalid price.");
+      return;
+    }
+
+    this.items.push(item);
+    this.total += item.price;
+  },
+
+  getTotal() {
+    return Total: $${parseFloat(this.total).toFixed(2)};
+  }
+};
+
+checkout.addItem({ name: "Coffee Maker", price: "99.95" });
+checkout.addItem({ name: "Milk", price: 3.50 });
+
+console.log(checkout.getTotal());</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>📋 Steps to Solve:</h2>
+    <ol>
+      <li>🔍 Identify and correct the type coercion that incorrectly handles the <code>price</code> as a string.</li>
+      <li>🛠️ Refactor the <code>addItem</code> method to ensure that it correctly validates and adds only items with valid numerical prices.</li>
+      <li>✅ Fix any ES6 syntax errors, especially inside <code>getTotal()</code>.</li>
+      <li>🎯 Ensure the output format is consistent, such as <code>Total: $99.95</code>.</li>
+    </ol>
+  </div>
+
+</body>
+</html>

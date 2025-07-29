@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            Problem : Extract Actions and Step Counts from Text</h2>
+        <p>Description:</p>
+        <p>Given a sentence containing actions and step counts in mixed case, return an object showing the total step
+            count per action (case-insensitive).
+
+        </p>
+        <p>Input:</p>
+        <div style="border: 1px solid black;padding: 20px;background-color: rgb(235, 235, 235);">
+            const input = "Run 45 steps, then Jump 30 STEPS, finally run 25 Steps!"; <br>
+            console.log(extractSteps(input)); <br>
+
+
+
+
+
+        </div>
+
+        <p>Expected Output:</p>
+
+        <div style="border: 1px solid black;padding: 20px;background-color: rgb(235, 235, 235);">
+            { run: 70, jump: 30 }
+
+        </div>
+        <p>Use: split, toLowerCase, Number, includes, trim, etc.</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Footer Container */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+/* Footer Sections */
+.footer-brand h2 {
+    margin-bottom: 10px;
+    color: #f8b400;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f8b400;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+/* Newsletter */
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-newsletter button {
+    padding: 10px;
+    background-color: #f8b400;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #222;
+}
+
+.footer-newsletter button:hover {
+    background-color: #ffcc00;
+}
+
+/* Social Media */
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #f8b400;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ffcc00;
+}
+
+/* Copyright */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .footer-container {
+        text-align: center;
+    }
+
+    .footer-newsletter form {
+        flex-direction: column;
+    }
+}

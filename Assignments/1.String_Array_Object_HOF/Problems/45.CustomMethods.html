@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Title</h2>
+        <hr>
+        <p>Custom Array Methods Assignment
+
+        </p>
+        <h2>Level</h2>
+        <p>Level 2</p>
+        <hr>
+
+        <h2>Overview</h2>
+        <hr>
+        <p>In this assignment, you will implement custom methods for arrays in JavaScript. These methods mimic
+            functionalities of built-in methods like map, filter, reduce, and include your own unique methods such as
+            customSlice, customSplice, customPush, and customPop. Each method should be designed to operate similarly to
+            its built-in counterpart but with unique features or constraints.</p>
+        <h2>Detailed Explanation</h2>
+        <hr>
+        <h3>Setup</h3>
+        <p>Begin by creating a JavaScript file to write your code. You can use any text editor or IDE of your choice for
+            editing.</p>
+        <h3>Running Your Code
+        </h3>
+        <p>You can run your JavaScript code in any modern browser's developer console or using Node.js. </p>
+        <hr>
+        <h3>Problem Statement
+        </h3>
+        <p>You are required to implement a series of custom methods for arrays based on the following specifications:
+
+        </p>
+        <h3>Custom Higher-Order Functions
+        </h3>
+        <ol>
+            <li>customMap</li>
+            <ul>
+                <li>Implement a custom map function that takes a callback function as an argument.</li>
+                <li>Apply the callback function to each element in the array and return a new array with the results.
+                </li>
+            </ul>
+            <li>customFilter</li>
+            <ul>
+                <li>Implement a custom filter function that takes a predicate function as an argument.</li>
+                <li>Apply the predicate function to each element in the array and return a new array containing only the
+                    elements that satisfy the predicate.</li>
+            </ul>
+            <li>customReduce</li>
+            <ul>
+                <li>Implement a custom reduce function that takes a reducer function and an initial value as arguments.
+                </li>
+                <li>Apply the reducer function to each element in the array, combining them into a single value.</li>
+            </ul>
+        </ol>
+        <h3>Example Usage
+        </h3>
+        <p style="border: 1px solid black;background-color: rgb(231, 231, 231); padding: 30px;">
+
+            const arr = [1, 2, 3, 4, 5]; <br>
+
+            // Using custom methods <br>
+            console.log(arr.customSlice(1, 3)); // Output: [2, 3] <br>
+            console.log(arr.customSplice(2, 0, 6)); // Output: [1, 2, 6, 3, 4, 5] <br>
+            console.log(arr.customPush(6, 7)); // Output: 7 (new length of the array) <br>
+            console.log(arr.customPop()); // Output: 5 (removed element) <br>
+
+            // Using custom higher-order functions <br>
+            console.log(arr.customMap(x => x * 2)); // Output: [2, 4, 6, 8, 10] <br>
+            console.log(arr.customFilter(x => x % 2 === 0)); // Output: [2, 4] <br>
+            console.log(arr.customReduce((acc, cur) => acc + cur, 0)); // Output: 15 <br>
+
+
+        </p>
+        <h3>Guidelines</h3>
+        <ul>
+            <li>Ensure that your custom methods behave similarly to their built-in counterparts.</li>
+            <li>Test each method with various inputs to verify correctness.</li>
+            <li>Document your code and explain any deviations or unique features compared to built-in methods.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

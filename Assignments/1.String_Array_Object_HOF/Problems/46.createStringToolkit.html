@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Problem : Function Returning an Object with Rest-Aware Methods</h2>
+        <hr>
+        <h3>Task </h3>
+        <hr>
+        <p>Implement createStringToolkit(separator = " ") that returns an object with three methods, all defined as arrow
+            functions and all using rest (...) parameters:</p>
+        <ol>
+            <li>join(...strings) → concatenates with the chosen separator</li>
+            <li>titleCase(...strings) → calls .join, then converts each word’s first letter to uppercase</li>
+            <li>stats(...strings) → returns an object { count, longest } where count is total strings joined and longest
+                is the longest individual string supplied</li>
+        </ol>
+        <p>Do not use class syntax or traditional functions.
+
+        </p>
+        <p>Example Input</p>
+        <div style="background-color: silver;padding: 20px;">const tk = createStringToolkit("-"); <br>
+            console.log(tk.join("hello", "world")); <br>
+
+
+            console.log(tk.titleCase("the", "quick", "fox")); <br>
+
+
+            console.log(tk.stats("a", "ab", "abc")); <br>
+
+        </div>
+        <p>​Expected Output </p>
+        <div style="background-color: silver;padding: 20px;">"The-Quick-Fox" <br>
+            { count: 3, longest: "abc" }
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Example</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul id="itemList"></ul>
+        <div class="buttons">
+            <button id="prevBtn" onclick="prevPage()">Previous</button>
+            <span id="pageNum">1</span>
+            <button id="nextBtn" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const items = new Array(50).fill(0).map((_, i) => `Item${i + 1}`)    
+        const itemsPerPage = 10;
+        let currentPage = 1;
+
+        function renderPage() {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const paginatedItems = items.slice(start, end);
+
+            document.getElementById("itemList").innerHTML = paginatedItems
+                .map(item => `<li>${item}</li>`)
+                .join("\n");
+
+            document.getElementById("pageNum").innerText = currentPage;
+
+            document.getElementById("prevBtn").disabled = currentPage === 1;
+            document.getElementById("nextBtn").disabled = currentPage === Math.ceil(items.length / itemsPerPage);
+        }
+
+        function nextPage() {
+            if (currentPage < Math.ceil(items.length / itemsPerPage)) {
+                currentPage++;
+                renderPage();
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPage();
+            }
+        }
+
+        renderPage();
+    </script>
+</body>
+
+</html>

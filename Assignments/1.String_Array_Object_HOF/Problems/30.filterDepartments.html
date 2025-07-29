@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Problem : Filter Departments by Budget Threshold</h2>
+        <p>Description:</p>
+        <p>Given an object where keys are department names and values are objects with quarterly budgets (Q1, Q2),
+            return an array of departments where the total budget exceeds ₹150000.</p>
+        <p>Input:</p>
+        <div style="border: 1px solid black;padding: 20px;background-color: rgb(235, 235, 235);">
+            data = { <br>
+            HR: { Q1: 50000, Q2: 70000 }, <br>
+            Tech: { Q1: 150000, Q2: 130000 }, <br>
+            Sales: { Q1: 80000, Q2: 85000 } <br>
+            } <br>
+            console.log(filterDepartments(data)) <br>
+        </div>
+
+        <p>Expected Output:</p>
+
+        <div style="border: 1px solid black;padding: 20px;background-color: rgb(235, 235, 235);">
+            ["Tech"]
+        </div>
+    </div>
+</body>
+
+</html>

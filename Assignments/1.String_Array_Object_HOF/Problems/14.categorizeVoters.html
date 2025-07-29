@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Title</h2>
+        <hr>
+        <p>Higher-Order Functions Assignmentx`</p>
+        <h2>Level</h2>
+        <p>Level 1</p>
+        <hr>
+
+        <h2>Overview</h2>
+        <hr>
+        <p>In this assignment, you will explore higher-order functions in JavaScript. Higher-order functions are
+            functions that can take other functions as arguments or return functions as values. You will implement
+            various higher-order functions to solve specific tasks, including reduce, filter, map, and forEach
+            functions.</p>
+        <h2>Detailed Explanation</h2>
+        <hr>
+        <p>Setup Guidelines and Instructions: Initial Setup: Begin by creating a JavaScript file to write your code. You
+            can use any text editor or IDE of your choice for editing.</p>
+        <p>Running Your Code: You can run your JavaScript code in any modern browser's developer console or using
+            Node.js.</p>
+
+        <h2>Problem statement (complete the following functions).</h2>
+        <hr>
+        <h3>Implementation</h3>
+
+        <p>Input</p>
+        <p style="border: 1px solid black;background-color: rgb(231, 231, 231); padding: 30px;">
+            const voters = [ <br>
+            { name: "Bob", age: 30, voted: true }, <br>
+            { name: "Jake", age: 32, voted: true }, <br>
+            { name: "Kate", age: 25, voted: false }, <br>
+            { name: "Sam", age: 20, voted: false }, <br>
+            { name: "Phil", age: 21, voted: true }, <br>
+            { name: "Ed", age: 55, voted: true }, <br>
+            { name: "Tami", age: 54, voted: true }, <br>
+            { name: "Mary", age: 31, voted: false }, <br>
+            { name: "Becky", age: 43, voted: false }, <br>
+            { name: "Joey", age: 41, voted: true }, <br>
+            { name: "Jeff", age: 30, voted: true }, <br>
+            { name: "Zack", age: 19, voted: false }, <br>
+            ]; <br>
+            let res = Implementation(voters) <br>
+            console.log(res)
+        </p>
+        <p>Output</p>
+        <p style="border: 1px solid black;background-color: rgb(231, 231, 231); padding: 30px;">
+            { <br>
+            numYoungVotes: 0, <br>
+            numYoungPeople: 2, <br>
+            numMidVotesPeople: 5, <br>
+            numMidsPeople: 8, <br>
+            numOldVotesPeople: 2, <br>
+            numOldsPeople: 2, <br>
+            }
+        </p>
+
+        <ul>
+            <li>Implementation function takes voters array as a input and returns the sample output .
+
+            </li>
+            <li>the values are the count of object meet the condition.
+
+            </li>
+            <li>numYoungVotes: voters age <= 20 and given the vote, </li>
+            <li>numYoungPeople: voters age <= 20, </li>
+            <li>numMidVotesPeople: voters age >20 and age<=45 and given the vote, </li>
+            <li>numMidsPeople: voters age >20 and age<=45, </li>
+            <li>numOldVotesPeople: voters age >45 and given the vote,
+
+            </li>
+            <li>numOldsPeople: voters age >45,
+
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

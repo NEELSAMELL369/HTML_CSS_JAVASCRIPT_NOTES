@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Title</h2>
+        <hr>
+        <p>Sort Students by Custom Condition
+
+        </p>
+        <h2>Level 0</h2>
+        <hr>
+
+        <h2>Overview</h2>
+        <hr>
+        <p>In this task, you will sort a list of student objects based on a custom condition provided as a function
+            using the sort method.</p>
+        <h2>Detailed Explanation</h2>
+        <hr>
+        <h3>Setup</h3>
+        <p>You have an array of student objects, where each object contains name and age properties.</p>
+
+        <h2>Task Requirements</h2>
+
+        <ol>
+            <li>Sort Students:
+            </li>
+            <ul>
+                <li>Implement a function sortStudentsByCondition(students, conditionFn) that takes an array of student
+                    objects (students) and a condition function (conditionFn).</li>
+                <li>The conditionFn will be used to determine the sorting order. It should accept two student objects (a
+                    and b) and return true if a should come before b, and false otherwise.</li>
+            </ul>
+            <li>Output Format:
+            </li>
+            <ul>
+                <li>Return a new array where students are sorted based on the provided conditionFn.</li>
+            </ul>
+        </ol>
+        <h2>Example</h2>
+
+        <p style="border: 1px solid black;background-color: rgb(231, 231, 231); padding: 30px;">
+
+            // Input <br>
+            const students = [ <br>
+            { name: "Alice", age: 21 },<br>
+            { name: "Bob", age: 19 },<br>
+            { name: "Charlie", age: 23 },<br>
+            { name: "David", age: 20 }<br>
+            ];<br>
+
+            Condition function: Sort by age in descending order<br>
+            function sortByAgeDescending(a, b) {<br>
+            return b.age - a.age;<br>
+            }<br>
+
+            const sortedStudents = sortStudentsByCondition(students, sortByAgeDescending);<br>
+            console.log(sortedStudents);<br>
+            <br>
+            Output :<br>
+            [<br>
+            { name: "Charlie", age: 23 },<br>
+            { name: "Alice", age: 21 },<br>
+            { name: "David", age: 20 },<br>
+            { name: "Bob", age: 19 }<br>
+            ]<br>
+
+
+        </p>
+
+    </div>
+</body>
+
+</html>

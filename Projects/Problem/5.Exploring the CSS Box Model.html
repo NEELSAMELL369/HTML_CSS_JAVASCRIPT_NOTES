@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L0 - Exploring the CSS Box Model</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 90%;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    .note {
+      font-style: italic;
+      color: #666;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📦 L0 - Exploring the CSS Box Model</h1>
+
+    <h2>📝 Problem Statement:</h2>
+    <p>
+      Create a simple webpage that demonstrates the <strong>CSS Box Model</strong> by styling three boxes with distinct content, padding, borders, and margins.
+    </p>
+
+    <h3>🎯 Requirements:</h3>
+    <ul>
+      <li>Create <strong>three</strong> <code>&lt;div&gt;</code> elements styled as boxes.</li>
+      <li>Each box should have:
+        <ul>
+          <li>A unique <strong>background color</strong>.</li>
+          <li>Different <strong>padding</strong>, <strong>border</strong>, and <strong>margin</strong> values.</li>
+        </ul>
+      </li>
+      <li>Use the <code>box-sizing</code> property:
+        <ul>
+          <li>Set <code>box-sizing: content-box</code> on one box.</li>
+          <li>Set <code>box-sizing: border-box</code> on another box.</li>
+        </ul>
+      </li>
+      <li>Add some text inside each box to visualize the content area.</li>
+    </ul>
+
+    <h3>✅ Expected Output:</h3>
+    <p>
+      A webpage displaying three distinct boxes with noticeable differences in size, spacing, and layout due to box model properties.
+    </p>
+
+    <p class="note">💡 Tip: Use the browser’s developer tools to inspect how padding, border, and margin affect each box.</p>
+  </div>
+
+</body>
+</html>

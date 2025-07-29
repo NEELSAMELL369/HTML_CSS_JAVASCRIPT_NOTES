@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Slideshow</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-color: #f0f0f0;
+        }
+
+        .slideshow-container {
+          width: 600px;
+          height: 400px;
+          overflow: hidden;
+          border: 5px solid #333;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #slideshow {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <div class="slideshow-container">
+      <img id="slideshow" alt="Movie Image" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  <script>
+
+    // Array of random movie image URLs (replace with actual URLs)
+    const movieImages = [
+      "https://images.pexels.com/photos/7991654/pexels-photo-7991654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600",
+      "https://images.pexels.com/photos/7991653/pexels-photo-7991653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600",
+      "https://images.pexels.com/photos/3379941/pexels-photo-3379941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600",
+      "https://images.pexels.com/photos/7991687/pexels-photo-7991687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600",
+      "https://images.pexels.com/photos/7991649/pexels-photo-7991649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600",
+    ];
+
+    let currentImageIndex = 0;
+
+    // Function to display the next image
+    function showNextImage() {
+      const imgElement = document.getElementById("slideshow");
+
+      // Set the current image
+      imgElement.src = movieImages[currentImageIndex];
+
+      // Increment the index (looping back to 0 if at the end of the array)
+      currentImageIndex = (currentImageIndex + 1) % movieImages.length;
+    }
+
+    
+
+    // Set the first image initially
+    document.getElementById("slideshow").src = movieImages[0];
+
+    // Change the image every 2 seconds (2000 milliseconds)
+    setInterval(showNextImage, 2000);
+
+  </script>
+</html>

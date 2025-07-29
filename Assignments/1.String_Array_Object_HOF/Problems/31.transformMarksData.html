@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Title</h2>
+        <hr>
+        <p>Higher-Order Functions Assignmentx`</p>
+        <h2>Level</h2>
+        <p>Level 1</p>
+        <hr>
+
+        <h2>Overview</h2>
+        <hr>
+        <p>In this assignment, you will explore higher-order functions in JavaScript. Higher-order functions are
+            functions that can take other functions as arguments or return functions as values. You will implement
+            various higher-order functions to solve specific tasks, including reduce, filter, map, and forEach
+            functions.</p>
+        <h2>Detailed Explanation</h2>
+        <hr>
+        <p>Setup Guidelines and Instructions: Initial Setup: Begin by creating a JavaScript file to write your code. You
+            can use any text editor or IDE of your choice for editing.</p>
+        <p>Running Your Code: You can run your JavaScript code in any modern browser's developer console or using
+            Node.js.</p>
+
+        <h2>Problem statement (complete the following functions).</h2>
+        <hr>
+        <h3>Implementation</h3>
+
+        <p>Input</p>
+        <p style="border: 1px solid black;background-color: rgb(231, 231, 231); padding: 30px;">
+            let prateekMarksData = { <br>
+            name: "Prateek",<br>
+            subject1: "Javascript",<br>
+            subject2: "HTML",<br>
+            subject3: "CSS",<br>
+            subject4: null,<br>
+            subject5: null,<br>
+            marks1: 90,<br>
+            marks2: 81,<br>
+            marks3: 80,<br>
+            marks4: null,<br>
+            marks5: null,<br>
+            };
+
+            let nrupulMarksData = {<br>
+            name: "Nrupul",<br>
+            subject1: "Java",<br>
+            subject2: "Python",<br>
+            subject3: null,<br>
+            subject4: null,<br>
+            subject5: null,<br>
+            marks1: 95,<br>
+            marks2: 85,<br>
+            marks3: null,<br>
+            marks4: null,<br>
+            marks5: null,
+            };<br><br>
+
+            let allStudentsMarksData = [prateekMarksData, nrupulMarksData];<br>
+            const processedData = transformMarksData(allStudentsMarksData);<br>
+            console.log(processedData)
+
+
+        </p>
+        <p>Output</p>
+        <p style="border: 1px solid black;background-color: rgb(231, 231, 231); padding: 30px;">
+            [<br>
+            {<br>
+            name: "Prateek",<br>
+            marks: [<br>
+            { subject: "Javascript", score: 90 },<br>
+            { subject: "HTML", score: 81 },<br>
+            { subject: "CSS", score: 80 },<br>
+            ],<br>
+            },<br>
+            {<br>
+            name: "Nrupul",<br>
+            marks: [<br>
+            { subject: "Java", score: 95 },<br>
+            { subject: "Python", score: 85 },<br>
+            ],<br>
+            },<br>
+            ];<br>
+
+
+        </p>
+
+        <ul>
+            <li>ImplementationPS7 function takes the allStudentsMarksData to get a new array called massagedData.
+
+            </li>
+            <li>Instead of separate entities for 5 subjects and their marks, in the new array, we just have one entry
+                called marks. marks is an array of objects. the objects of marks contains subject and score to therre
+                crosponding values.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

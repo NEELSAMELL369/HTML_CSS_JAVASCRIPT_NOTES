@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Header & Fixed Footer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-bottom: 60px;
+            /* Space for fixed footer */
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: #0077cc;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="sticky-header">
+        <h2>Sticky Header</h2>
+    </header>
+
+    <main class="content">
+        <h3>Scrollable Content</h3>
+        <p>Paragraph 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Paragraph 2: Vivamus lacinia odio vitae vestibulum.</p>
+        <p>Paragraph 3: Pellentesque habitant morbi tristique senectus et netus.</p>
+        <p>Paragraph 4: Integer nec odio. Praesent libero. Sed cursus ante dapibus.</p>
+        <p>Paragraph 5: Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+        <p>Paragraph 6: Duis sagittis ipsum. Praesent mauris.</p>
+        <p>Paragraph 7: Fusce nec tellus sed augue semper porta.</p>
+        <p>Paragraph 8: Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+        <p>Paragraph 9: Class aptent taciti sociosqu ad litora torquent per conubia.</p>
+        <p>Paragraph 10: Cras mattis consectetur purus sit amet fermentum.</p>
+        <p>Paragraph 11: Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p>Paragraph 12: Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    </main>
+
+    <footer class="fixed-footer">
+        <p>Fixed Footer - Always at the bottom</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>L1 - Deep vs Shallow Copy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-left: 5px solid #27ae60;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: #fcf8e3;
+            padding: 1rem;
+            border-left: 5px solid #f39c12;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>L1 - Deep vs Shallow Copy</h1>
+
+    <div class="note">
+        📘 <strong>Important:</strong> Please read about deep vs shallow copy before attempting this exercise.
+        A good reference: <a href="https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy" target="_blank">MDN
+            Docs: Deep Copy</a>
+    </div>
+
+    <p><strong>Problem Statement:</strong></p>
+    <p>
+        Write a function <code>deepClone(obj)</code> that creates a deep copy of a given object using
+        <code>JSON.stringify()</code> and <code>JSON.parse()</code>. The cloned object should not affect the original
+        when modified.
+    </p>
+
+    <p><strong>Example Input:</strong></p>
+    <pre><code>{ name: "Alice", hobbies: ["reading", "traveling"] }</code></pre>
+
+    <p><strong>Example Output (After modifying the clone):</strong></p>
+    <pre><code>Original: { name: "Alice", hobbies: ["reading", "traveling"] }
+Clone:    { name: "Alice", hobbies: ["reading", "traveling", "coding"] }</code></pre>
+
+
+
+
+
+</body>
+
+</html>

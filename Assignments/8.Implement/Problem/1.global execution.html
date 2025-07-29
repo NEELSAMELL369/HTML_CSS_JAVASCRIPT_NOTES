@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>L0 - Understanding Global and Function Execution Context</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #1a73e8;
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Q: 11 - L0: Understanding Global and Function Execution Context</h1>
+
+    <div class="section">
+        <h2>🧠 Problem Statement:</h2>
+        <p>
+            You are tasked with creating two functions—one in the global execution context and another inside a function
+            context.
+        </p>
+        <p>
+            In this problem, you need to:
+        </p>
+        <ul>
+            <li>Define a global variable <code>age</code>.</li>
+            <li>Create a function <code>displayAge</code> that prints the value of the <code>age</code> variable.</li>
+            <li>Call the <code>displayAge</code> function to show how the global execution context works.</li>
+            <li>Create another function <code>changeAge</code> that updates the global <code>age</code> variable.</li>
+            <li>Print the value of <code>age</code> after updating it to demonstrate function context affecting global
+                state.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📝 Steps to Follow:</h2>
+        <ol>
+            <li>Declare a global variable <code>age</code> and assign a value to it.</li>
+            <li>Create a function <code>displayAge</code> that logs the value of <code>age</code>.</li>
+            <li>Create a second function <code>changeAge</code>, which changes the value of <code>age</code>.</li>
+            <li>Call <code>displayAge</code> and <code>changeAge</code> and check how the value of <code>age</code> is
+                updated.</li>
+        </ol>
+    </div>
+
+
+</body>
+
+</html>

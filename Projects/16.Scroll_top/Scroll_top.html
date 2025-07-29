@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Button Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .scroll-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ff6347; /* Tomato color */
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 30px; /* Larger text */
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease; /* Smooth effect for hover */
+        z-index: 1000;
+      }
+
+      .scroll-btn:hover {
+        background-color: #ff4500; /* Darker red when hovered */
+        transform: scale(1.1); /* Slightly increase size */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Larger shadow */
+      }
+
+      .scroll-btn:focus {
+        outline: none;
+      }
+
+      /* Ensures the button is hidden when at the top */
+      .scroll-btn.hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Content of the page -->
+    <div style="height: 1500px; padding: 20px">
+      <h1>Scroll Down and Click the Arrow to Go to Top</h1>
+      <!-- Your page content -->
+    </div>
+
+    <!-- Arrow Button -->
+    <button id="scrollToTopBtn" class="scroll-btn">&#8593;</button>
+
+    <script>
+      // Get the button
+      var mybutton = document.getElementById("scrollToTopBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.classList.remove("hidden"); // Show button
+        } else {
+          mybutton.classList.add("hidden"); // Hide button when at the top
+        }
+      };
+
+      // When the user clicks on the button, scroll to the top instantly
+      mybutton.onclick = function () {
+        window.scrollTo(0, 0); // Jump instantly to top
+        // window.scrollTo(0, behaviour="smooth");
+      };
+    </script>
+  </body>
+</html>

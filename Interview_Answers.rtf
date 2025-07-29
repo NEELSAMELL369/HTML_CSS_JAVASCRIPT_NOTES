@@ -1,0 +1,822 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 @Yu Gothic UI Semibold;}{\f1\fnil\fcharset0 Calibri;}{\f2\fnil\fcharset0 Arial;}{\f3\fnil\fcharset0 @Arial Unicode MS;}{\f4\fnil Arial;}{\f5\fnil\fcharset0 Comic Sans MS;}{\f6\fnil\fcharset1 Segoe UI Symbol;}{\f7\fnil Comic Sans MS;}{\f8\fnil\fcharset1 Cambria Math;}{\f9\fnil\fcharset0 Cambria;}{\f10\fnil\fcharset1 Segoe UI Symbol;}{\f11\fnil Segoe UI Emoji;}{\f12\fnil\fcharset1 Segoe UI Emoji;}{\f13\fnil Segoe UI Symbol;}{\f14\fnil Cambria;}{\f15\fnil\fcharset0 Segoe UI Emoji;}{\f16\fnil\fcharset0 Cambria Math;}}
+{\colortbl ;\red79\green129\blue189;\red54\green95\blue145;\red255\green0\blue0;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont8\mwrapIndent1440 }\viewkind4\uc1 
+\pard\keep\keepn\sb480\sl276\slmult1\cf1\b\f0\fs32\lang9 Basic Level JavaScript Interview Questions\cf2\f1\par
+
+\pard\sa200\sl276\slmult1\cf1\f2\fs26\line\cf0\f3\fs24 1. What is JavaScript and its role in web development?\cf1\par
+
+\pard\sl240\slmult1\cf0\b0\f2 JavaScript is a scripting language primarily used to create dynamic and interactive content on websites.\cf1\b\fs26\line\cf0\b0\fs24 It runs on the client-side (in the browser), but it can also run on the server-side using environments like Node.js.\line\b Roles:-\b0\line Adds interactivity to web pages (e.g., sliders, modals, form validation).\line Manipulates the DOM to update content dynamically without reloading the page.\line Handles events like clicks, keystrokes, and mouse movements.\line Fetches data asynchronously using APIs (fetch, async/await, promises).\par
+  \par
+
+\pard\sa200\sl276\slmult1\b\f3 2. Is JavaScript statically typed or dynamically typed?\par
+
+\pard\sl240\slmult1\b0\f2 JavaScript is a dynamically typed language.In JavaScript, you don\f4\rquote\f2 t need to declare variable types\f4\emdash the type is determined at runtime, and a variable can hold different types of values at different times.\f2\par
+\par
+
+\pard\sa200\sl276\slmult1\b\f3 3. What are the different data types in JavaScript?\b0\f2\par
+
+\pard\sl240\slmult1 JavaScript has 7 primitive data types (String, Number, BigInt, Boolean, Undefined, Null, Symbol) and 1 non-primitive type (Object).\par
+
+\pard 
+{\pntext\f3 1.\tab}{\*\pn\pnlvlbody\pnf3\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sl240\slmult1\b\f3\par
+
+\pard\sa200\sl276\slmult1 4. What is the DOM (Document Object Model)?\par
+
+\pard\sl240\slmult1\b0\f2 The DOM (Document Object Model) is:\par
+A tree-like structure created by the browser from your HTML code.\par
+It lets JavaScript interact with the web page (change text, add elements, change styles, etc.).\par
+Each HTML tag (like <p>, <div>, etc.) becomes an object (node) in this tree.\line\line\f5 Example:\line\cf3\b HTML:\line\b0 <p id="demo">Hello</p>\par
+\b JavaScript:\par
+\b0 document.getElementById("demo").innerText = "Hi!";\line\cf0\f2\par
+\b\f3 5. What is strict mode in JavaScript ?\par
+\b0\f2 Strict mode is a feature in JavaScript that helps you write more secure and error-free code by applying stricter parsing and error handling to your scripts.\line\par
+
+\pard\sa200\sl276\slmult1\b\f3 6. What is the NaN property in JavaScript? When does NaN occur?\par
+
+\pard\sl240\slmult1\b0\f2 NaN stands for "Not-a-Number" \f4\emdash  it is a special value in JavaScript that represents a value which is not a valid number.\f2\line\line\f4 When you perform a mathematical operation that doesn\rquote t return a valid number.\f2\line\cf3\b\f5 let result = 0 / 0;        // NaN\line let invalid = "abc" * 5;   // NaN\line parseInt("hello");         // NaN\line\cf0\b0\f2\par
+
+\pard\sa200\sl276\slmult1\b\f3 7. What are JavaScript truthy and falsy values?\b0\f2\par
+
+\pard\sl240\slmult1 Truthy values evaluate to true, and falsy values evaluate to false when used in a Boolean context.\line\par
+
+\pard\sa200\sl276\slmult1\b\f3 8. What is the difference between var, let, and const?\b0\f2\par
+
+\pard\sl240\slmult1\b var \b0 is function-scoped, can be re-declared and updated, and is hoisted with undefined initialization.\line\b let \b0 is block-scoped, cannot be re-declared in the same scope, can be updated, and is hoisted but not initialized.\line\b const \b0 is block-scoped, cannot be re-declared or updated, and is hoisted but not initialized.\line\par
+
+\pard\sa200\sl276\slmult1\b\f3 9. Explain hoisting in JavaScript.\b0\f2\par
+
+\pard\sl240\slmult1 Hoisting is the behavior in JavaScript where variable and function declarations are moved to the top of their scope before code execution.\line\line\f6\u9989?\f4  \f2 Key Points:\line var is hoisted (initialized as undefined):\line\cf3\f5 console.log(a); // undefined\line var a = 10;\line\cf0\f2\line let and const are hoisted but not initialized (Temporal Dead Zone):\line\cf3\f5 console.log(b); // \f6\u10060?\f7  \f5 ReferenceError\line let b = 20;\line console.log(c); // \f6\u10060?\f7  \f5 ReferenceError\line const c = 30;\line\cf0\f2\line Function declarations are fully hoisted:\line\cf3\f5 sayHello(); // \f6\u9989?\f7  \f5 Works fine\line function sayHello() \{\line console.log("Hello, Neel!");\line\}\line\cf0\f2\line Function expressions are not hoisted:\line\cf3\f5 greet(); // \f6\u10060?\f7  \f5 TypeError: greet is not a function\line var greet = function() \{\line console.log("Hi!");\line\};\line\cf0\f2\par
+
+\pard\sa200\sl276\slmult1\b\f3 10. Explain the scope of variables in JavaScript.\b0\f2\par
+
+\pard\sl240\slmult1 Scope in JavaScript refers to the accessibility of variables in different parts of the code.\line\line\f6\u9989?\f4  \f2 Types of Scope in JavaScript (with examples):\line\line Global Scope \f4\endash  Variables declared outside any function or block are accessible everywhere.\f2\line\cf3\f5 var a = 10;\line function show() \{ \line  console.log(a); // \f6\u9989?\f7  \f5 Accessible\line\}\line show();\line console.log(a); // \f6\u9989?\f7  \f5 Accessible\line\cf0\f2\line Function Scope \f4\endash  Variables declared with var inside a function are accessible only within that function.\f2\line\cf3\f5 function greet() \{\line var name = "Neel";\line console.log(name); // "Neel"\line\}\line console.log(name); // \f6\u10060?\f7  \f5 Error\cf0\f2\line\line Block Scope \f4\endash  Variables declared with let or const inside \{\} are limited to that block.\f2\line\cf3\f5 if (true) \{\line let age = 25;\line console.log(age); // 25\line\}\line console.log(age); // \f6\u10060?\f7  \f5 Error\cf0\f2\line\line Lexical Scope (Static Scope) \f4\endash  A function can access variables from its outer scope where it was defined.\f2\line\cf3\f5 function outer() \{\line let message = "Hello";\line function inner() \{\line console.log(message); // "Hello"\line\}\line inner();\line\}\line\cf0\f2\par
+
+\pard\sa200\sl276\slmult1\b\f3 11. What is the Temporal Dead Zone (TDZ)?\b0\f2\par
+
+\pard\sl240\slmult1 The Temporal Dead Zone (TDZ) is the period between the start of a block and the point where a variable declared with let or const is initialized, during which the variable cannot be accessed.\line\line\f6\u9989?\f4  \f2 Example:\line\cf3\f5 console.log(a); // \f6\u10060?\f7  \f5 ReferenceError: Cannot access 'a' before initialization\line let a = 10;\line\cf0\f2 In this example, the variable a exists in memory due to hoisting, but it is in the TDZ and cannot be accessed until the line let a = 10; is reached.\line\par
+
+\pard\sa200\sl276\slmult1\b\f3 12. What is the difference between == and === operators?\par
+
+\pard 
+{\pntext\f2 1.\tab}{\*\pn\pnlvlbody\pnf2\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sl240\slmult1\b0\f2\par
+
+\pard\sl240\slmult1 Both == and === are comparison operators in JavaScript, but they behave differently in terms of type checking.\line\line\f6\u9989?\f4  \f2 Example:\line\cf3\f5 5 == "5";    // \f6\u9989?\f7  \f5 true \f8\u8594?\f7  \f5 values are equal after type coercion\line 5 === "5";   // \f6\u10060?\f7  \f5 false \f8\u8594?\f7  \f5 different types (number vs string)\lang9\line\line null == undefined;  // \f6\u9989?\f7  \f5 true (loosely equal)\line null === undefined; // \f6\u10060?\f7  \f5 false (different types)\line\cf0\f2\par
+
+\pard\sa200\sl276\slmult1\b\f3 13. What is implicit type coercion in JavaScript?\par
+
+\pard 
+{\pntext\f2 1.\tab}{\*\pn\pnlvlbody\pnf2\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sl240\slmult1\b0\f2\par
+
+\pard\sl240\slmult1 Implicit type coercion is the process where JavaScript automatically converts one data type to another during operations, like comparing or adding different types.\line\line\f6\u9989?\f4  \f2 Example 1 \f4\endash  String + Number:\f2\line\cf3\f5 let result = "5" + 2;  // "52" \f8\u8594?\f7  \f5 number 2 is converted to string\lang9\line\cf0\f2\line\f6\u9989?\f4  \f2 Example 2 \f4\endash  Number + Boolean:\f2\line\cf3\f5 let sum = 5 + true;    // 6 \f8\u8594?\f7  \f5 true is converted to 1\lang9\line\cf0\f2\line\f6\u9989?\f4  \f2 Example 3 \f4\endash  Equality Check (==):\f2\line\cf3\f5 0 == false;     // true \f8\u8594?\f7  \f5 false is converted to 0\line "5" == 5;       // true \f8\u8594?\f7  \f5 "5" is converted to number\lang9\line\cf0\f2\par
+\par
+
+\pard\sa200\sl276\slmult1\f9\fs22\line\b\f3\fs24 14. Explain the difference between value types and reference types.\b0\f2\par
+In JavaScript, variables can store value types (primitive) or reference types (non-primitive).\par
+\line\ul\b Here\f4\rquote\f2 s the key difference:\ulnone\b0\line\b Value Types (Primitive Types):\b0\line Stored directly in the stack.\line When you assign a value type to a variable, it stores a copy of the actual value.\line Changing one variable does not affect the other.\line\line\f10\u-10179?\u-8947?\f4  \f2 Example:\line\cf3\f5 let a = 10;\line let b = a;\line b = 20;\line console.log(a); // 10\line console.log(b); // 20\line\cf0 a remains 10 because b got a copy of a.\line\f2\line\b Reference Types (Non-Primitive Types):\b0\line Stored in the heap, and the variable holds a reference (address) to that memory.\line When assigned to another variable, it copies the reference, not the actual object.\line So, changing one affects the other.\line\line\f6\u9989?\f4  \f2 Examples:\line\cf3\f5 Object, Array, Function, Date, etc.\cf0\f2\line\f10\u-10179?\u-8947?\f4  \f2 Example:\line\cf3\f5 let obj1 = \{ name: "Neel" \};\line let obj2 = obj1;\line obj2.name = "Samel";\line console.log(obj1.name); // "Samel"\line console.log(obj2.name); // "Samel"\line\cf0 Both obj1 and obj2 point to the same object in memory, so changes reflect in both\f2 .\line\line\b\f3 15. Explain the this keyword in JavaScript and its use cases.\par
+
+\pard 
+{\pntext\f2 1.\tab}{\*\pn\pnlvlbody\pnf2\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sl240\slmult1\b0\f2\par
+
+\pard\sl240\slmult1 The this keyword in JavaScript refers to the object that is executing the current function.\line\line\b How this Works Depends on the Context:\line\b0\line\b Global Context (Outside any function):\line\b0\line In browsers, this refers to the global object (window).\line\cf3\f5 console.log(this); // window (in browser)\cf0\f2\line\par
+\line\b Inside a Regular Function:\line\b0 In non-strict mode, this refers to the global object.\par
+In strict mode, this is undefined.\line\line\cf3\f5 function show() \{\par
+console.log(this);\par
+\}\line\cf0\f2\par
+
+\pard\sl240\slmult1\tx631\tx947\tx1104\tx1420 show(); // window (non-strict) OR undefined (strict mode)\line\line\b Inside a Method (Object Function):\par
+\b0 this refers to the object that owns the method.\line\cf3\f5 const person = \{\par
+  name: "Neel",\par
+  greet: function () \{\par
+    console.log(this.name);\par
+  \},\par
+\};\par
+
+\pard\sl240\slmult1 person.greet(); // "Neel"\par
+\cf0\f2\line\b Arrow Functions:\line\b0 Arrow functions do not have their own this.\par
+They inherit this from their lexical (outer) scope.\par
+\cf3\f5 const obj = \{\par
+ name: "Neel",\par
+ greet: () => \{\par
+ console.log(this.name);\par
+  \},\par
+\};\par
+obj.greet(); // undefined (inherited from global scope)\b\fs26\par
+\cf0\b0\f2\fs24\line\b Constructor Functions:\line\b0 When using new, this refers to the newly created object.\line\cf3\f5 function User(name) \{\par
+ this.name = name;\par
+\}\par
+const u = new User("Neel");\par
+console.log(u.name); // "Neel"\ul\b\fs32\par
+\cf0\ulnone\b0\f11\fs24\par
+
+\pard\sa200\sl276\slmult1\b\f3 16. What are first-class functions in JavaScript?\lang16393\par
+
+\pard\sl240\slmult1\b0\f2 In JavaScript, functions are first-class citizens (also called first-class objects), which means:\par
+
+\pard\sa200\sl276\slmult1 Functions can be treated like any other variable.\line\line\b\f3\lang9 17. What are higher-order functions in JavaScript?Why Are They Useful?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 Higher-order functions in JavaScript are functions that take other functions as arguments.\par
+\line\b  Examples:\line 1. Function passed as an argument:\par
+
+\pard\sa200\sl240\slmult1\b0\line\cf3\f5 function greet(name) \{\par
+  return `Hello, $\{name\}`;\par
+\}\par
+function processUserInput(callback) \{\par
+  const name = "Neel";\par
+  console.log(callback(name));\par
+\}\par
+processUserInput(greet); // Output: Hello, Neel  \line\line\cf0\b\f2 2. Function returning another function:\line\cf3\b0\f5 function multiplier(factor) \{\par
+  return function(x) \{\par
+    return x * factor;\par
+  \};\par
+\}\par
+const double = multiplier(2);\par
+console.log(double(5)); // Output: 10\line\line\cf0\b\f4  \f2 They Useful:-\par
+
+\pard\sl240\slmult1\b0 1. Abstraction \f4\endash  Hide complex logic inside simple, reusable functions.\par
+2. Code Reusability \endash  Write code once and use it in many places.\par
+3. Functional Programming \endash  Use functions to write clean and predictable code.\par
+4. Cleaner and Shorter Code \endash  Make code easy to read and write with fewer lines.\line\f2\line\b\f3\lang9 18. What is an anonymous function? \par
+\b0\f2\lang16393 An anonymous function is a function without a name.\par
+It used as a value, especially when passing a function as an argument and assigning it to a variable.\line\line\b\f3\lang9 19. What are arrow functions?\par
+
+\pard\sa200\sl276\slmult1\b0\f2\lang16393 Arrow functions are a shorter syntax for writing functions in JavaScript, introduced in ES6 (ECMAScript 2015).\line\line\b\f3\lang9 20. What is the difference between arrow functions and regular functions?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 Arrow functions and regular (traditional) functions both define behavior, but they differ in:-\par
+\line\b Syntax\b0 : \par
+\f5 Arrow functions are short and concise, \line\cf3 const add = (a, b) => a + b;\par
+\tab\par
+\cf0 Regular functions are more verbose.\par
+\cf3 function add(a, b) \{\par
+  return a + b;\par
+\}\line\cf0\b\f2\par
+this Binding: \par
+\b0 Arrow functions inherit this from the surrounding scope \par
+regular functions have their own this.\par
+\par
+\cf3\f5 const person = \{\par
+name: "Neel",\par
+greet: function () \{\par
+console.log("Hi, I'm " + this.name); // "Neel"\par
+ \},\par
+ greetArrow: () => \{\par
+console.log("Hi, I'm " + this.name); // \f6\u10060?\f7  \f5 undefined or window.name\par
+\}\par
+\};\par
+person.greet();       // "Hi, I'm Neel"\par
+person.greetArrow();  // "Hi, I'm undefined"\line\cf0\f2\par
+\b Arguments Object: \par
+\b0 Regular functions have access to arguments.\par
+Arrow functions do not have their own arguments.\par
+\line\cf3\f5 function showArgs() \{\par
+  console.log(arguments);\par
+\}\par
+showArgs(1, 2); // [1, 2]\par
+\par
+const showArrowArgs = () => \{\par
+  console.log(arguments);\par
+\};\par
+showArrowArgs(1, 2); // \f6\u10060?\f7  \f5 ReferenceError: arguments is not defined\par
+\cf0\f2\par
+\b Constructor Usage:\b0  \par
+Regular functions can be used as constructors with new.\par
+Arrow functions \f6\u10060? cannot be used as constructors.\par
+\f2\par
+\cf3\f5 function Person(name) \{\par
+  this.name = name;\par
+\}\par
+\cf0 const p = new Person("Neel"); // \f6\u9989?\f7  \f5 Works\cf3\par
+\par
+const PersonArrow = (name) => \{\par
+  this.name = name;\par
+\};\par
+\cf0 const p2 = new PersonArrow("Neel"); // \f6\u10060?\f7  \f5 TypeError: PersonArrow is not a constructor\cf3\line\par
+\cf0\b\f2 Implicit Return: \par
+\b0 Arrow functions support implicit return in one-liners\par
+regular functions require return keyword.\par
+\par
+
+\pard\sl276\slmult1\cf3\f5 const square = (x) => x * x;           // \f6\u9989?\f7  \f5 Implicit return\par
+const square2 = function (x) \{\par
+  return x * x;                        // \f6\u9989?\f7  \f5 Requires return keyword\par
+\};\par
+console.log(square(4));  // 16\par
+console.log(square2(5)); // 25\line\cf0\f2\line\b\f3\lang9 21. What are generator functions?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 A generator function is a special type of function in JavaScript that can pause and resume its execution\line\line\b\f12\u-10178?\u-8726?\f7  \f5 Example:\cf3\b0\line function* countUp() \{\par
+  yield 1;\par
+  yield 2;\par
+  yield 3;\par
+\}\par
+\par
+const counter = countUp();\par
+\par
+console.log(counter.next()); // \{ value: 1, done: false \}\par
+console.log(counter.next()); // \{ value: 2, done: false \}\par
+console.log(counter.next()); // \{ value: 3, done: false \}\par
+console.log(counter.next()); // \{ value: undefined, done: true \}\line\cf0 yield pauses the function, and next() resumes it.\line\f2\line\f12\u9881?\u-497?\f4  \f2 Use Cases:\par
+Lazy evaluation (generate values on demand)\par
+
+\pard\sa200\sl276\slmult1 Iterating over asynchronous or complex data\line\line\b\f3\lang9 22. What is the use of a constructor function in JavaScript?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 A constructor function in JavaScript is used to create objects  and initialize with the help of the new keyword.\line\line\cf3\f5 function Car(model, year) \{\par
+  this.model = model;\par
+  this.year = year;\par
+  this.display = function () \{\par
+    return `$\{this.model\} - $\{this.year\}`;\par
+  \};\par
+\}\par
+\par
+const car1 = new Car("BMW", 2022);\par
+
+\pard\sa200\sl276\slmult1 console.log(car1.display()); // BMW - 2022\line\cf0\f2\line\b\f3\lang9 23. What is an IIFE (Immediately Invoked Function Expression)?Why Use IIFE?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 An IIFE (Immediately Invoked Function Expression) is a function that runs as soon as it is defined.\par
+\line\b Uses IIFE\par
+1. Avoid Global Scope Pollution\par
+\b0 Variables declared in the global scope can be overwritten unintentionally.\par
+IIFE creates a private scope.\line\line\cf3\f5 (function () \{\par
+  var privateVar = "I am private";\par
+\})();\par
+
+\pard\sa200\sl276\slmult1 console.log(privateVar); // \f6\u10060?\f7  \f5 Error: privateVar is not defined\line\cf0\f2\line\line\b\f3\lang9 24. What is the difference between slice()and splice()?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 Both slice() and splice() are used to work with arrays, but they behave very differently.\line\line\b slice()\par
+\b0\f10\u-10179?\u-8903?\f4  \f2 Returns a shallow copy of a portion of an array.\par
+\f10\u-10179?\u-8903?\f4  \f2 Does not modify the original array.\line\line\b Syntax:\line\cf3\b0\f5 array.slice(start, end)\line\cf0\f2\line\b Example:\line\b0\f5 const arr = [1, 2, 3, 4, 5];\par
+const sliced = arr.slice(1, 4); // [2, 3, 4]\par
+\par
+console.log(arr);   // [1, 2, 3, 4, 5] (unchanged)\par
+console.log(sliced); // [2, 3, 4]\line\f2\line\b splice()\par
+\b0\f10\u-10179?\u-8903?\f4  \f2 Used to add, remove, or replace elements in an array.\par
+\f10\u-10179?\u-8903?\f4  \f2 Modifies the original array.\line\line Syntax:\line\cf3\b\f5 array.splice(start, deleteCount, item1, item2, ...)\cf0\b0\f2\line\b Example:\b0\line\cf3\f5 const arr = [1, 2, 3, 4, 5];\par
+const removed = arr.splice(1, 2); // removes 2, 3\par
+\par
+console.log(arr);    // [1, 4, 5] (modified)\par
+
+\pard\sa200\sl276\slmult1 console.log(removed); // [2, 3]\line\cf0\f2\line\b\f3\lang9 25. Explain important JavaScript array methods.\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 JavaScript arrays come with many built-in methods that help with searching, transforming, modifying, and looping over data.\line Examples\line\line\b forEach()\line\b0 Executes a function for each array element.\line\cf3\f5 [1, 2, 3].forEach(num => console.log(num));\par
+// Output: 1 2 3\line\cf0\f2\line\b map()\line\b0 Creates a new array by applying a function to each element.\line\cf3\f5 const doubled = [1, 2, 3].map(n => n * 2);\par
+console.log(doubled); // [2, 4, 6]\line\cf0\f2\line\b filter()\line\b0 Returns a new array with elements that pass a condition.\line\cf3\f5 const evens = [1, 2, 3, 4].filter(n => n % 2 === 0);\par
+console.log(evens); // [2, 4]\line\cf0\f2\line\b reduce()\line\b0 Reduces the array to a single value\line\cf3\f5 const sum = [1, 2, 3].reduce((acc, curr) => acc + curr, 0);\par
+
+\pard\sa200\sl276\slmult1 console.log(sum); // 6\line\cf0\f2\line\b\f3\lang9 26. What is object destructuring?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 Object destructuring is a JavaScript feature that lets you extract properties from an object and assign them to variables in a concise and readable way.\line\line\b Basic Syntax:\b0\par
+\cf3\b\f5 const \{ key1, key2 \} = object;\cf0\b0\f2\line\line\b\f10\u-10179?\u-8947?\f4  \f2 Example:\b0\line\cf3\f5 const user = \{\par
+  name: "Neel",\par
+  age: 27,\par
+  city: "Mumbai"\par
+\};\par
+const \{ name, age \} = user;\par
+console.log(name); // "Neel"\par
+console.log(age);  // 27\line\cf0\f2\line\b Use Cases:\b0\line Renaming Variables\line\cf3\f5 const \{ name: userName \} = user;\par
+console.log(userName); // "Neel\line\cf0\f2\line\b Nested Destructuring\line\cf3\b0\f5 const student = \{\par
+  id: 1,\par
+  marks: \{\par
+    math: 90,\par
+    english: 85\par
+  \}\par
+\};\par
+\par
+const \{ marks: \{ math \} \} = student;\par
+
+\pard\sa200\sl276\slmult1 console.log(math); // 90\line\cf0\f2\line\line\line\b\f3\lang9 27. What is the difference between deep copy and shallow copy?\par
+\b0\f2\lang16393 The difference between deep copy and shallow copy lies in how they handle nested objects or references.\line\line\b Shallow Copy\par
+\b0 Copies only the top-level data.\par
+Nested objects/arrays are shared (both original and copy refer to the same nested object).\par
+Changes to nested data in the copy affect the original.\par
+Created using:\par
+\f5 JavaScript: slice(), [...arr], Object.assign()\par
+\cf3 Example (JavaScript):\par
+const original = [[1, 2], [3, 4]];\par
+const shallow = original.slice();  // Shallow copy\par
+shallow[0][0] = 99;\par
+
+\pard\sl240\slmult1 console.log("Original:", original);  // [[99, 2], [3, 4]] (affected)\line\line\cf0 When we say "top-level data", we mean only the first layer of the object/array is copied.\par
+If there are other objects or arrays inside (nested), they are not copied, but their memory reference is shared.\line\cf3\line const original = [10, 20, 30]; // Just numbers\par
+
+\pard\sa200\sl276\slmult1 const shallow = original.slice(); // Shallow copy\par
+shallow[0] = 99;\par
+console.log(original); // [10, 20, 30] (NOT affected)\line\line\cf0 Here, there is no nested object, so the shallow copy works fine because it's just top-level values (numbers).\b\f2\par
+Deep Copy\par
+\b0 Copies all levels of data, creating new objects for nested structures.\par
+Changes in the copy do not affect the original.\par
+Created using:\par
+\f5 JavaScript: JSON.parse(JSON.stringify(obj)) or structuredClone(obj)\par
+\cf3 Example (JavaScript):\par
+const original = [[1, 2], [3, 4]];\par
+const deep = JSON.parse(JSON.stringify(original));  // Deep copy\par
+deep[0][0] = 88;\par
+console.log("Original:", original);  // [[1, 2], [3, 4]] (not affected)\line\cf0\f2\line\b\f3\lang9 28. What do mutability and immutability mean?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 Mutability and immutability refer to whether or not a value can be changed after it is created.\line\line\b Mutable:\b0\par
+A mutable value can be changed without creating a new one.\par
+Most non-primitive types (like objects and arrays) are mutable.\line\cf3\f5 const user = \{ name: "Neel" \};\par
+user.name = "Samel"; // \f6\u9989?\f7  \f5 mutated\par
+console.log(user.name); // "Samel"\line\cf0\f2\line\b Immutable:\b0\par
+An immutable value cannot be changed once created.\par
+All primitive types (like strings, numbers, booleans) are immutable.\line\line\cf3\f5 let name = "Neel";\par
+name[0] = "S"; // \cf0\f6\u10060?\f7  \f5 does nothing\cf3\par
+
+\pard\sa200\sl276\slmult1 name = "Samel"; // \cf0\f6\u9989?\f7  \f5 creates a new string, doesn't change the original\line\f2\line\b\f3\lang9 29. What are Object.freeze() and Object.seal()?\par
+
+\pard\sl240\slmult1\b0\f2\lang16393 Both Object.freeze() and Object.seal() are used to restrict changes to objects, but they do it at different levels.\line\line\b Object.freeze()\b0\par
+Completely freezes the object:\par
+\f6\u10060?\f4  \f2 Cannot add new properties\par
+\f6\u10060?\f4  \f2 Cannot remove properties\par
+\f6\u10060?\f4  \f2 Cannot change existing property values\par
+\f6\u10060?\f4  \f2 Cannot reconfigure (make writable or configurable again)\line\line\cf3\f5 const user = \{ name: "Neel" \};\par
+\line Object.freeze(user);\line\par
+user.name = "Samel";      // \f6\u10060?\f7  \f5 Ignored\par
+user.city = "Mumbai";     // \f6\u10060?\f7  \f5 Ignored\par
+delete user.name;         // \f6\u10060?\f7  \f5 Ignored\par
+\par
+console.log(user); // \{ name: "Neel" \}\line\cf0\f2\line\b Object.seal()\b0\line Seals the object:\par
+\f6\u10060?\f4  \f2 Cannot add or remove properties\par
+\f6\u9989?\f4  \f2 Can modify existing values\line\line\cf3\f5 const person = \{ name: "Neel" \};\par
+Object.seal(person);\par
+person.name = "Samel";     // \f6\u9989?\f7  \f5 Allowed\par
+person.age = 27;           // \f6\u10060?\f7  \f5 Ignored\par
+delete person.name;        // \f6\u10060?\f7  \f5 Ignored\par
+console.log(person); // \{ name: "Samel" \}\line\cf0\f2\par
+\b\fs28 30. Difference between null and undefine?\par
+\b0\fs24 undefined: The default state of a variable that hasn\f13\rquote\f2 t been assigned a value.\par
+null: A value you intentionally assign to represent \f13\ldblquote\f2 no value\f13\rdblquote\f2 .\par
+\b\f13\fs28\par
+\cf3\b0\f6\fs24\u9989?\f7  \f5 Examples\par
+let a;\par
+console.log(a); // \f10\u-10179?\u-9143?\f7  \f5 undefined (declared but not assigned)\par
+\par
+let b = null;\tab\par
+console.log(b); // \f10\u-10179?\u-9143?\f7  \f5 null (assigned by the developer)\cf0\b\f13\fs28\par
+\f2\par
+31. What is difference between parameters and arguments ?\line\b0\fs24 Variables listed in function declaration\line Values passed to the function when it\f4\rquote\f2 s called\par
+\cf3\f5 Example\tab\par
+function greet(name) \f8\u8594?\f7  \f5 name is a parameter\par
+\lang16393 Example\tab\par
+greet("Neel") \f8\u8594?\f7  \f5 "Neel" is an argument\par
+\cf0\b\f2\fs28\lang16393\par
+32. What is Execution Context in JavaScript ?\par
+\b0\fs24 An Execution Context is the environment where your JavaScript code is evaluated and executed.\par
+\b\fs28\par
+33. What is Encapsulate ?\b0\fs24  \fs28\par
+\fs24\par
+\b\fs32\lang9 Intermediate Level JavaScript Interview Questions\par
+\b0\fs24\lang16393\par
+
+\pard\sa200\sl276\slmult1\b\fs22\lang9 1. \fs28 How do you handle errors in JavaScript?\fs22\par
+
+\pard\sl240\slmult1\b0\fs24\lang16393 In JavaScript, errors can be handled using several techniques to ensure your application doesn't crash and behaves predictably. The most common methods include:\line\line\f6\u9989? Handling Asynchronous Errors (Promises)\line Use .catch() for promise-based error handling.\line\cf3\f5 fetch('{\cf0{\field{\*\fldinst{HYPERLINK https://api.example.com/data }}{\fldrslt{https://api.example.com/data\ul0\cf0}}}}\f5\fs24 ')\par
+ .then(res => res.json())\par
+ .then(data => console.log(data))\par
+ .catch(error => console.error("Fetch error:", error));\line\cf0\f2\line\f6\u9989?\f4  \f2 Using async/await with try...catch\line\cf3\f5 async function getData() \{\par
+  try \{\par
+    const res = await fetch('{\cf0{\field{\*\fldinst{HYPERLINK https://api.example.com/data }}{\fldrslt{https://api.example.com/data\ul0\cf0}}}}\f5\fs24 ');\par
+    const data = await res.json();\par
+    console.log(data);\par
+  \} catch (error) \{\par
+    console.error("Async error:", error);\par
+  \}\par
+
+\pard\sa200\sl276\slmult1\}\line\line\cf0\b\f2\lang9 2. What are the types of errors in JavaScript?\cf3\lang16393\par
+
+\pard\sl240\slmult1\cf0\b0 JavaScript has several built-in error types:\par
+\par
+
+\pard\sl276\slmult1\b SyntaxError \b0\f4\endash  Occurs when code has invalid syntax. Example: if (true \{\}\par
+\b ReferenceError \b0\endash  Happens when referencing a variable that hasn\rquote t been declared. Example: console.log(x); // x is not defined\par
+\b TypeError \b0\endash  Triggered when a value is not of the expected type. Example: null.f(); // Cannot read property 'f' of null\par
+\b RangeError \b0\endash  Occurs when a value is not within an acceptable range. Example: new Array(-1);\par
+\b EvalError \b0\endash  Related to improper use of eval() (rarely used now). Example: throw new EvalError("Eval error occurred");\par
+\b URIError \b0\endash  Raised when URI functions are used incorrectly. Example: decodeURIComponent('%'); // URI malformed\par
+\par
+
+\pard\sa200\sl276\slmult1\b\f2\lang9 3. What is \lang16393 Prototype \lang9 inheritance in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 Prototypal inheritance is a feature in JavaScript where objects can inherit properties and methods from other objects via the prototype chain.\line\par
+In JavaScript, every object has a hidden property called [[Prototype]] accessible via\line 1. __proto__  \line 2.Object.getPrototypeOf()\par
+\line\b Creating Inheritance using Object\cf3\b0\f5\line const animal = \{\par
+  eats: true,\par
+  walk() \{\par
+    console.log("Animal walks");\par
+  \}\par
+\};\par
+const dog = Object.create(animal); // dog inherits from animal\par
+dog.barks = true;\par
+console.log(dog.eats); // true (inherited from animal)\par
+dog.walk();            // "Animal walks" (inherited)\line\line\cf0\b\f2 Creating Inheritance using Constructor Functions:\f13\line\cf3\b0\f5 function Person(name) \{\par
+  this.name = name;\par
+\}\par
+\par
+Person.prototype.sayHello = function () \{\par
+  console.log(`Hello, I'm $\{this.name\}`);\par
+\};\par
+\par
+const john = new Person("John");\par
+john.sayHello(); // Hello, I'm John\line\cf0\f13\line\b\f2 Creating Inheritance using Modern Syntax (ES6 Classes):\f13\par
+\cf3\b0\f5 class Animal \{\par
+  speak() \{\par
+    console.log("Animal speaks");\par
+  \}\par
+\}\par
+\par
+class Dog extends Animal \{\par
+  bark() \{\par
+    console.log("Dog barks");\par
+  \}\par
+\}\par
+\par
+const pet = new Dog();\par
+pet.speak(); // Animal speaks\par
+
+\pard\sa200\sl276\slmult1 pet.bark();  // Dog barks\line\line\cf0\b\f2\lang9 4. What are JavaScript classes?\par
+
+\pard\sl276\slmult1\b0\lang16393 JavaScript classes are blueprints for creating objects with shared properties and methods. They were introduced in ES6 (ES2015) to provide a cleaner and more familiar syntax for object creation and inheritance, compared to the older prototype-based approach.\line\cf3\f13\line\cf0\b\f2 Key Features of Classes:\par
+\b0 constructor() \f4\emdash  \f2 special method for initializing new objects.\par
+Methods defined inside a class are stored on the prototype.\par
+Supports inheritance using the extends keyword.\par
+Use super() to call the parent class constructor.\par
+\par
+
+\pard\sa200\sl276\slmult1\b\lang9 5. What is OOP (Object-Oriented Programming) in JavaScript?\par
+\b0\lang16393 OOP in JavaScript means writing code using objects that have data and actions, making it easier to build programs.\line\cf3\f5\line\cf0\b\f2\lang9 6. What are the possible ways to create objects in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 JavaScript provides multiple ways to create objects, each serving different use cases.\line\line\b Using Object Literals\line\b0 The most common and simplest way.\par
+\cf3\f5 const person = \{\par
+  name: "Neel",\par
+  age: 27,\par
+  greet() \{\par
+    console.log(`Hi, I'm $\{this.name\}`);\par
+  \}\par
+\};\line\line\cf0\b\f2 Using the new Object() Syntax\line\cf3\b0\f5 const person = new Object();\par
+person.name = "Neel";\par
+person.age = 27;\line\line\cf0\b\f2 Using Factory Functions\line\b0 Functions that return a new object.\cf3\f5\line function createPerson(name, age) \{\par
+  return \{\par
+    name,\par
+    age,\par
+    greet() \{\par
+      console.log(`Hi, I'm $\{name\}`);\par
+    \}\par
+  \};\par
+\}\par
+\par
+const user = createPerson("Neel", 27);\line\line\cf0\b\f2 Using Constructor Functions\line\cf3\b0\f5 function Person(name, age) \{\par
+  this.name = name;\par
+  this.age = age;\par
+\}\par
+\par
+const user = new Person("Neel", 27);\line\par
+\cf0\b\f2 Using ES6 Classes\line\b0 A modern and cleaner approach to object creation and inheritance.\line\cf3\f5 class Person \{\par
+  constructor(name) \{\par
+    this.name = name;\par
+  \}\par
+\par
+  greet() \{\par
+    console.log(`Hi, I'm $\{this.name\}`);\par
+  \}\par
+\}\par
+\par
+const user = new Person("Neel");\line\par
+\line\cf0\b\f2 Using Object.create()\line\b0 This creates a new object with the specified prototype.\line\cf3\f5 const proto = \{\par
+  greet() \{\par
+    console.log("Hello!");\par
+  \}\par
+\};\par
+\par
+const person = Object.create(proto);\par
+person.name = "Neel";\par
+
+\pard\sa200\sl276\slmult1 person.greet(); // Hello!\line\cf0\f2\line\cf3\f5\line\cf0\b\f2\lang9 7. What are closures in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 A closure happens when a function remembers the variables from its outer scope, even after the outer function has finished executing.\line\cf3\f5\line function outer() \{\par
+  let count = 0;\par
+\par
+  function inner() \{\par
+    count++;\par
+    console.log("Count:", count);\par
+  \}\par
+\par
+  return inner;\par
+\}\par
+\par
+const counter = outer(); // outer() returns inner\par
+counter(); // Count: 1\par
+counter(); // Count: 2\line\cf0 counter still has access to count even though outer() has finished. That\f7\rquote\f5 s a closure in action!\cf3\line\par
+\cf0\b Closure Useful\cf3\b0\line\cf0\f2 Data privacy/encapsulation\cf3\f5\line\cf0\f2 Maintaining state in async code (e.g., setTimeout, event listeners)\par
+
+\pard\sa200\sl276\slmult1\line\line\b\lang9 8. What is memoization?\par
+
+\pard\sl276\slmult1\b0\lang16393 Memoization is an optimization technique used to cache the results of expensive function calls so that future calls with the same arguments return the cached result instantly, rather than recalculating.\par
+It\f4\rquote\f2 s commonly used in recursive functions or functions with repeated inputs, improving performance.\par
+\line\b Example Without Memoization:\line\cf3\b0\f5 function slowSquare(n) \{\par
+  console.log("Calculating..." );\par
+  return n * n;\par
+\}\par
+\par
+console.log(slowSquare(5)); // Calculates\par
+console.log(slowSquare(5)); // Calculates again\line\cf0\f13\line\b\f2 Example With Memoization:\line\cf3\b0\f5 function memoizedSquare() \{\par
+  const cache = \{\};\par
+\par
+  return function(n) \{\par
+   console.log("Calculating...");\par
+    cache[n] = n * n;\par
+    return cache[n];\par
+  \};\par
+\}\par
+\par
+const square = memoizedSquare();\par
+\par
+console.log(square(5)); // Calculating... 25\par
+console.log(square(5)); // Fetching from cache... 25\line\cf0\f2\line\b Real-World Use Cases:\b0\par
+Recursive problems like Fibonacci, Factorial\par
+API call result caching\par
+
+\pard\sa200\sl276\slmult1 Expensive calculations in UI (e.g., React useMemo)\line\line\b\lang9 9. What are pure and impure functions?\par
+
+\pard\sl276\slmult1\b0\lang16393 In JavaScript (and functional programming), pure and impure functions are classified based on side effects and input-output consistency.\line\line\b Pure Function\par
+\b0 A pure function always:\par
+Returns the same output for the same input\par
+Does not cause any side effects (like modifying global variables, DOM, or external state)\line\cf3\f5 function add(a, b) \{\par
+  return a + b;\par
+\}\par
+console.log(add(2, 3)); // 5\par
+console.log(add(2, 3)); // Always 5\line\cf0\f2 It doesn\f4\rquote\f2 t change external data, and its output only depends on the inputs.\line\line\b Impure Function\line\b0 An impure function:\par
+May return different results for the same input\par
+May cause side effects, such as modifying global variables, logs, API calls, DOM manipulation, etc.\par
+\par
+\cf3\f5 let count = 0;\par
+\par
+function increment() \{\par
+  count++;\par
+  return count;\par
+\}\par
+\par
+console.log(increment()); // 1\par
+
+\pard\sa200\sl276\slmult1 console.log(increment()); // 2\line\line\cf0\f6\u10060?\f7  \f5 It relies on and modifies a global variable (count), making it impure.\line\line\b\f2\lang9 10. What is currying in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 Currying is the technique of transforming a function with multiple arguments into a sequence of functions\line\line Example (Normal Function):\line\cf3\f5 function add(a, b) \{\par
+  return a + b;\par
+\}\par
+\par
+add(2, 3); // 5\line\cf0\f2\line Curried Version:\line\cf3\f5 function curriedAdd(a) \{\par
+  return function(b) \{\par
+    return a + b;\par
+  \};\par
+\}\par
+
+\pard\sa200\sl276\slmult1 curriedAdd(2)(3); // 5\line\line\cf0\b\f2\lang9 11. What are call(), apply(), and bind() methods?\par
+
+\pard\sl276\slmult1\b0\lang16393 These three methods are used to set the this context explicitly in JavaScript functions.They allow functions to be reused across different objects.\par
+
+\pard\sa200\sl276\slmult1\line\line\b\lang9 12. What is the difference between the rest (...args) and spread (...array) operators?\par
+
+\pard\sl276\slmult1\b0\lang16393 Though rest and spread use the same ... syntax, they serve opposite purposes in JavaScript:\line\line\b Rest Operator (...args)\par
+\b0 Gathers multiple values into a single array\par
+Used in function parameters\par
+Used to collect remaining elements\line\cf3\f5\line function sum(...numbers) \{\par
+  return numbers.reduce((acc, num) => acc + num, 0);\par
+\}\par
+\cf0\f2\par
+\cf3\f5 sum(1, 2, 3); // 6\line\cf0 Here, ...numbers collects all arguments into an array.\line\f2\line\cf3\f5 function greet(greeting, ...names) \{\par
+  names.forEach(name => console.log(`$\{greeting\}, $\{name\}`));\par
+\}\par
+\cf0\f2\line\line\b Spread Operator (...array)\line\b0 Expands (spreads) elements of an array or object into individual elements\par
+Used in function calls, arrays, and object literals\line Example (Array):\line\cf3\f5 const nums = [1, 2, 3];\par
+
+\pard\sa200\sl276\slmult1 console.log(...nums); // 1 2 3\line\cf0\f2\line\b\lang9 13. What is the purpose of the defer keyword in a <script> tag?\par
+
+\pard\sl276\slmult1\b0\lang16393 The defer keyword is used in the <script> tag to delay the execution of the JavaScript code until after the HTML document has been fully parsed.\par
+
+\pard\sa200\sl276\slmult1\line\b\lang9 14. What is the difference between local storage, session storage, and cookies?\par
+
+\pard\sl276\slmult1\b0\lang16393 These are all ways to store data in the browser, but they differ in storage capacity, lifetime, accessibility, and use cases.\line\line\b Storage Limit\b0 : localStorage (~5\f4\endash 10 MB), sessionStorage (~5 MB), cookies (~4 KB).\par
+\b Lifetime\b0 : localStorage (until manually cleared), sessionStorage (until tab/window closes), cookies (based on expiry or session).\par
+\b Accessibility\b0 : localStorage and sessionStorage (JavaScript, same origin), cookies (sent with every HTTP request).\par
+\b Use Case\b0 : localStorage (long-term client data), sessionStorage (tab-specific temporary data), cookies (authentication, server communication).\line\line\b\f2\lang9 15. Explain JavaScript's single-threaded model\line\b0\f9\fs22\line\f2\fs24 JavaScript uses a single-threaded model, meaning it can execute one command at a time in a single thread \f4\par
+\b\f2\line 16.What is the call stack and the task queue?\par
+\lang16393 Call Stack\par
+\b0 The Call Stack is where JavaScript keeps track of the functions that are currently being called.\par
+\par
+\b Key Points:\par
+\b0 Works in LIFO (Last In, First Out) order.\par
+Every time a function is called, it's pushed to the stack.\par
+When the function finishes, it's popped off the stack.\par
+JavaScript is single-threaded, so only one task runs at a time in the call stack.\par
+\par
+\cf3\f10\u-10179?\u-8921?\f7  \f5 Example:\par
+function greet() \{\par
+  console.log("Hello");\par
+\}\par
+greet();\par
+greet() is pushed to the stack \f8\u8594?\f7  \f5 runs \f8\u8594?\f7  \f5 logs "Hello" \f8\u8594?\f7  \f5 popped off the stack.\par
+\cf0\f2\par
+\b Task Queue (Event Queue)\par
+\b0 The Task Queue is where asynchronous callbacks wait to be executed after the call stack is empty.\par
+\par
+\b Key Points:\par
+\b0 Holds things like setTimeout, DOM events, and message events.\par
+The Event Loop checks the queue and moves tasks to the call stack when it's free.\par
+\par
+\cf3\f10\u-10179?\u-8921?\f7  \f5 Example:\par
+console.log("A");\par
+\par
+setTimeout(() => \{\par
+  console.log("B");\par
+\}, 0);\par
+\par
+console.log("C");\par
+\cf0\f2\par
+\b Execution:\par
+\b0 "A" \f8\u8594?\f4  \f2 printed from stack.\par
+setTimeout callback \f8\u8594?\f4  \f2 goes to Task Queue.\par
+"C" \f8\u8594?\f4  \f2 printed from stack.\par
+Stack is now empty \f8\u8594?\f4  \f2 Event Loop moves "B" to stack \f8\u8594?\f4  \f2 printed.\par
+\par
+Output:\par
+A\par
+C\par
+B\par
+
+\pard\sa200\sl276\slmult1\f4\lang16393\line\b\f2\lang9 17. What is the difference between the call stack and the event queue?\par
+
+\pard\sl276\slmult1\b0\lang16393 The call stack holds and executes synchronous functions in a LIFO manner, while the event queue holds asynchronous callbacks waiting to be pushed into the call stack when it's empty.\line\par
+\b Purpose\b0 : Call Stack executes synchronous code, while Event Queue stores async callbacks (e.g., setTimeout).\par
+\b Order\b0 : Call Stack follows LIFO (Last In, First Out); Event Queue follows FIFO (First In, First Out).\par
+\b Triggered By\b0 : Call Stack is triggered by function calls; Event Queue by Web APIs and async operations.\par
+\b When Processed\b0 : Call Stack runs code immediately; Event Queue is processed when the call stack is empty (via event loop).\par
+
+\pard\sa200\sl276\slmult1\b Example Use Case\b0 : Call Stack \f4\endash  console.log(), function calls; Event Queue \endash  setTimeout, fetch, event listeners.\b\f2\lang9\line\line\b0\f14\fs22\line\b\f9\fs24 18. What is the event loop in JavaScript?\par
+
+\pard\sl276\slmult1\b0\f2\lang16393 The event loop pushes tasks from the task queue into the call stack once the stack is empty, allowing asynchronous operations like setTimeout, fetch, and event listeners to execute after synchronous code.\line How It Works:\par
+Synchronous code runs in the call stack.\par
+Asynchronous operations (e.g., setTimeout) are handled by Web APIs.\par
+Their callbacks go to the task queue once completed.\par
+The event loop checks if the call stack is empty.\par
+If empty, it moves a task from the task queue to the call stack for execution.\line\f10\u-10179?\u-8986?\f4  \f2 Example:\line\cf3\f5 console.log("A");\par
+\par
+setTimeout(() => \{\par
+  console.log("B");\par
+\}, 0);\par
+\par
+console.log("C");\line\line\f10\u-10179?\u-8947?\f7  \f5 Output:\line A\par
+C\par
+B\line\line "A" and "C" run synchronously.\par
+
+\pard\sa200\sl276\slmult1 "B" is queued and executed later by the event loop.\line\cf0\f4\line\line\b\f2\lang9 19. How does JavaScript handle asynchronous operations?\par
+\b0\lang16393 JavaScript handles asynchronous operations using Web APIs to process tasks in the background, placing their callbacks in the event queue, which are executed by the event loop when the call stack is empty.\line\line\b\lang9 20.What is event bubbling and event capturing?\par
+
+\pard\sl276\slmult1\b0\lang16393 Event bubbling propagates the event from the target element up to the root, while event capturing (also called trickling) propagates the event from the root down to the target element.\line\line\b Direction\b0 : Event Capturing flows from top to target (outer \f8\u8594?\f4  \f2 inner), while Event Bubbling flows from target to top (inner \f8\u8594?\f4  \f2 outer).\par
+\b Order of Handling\b0 : Capturing handles parent first then child, bubbling handles child first then parent.\par
+\b Default Behavior\b0 : Capturing is not default; bubbling is the default in JavaScript.\par
+
+\pard\sa200\sl276\slmult1\line\line\b\lang9 21. What is event delegation in JavaScript?\par
+\b0 Event delegation is a technique where a single event listener is added to a parent element to handle events on its child elements using event bubbling.\line\f9\fs22\line\b\f2\fs24 22. How does event delegation improve performance?\line\b0 Event delegation improves performance by reducing the number of event listeners, handling all child events with a single listener on the parent, which minimizes memory usage and speeds up event handling\f4\emdash\f2 especially for dynamic or many elements.\line\f14\fs22\line\b\f2\fs24 23. Why do we use callbacks?\par
+\b0 We use callbacks to handle asynchronous operations and ensure that a function is executed only after another function finishes, \par
+\line\cf3\f5\fs22 function fetchData(callback) \{\par
+  setTimeout(() => \{\par
+    console.log("Data fetched");\par
+    callback();\par
+  \}, 1000);\par
+\}\par
+fetchData(() => \{\par
+  console.log("Callback executed");\par
+\});\par
+\cf0\f2\fs24\lang16393\line\b\lang9 24. What are promises in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 A Promise is like a placeholder for a value that will get in the future\line\f4\line\f10\u-10179?\u-8986?\f4  \f2 Example:\line\cf3\f5\lang9 const customPromise = new Promise((resolve, reject) => \{\par
+  const success = true;\par
+\par
+  setTimeout(() => \{\par
+    if (success) \{\par
+      resolve("\f6\u9989?\f7  \f5 Promise resolved successfully!");\par
+    \} else \{\par
+      reject("\f6\u10060?\f7  \f5 Promise rejected with an error!");\par
+    \}\par
+  \}, 1000);\par
+\});\par
+\cf0\f2\par
+\cf3\f5 customPromise\par
+  .then((result) => console.log(result))\par
+
+\pard\sa200\sl276\slmult1   .catch((error) => console.error(error));\line\cf0\f2\lang16393\line\b\lang9 25. What are the different states of a promise?\par
+
+\pard\sl276\slmult1\f12\lang16393\u-10178?\u-8736?\f4  \f2 States of a Promise:\par
+\b0 Pending \f4\endash  initial state, not yet resolved or rejected.\par
+Fulfilled \endash  operation completed successfully.\par
+Rejected \endash  operation failed with an error.\line\par
+
+\pard\sa200\sl276\slmult1\b\f2\lang9 26. What is the difference between Promise.all() and Promise.allSettled()?\par
+\b0\lang16393 Promise.all() waits for all promises to fulfill and rejects if any one fails. \line Promise.allSettled() waits for all promises to settle (either fulfilled or rejected) and returns their status.\f15\par
+\b\f2\lang9 27. What is callback hell, and how do we avoid it?\par
+
+\pard\sl276\slmult1\b0\lang16393 Callback hell is a situation where callbacks are nested deeply and unreadably, making code hard to maintain; we avoid it using Promises, async/await, or modularizing functions.\line\par
+\b\lang9 28. How do async and await work? Provide an example.\par
+\b0\f16\line\b\f2 29. What is the difference between promise chaining and async/await?\line\b0 Promise chaining uses .then() for sequential async operations, while async/await uses a more readable, synchronous-like syntax built on top of promises.\par
+\line\b Syntax\b0 : Promise chaining uses .then() and .catch(), while async/await uses async functions with await.\par
+\b Readability\b0 : Promise chaining can become nested and harder to follow, async/await is cleaner and easier to read.\par
+\b Error Handling\b0 : Promise chaining uses .catch(), async/await uses try...catch.\par
+
+\pard\sa200\sl276\slmult1 Underlying Mechanism: Both are based on Promises, with async/await offering syntactic sugar.\par
+\lang16393\line\b\lang9 30. What is a WeakMap in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 A WeakMap in JavaScript is a collection of key-value pairs where keys must be objects and are weakly referenced, meaning they don't prevent garbage collection.\line\line\f12\u-10179?\u-8986?\f11  Example:\line\cf3\f5 let obj = \{\};\par
+const map = newMap();\line weakMap.set(obj, "Hello");\par
+\par
+console.log(map)\par
+\par
+\cf0\b\f12\u-10179?\u-8986?\f11  Example:\cf3\b0\f5\par
+let obj = \{\};\par
+const weakMap = new WeakMap();\line weakMap.set(obj, "Hello");\par
+\par
+console.log(weakMap)\par
+
+\pard\sa200\sl276\slmult1\line\cf0\f11\line\b\f2\lang9 31. What is a WeakSet in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 A WeakSet in JavaScript is a collection of objects only, where each object is weakly referenced \f4\emdash  they do not prevent garbage collection.\par
+\f2\par
+\b\f12\u-10179?\u-8986?\f11  Example:\line\cf3\b0\f5 let user = \{ name: "Neel" \};\par
+const set = new Set();\line weakSet.add(user);\par
+\par
+console.log(set)\par
+\par
+\cf0\b\f12\u-10179?\u-8986?\f11  Example:\cf3\b0\f5\par
+let user = \{ name: "Neel" \};\par
+const weakSet = new WeakSet();\line weakSet.add(user);\par
+\par
+console.log(weakSet )\par
+\cf0\f11\line\line\b\f2\fs22\lang9 32. What is a polyfill in JavaScript?\par
+\b0\fs24\lang16393 A polyfill is a piece of code (usually JavaScript) that implements modern features in older browsers that do not natively support them.\par
+
+\pard\sa200\sl276\slmult1\f11\line\b\f2\lang9 33. What is ES6, and what are its key features?\par
+
+\pard\sl276\slmult1\b0\lang16393 ES6 (ECMAScript 2015) is a major update to JavaScript that introduced modern syntax and powerful features to make code more readable, maintainable, and efficient.\line\line\b Key Features of ES6:\par
+\b0 let and const \f4\endash  Block-scoped variable declarations.\par
+Arrow Functions (=>) \endash  Shorter syntax for functions with lexical this.\par
+Template Literals \endash  String interpolation using backticks (`Hello $\{name\}`).\par
+Destructuring \endash  Unpack values from arrays or objects into variables.\par
+Default Parameters \endash  Assign default values to function parameters.\par
+Rest & Spread Operators (...) \endash  Handle variable-length arguments and expand arrays/objects.\par
+Classes \endash  Cleaner, class-based syntax for OOP.\par
+Modules \endash  import and export for modular code.\par
+Promises \endash  Native support for asynchronous programming.\par
+
+\pard\sa200\sl276\slmult1 Enhanced Object Literals \endash  Shorter syntax for defining objects.\line\line\line\b\f2\lang9 34. Define a transpiler and a compiler in the context of JavaScript.\par
+
+\pard\keep\keepn\sb200\sl276\slmult1\b0\lang16393 A transpiler converts JavaScript code from one version to another (e.g., ES6 to ES5), \line while a compiler translates code from one language to another (e.g., TypeScript to JavaScript).\line\line\line\cf1\b\f1\fs26\lang9 Advanced Level JavaScript Interview Questions\par
+
+\pard\sa200\sl276\slmult1\cf0\b0\f9\fs22\par
+\f2\fs24\lang16393\line\b\lang9 1. What is debouncing and how does it work?\line\line\b0 Debouncing means doing something only after a short wait, \line to avoid multiplecalls.\line\line we are typing in a search box. Without debouncing, it might search every time you type a letter. \line\line\cf3\f5 function debounce(func, delay) \{\par
+  let timer;\par
+  return function () \{\par
+    clearTimeout(timer);\par
+    timer = setTimeout(func, delay);\par
+  \};\par
+\}\par
+function sayHello() \{\par
+  console.log("Hello!");\par
+\}\par
+const debouncedHello = debounce(sayHello, 1000);\line debounceFunc()\par
+\cf0 // Now if you call debouncedHello many times quickly,\par
+// "Hello!" will only print once, after 1 second of no calls.\par
+\f2\lang16393\line\b\lang9 2. What is throttling and how does it work?\par
+\b0 Throttling means limiting how often a function runs \f4\emdash  even if it\rquote s called many times quickly, it will run only once every set time\f2\lang16393\par
+
+\pard\sl276\slmult1 Without throttling: it may run the scroll function 100s of times per second (bad for performance).\par
+With throttling: it runs the function once every 500ms, no matter how fast you scroll.\par
+\par
+
+\pard\sa200\sl276\slmult1\b\lang9 3.What is the difference between debouncing and throttling?\b0\lang16393\par
+
+\pard\sl276\slmult1 Debouncing vs Throttling (One-Liners)\par
+\b Meaning:\par
+\b0 Debouncing waits until the user stops; throttling runs at fixed intervals.\par
+\b When it runs:\par
+\b0 Debouncing runs after a pause; throttling runs every X milliseconds.\par
+\b Extra calls:\par
+\b0 Debouncing cancels extra calls; throttling ignores them until time is up.\par
+\b Use case:\par
+\b0 Debouncing is great for search inputs; throttling is best for scroll or resize.\par
+\b Goal:\par
+\b0 Debouncing avoids too many calls; throttling limits how often calls happen.\line\line\b 4.\lang9 How to create a custom promise?\line\b0\f9\fs22\line\f2\fs24 we can create a custom promise using the new Promise() constructor, which takes a function with resolve and reject parameters to control the async result.\line\line Example: Basic Custom Promise\line\line\cf3\f5 const customPromise = new Promise((resolve, reject) => \{\par
+  const success = true;\par
+\par
+  setTimeout(() => \{\par
+    if (success) \{\par
+      resolve("\f6\u9989?\f7  \f5 Promise resolved successfully!");\par
+    \} else \{\par
+      reject("\f6\u10060?\f7  \f5 Promise rejected with an error!");\par
+    \}\par
+  \}, 1000);\par
+\});\par
+\cf0\f2\par
+\cf3\f5 customPromise\par
+  .then((result) => console.log(result))\par
+  .catch((error) => console.error(error));\line\cf0\f2\line\par
+}
+ 

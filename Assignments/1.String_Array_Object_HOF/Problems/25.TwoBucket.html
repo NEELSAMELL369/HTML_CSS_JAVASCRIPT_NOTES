@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Two Bucket Problem - Problem Statement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        h3 {
+            color: #34495e;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚰 Two Bucket Problem</h1>
+
+        <h3>Description</h3>
+        <p>
+            You are given two buckets with capacities <code>bucket1</code> and <code>bucket2</code> (in liters), and a
+            target volume <code>target</code>.
+            Your goal is to measure exactly <code>target</code> liters using the two buckets.
+        </p>
+
+        <p>
+            You can perform the following operations:
+        <ul>
+            <li>Fill either bucket completely.</li>
+            <li>Empty either bucket.</li>
+            <li>Pour water from one bucket into the other until one is empty or the other is full.</li>
+        </ul>
+        </p>
+
+        <p>
+            Write a function to find the <strong>minimum number of steps</strong> required to measure exactly
+            <code>target</code> liters of water.
+        </p>
+
+        <h3>Input Format</h3>
+        <p>Three integers: <code>bucket1</code>, <code>bucket2</code>, and <code>target</code></p>
+
+        <h3>Constraints</h3>
+        <ul>
+            <li>1 ≤ bucket1, bucket2 ≤ 10<sup>4</sup></li>
+            <li>1 ≤ target ≤ max(bucket1, bucket2)</li>
+            <li>The target must be measurable using the two buckets (i.e., target is a multiple of GCD of bucket1 and
+                bucket2).</li>
+        </ul>
+
+        <h3>Output Format</h3>
+        <p>An integer: the minimum number of steps to get exactly <code>target</code> liters.</p>
+
+        <h3>Sample Input</h3>
+        <pre>
+const a = [3, 5];
+const b = [3, 6];
+
+const res = canPourIntoTwoBuckets(a, b);
+console.log(res);
+    </pre>
+
+        <h3>Sample Output</h3>
+        <pre>
+6
+    </pre>
+
+        <h3>Explanation</h3>
+        <p>
+            Steps to get 4 liters using 3L and 5L buckets:
+        <ol>
+            <li>Fill 5L bucket (5, 0)</li>
+            <li>Pour from 5L into 3L (2, 3)</li>
+            <li>Empty 3L (2, 0)</li>
+            <li>Pour from 5L to 3L (0, 2)</li>
+            <li>Fill 5L (5, 2)</li>
+            <li>Pour from 5L to 3L (4, 3)</li>
+        </ol>
+        Total steps: <strong>6</strong>
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Title</h2>
+        <p>Book Management System</p>
+        <h2>Level</h2>
+        <p>Easy</p>
+        <h2>Overview</h2>
+        <p>You are developing a simple application to manage and display information about a collection of books. This
+            task involves implementing the system using JavaScript features including constructor functions, prototypes,
+            module import/export, and array methods like map.</p>
+        <h2>Detailed Explanation</h2>
+        <h3>Topics</h3>
+        <ul>
+            <li>Module Import/Export</li>
+            <li>JavaScript Constructor Functions</li>
+            <li>Prototypes</li>
+            <li>Array Methods (map)</li>
+        </ul>
+        <h2>Setup Guidelines and Instructions</h2>
+        <ol>
+            <li>Use any JavaScript environment or IDE to implement the solution.</li>
+            <li>Create separate JavaScript files for modules.</li>
+            <li>Write comments to explain the logic and flow of your code.</li>
+        </ol>
+        <h2>Problem Statement</h2>
+        <h3>Book Constructor:</h3>
+        <ul>
+            <li>Create a constructor function Book with the following properties:</li>
+            <ul>
+                <li>title (string): the title of the book</li>
+                <li>author (string): the author of the book</li>
+                <li>year (number): the year the book was published</li>
+            </ul>
+        </ul>
+        <h3>Book Prototype Method:</h3>
+        <ul>
+            <li>Add a method to Book.prototype called getSummary that returns a string: "[title] by [author], published
+                in [year]".</li>
+        </ul>
+        <h3>books.js Module:</h3>
+        <ul>
+            <li>Create a module books.js that: </li>
+            <ul>
+                <li>Defines and exports an array of Book instances representing a collection of books.
+                </li>
+            </ul>
+        </ul>
+        <h3>app.js Module:</h3>
+        <ul>
+            <li>Create another module app.js that:</li>
+            <ul>
+                <li>Imports the array of Book instances from books.js.</li>
+                <li>Uses Array.prototype.map to create an array of book summaries by calling the getSummary method on each book.</li>
+                <li>Logs the array of book summaries to the console.</li>
+            </ul>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .box {
+            color: #000;
+            border-style: solid;
+            margin-bottom: 30px;
+        }
+
+        .box1 {
+            background-color: #cceeff;
+            width: 300px;
+            padding: 20px;
+            border: 5px solid #3399ff;
+            margin: 20px;
+            box-sizing: content-box;
+            /* Default */
+        }
+
+        .box2 {
+            background-color: #ccffcc;
+            width: 300px;
+            padding: 20px;
+            border: 5px dashed #33cc33;
+            margin: 30px;
+            box-sizing: border-box;
+        }
+
+        .box3 {
+            background-color: #ffcccc;
+            width: 250px;
+            padding: 10px;
+            border: 3px dotted #ff6666;
+            margin: 40px;
+            /* No box-sizing, defaults to content-box */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Box Model Demonstration</h1>
+
+    <div class="box box1">
+        <p>This is Box 1 using <strong>content-box</strong> (default). Padding and border add to total size.</p>
+    </div>
+
+    <div class="box box2">
+        <p>This is Box 2 using <strong>border-box</strong>. Total width includes padding and border.</p>
+    </div>
+
+    <div class="box box3">
+        <p>This is Box 3 with default box-sizing (content-box). Margins and border are clearly visible.</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+
+            padding-inline: 300px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <h2>Title</h2>
+        <p>Object creation using Constructor function</p>
+        <hr>
+        <h2>Level</h2>
+        <p>Level 1</p>
+        <h2>Overview</h2>
+        <p>In this assignment, you will implement factory function,constructor function, ES6 class and also .call() ,
+            .apply()</p>
+
+        <h2>Detailed Explanation</h2>
+        <h3>Topics</h3>
+        <ul>
+            <li>factory fucntion</li>
+            <li>constructor function</li>
+            <li>ES6 class</li>
+            <li>.call()</li>
+            <li>.apply()</li>
+        </ul>
+        <h3>factory function to an ES6 class</h3>
+        <p>create a class AnimalES6 that can be used to create animal objects in bulk quantity.</p>
+        <p>animal</p>
+        <div style="border: 1px solid black;background-color: rgb(237, 237, 237); padding: 20px;">
+            ├── noOfLegs <number> <br>
+                ├── vegetarian <boolean> <br>
+                    ├── eat() <function that returns `eating...`> <br>
+                        └── greet() <function that returns `Hi, I have {noOfLegs} legs.`> <br>
+        </div>
+        <ul>
+            <li>define an animal factory function that takes input as</li>
+            <ul>
+                <li>noOfLegs (number)</li>
+                <li>vegetarian (boolean)</li>
+            </ul>
+        </ul>
+        <ul>
+            <li>Every animal object it creates has the following</li>
+            <ul>
+                <li>properties: noOfLegs, vegetarian</li>
+                <li>methods:</li>
+                <ul>
+                    <li>eat - return "eating..."</li>
+                    <li>greet - return "Hi, I have ${noOfLegs} legs."</li>
+                </ul>
+            </ul>
+        </ul>
+        <div style="border: 1px solid black;background-color: rgb(237, 237, 237); padding: 20px;">
+            let a1 = animal(4, true); <br>
+            console.log(a1.eat()); // eating... <br>
+            console.log(a1.greet()); // Hi, I have 4 legs. <br>
+
+        </div>
+    </div>
+</body>
+
+</html>

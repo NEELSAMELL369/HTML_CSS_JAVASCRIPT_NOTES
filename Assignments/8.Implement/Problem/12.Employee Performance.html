@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Performance Evaluation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        pre {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        .highlight {
+            background-color: #e8f4ff;
+            padding: 0.3rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>L1 - Employee Performance Evaluation System</h1>
+
+    <h2>Problem Statement:</h2>
+    <p>
+        You are tasked with building an <strong>Employee Performance Evaluation System</strong>.
+        You have an array of employee objects, where each employee has the following properties:
+        <span class="highlight">name</span>, <span class="highlight">tasksCompleted</span>, and <span
+            class="highlight">rating</span>.
+    </p>
+
+    <h2>Steps:</h2>
+    <ul>
+        <li>Filter the employees who have completed more than 5 tasks.</li>
+        <li>Map the filtered employees to a new array that contains only the employee's name and their performance
+            level:</li>
+        <ul>
+            <li>If rating is above 4.5 → <strong>“Excellent”</strong></li>
+            <li>If rating is between 3 and 4.5 (inclusive) → <strong>“Good”</strong></li>
+            <li>Otherwise → <strong>“Needs Improvement”</strong></li>
+        </ul>
+        <li>Sort the final array in descending order based on performance level: <strong>Excellent → Good → Needs
+                Improvement</strong></li>
+        <li>Return the final sorted array containing employee names and their performance levels.</li>
+    </ul>
+
+    <h2>Example:</h2>
+    <pre><code>Input:
+[
+  { name: "Alice", tasksCompleted: 8, rating: 4.7 },
+  { name: "Bob", tasksCompleted: 4, rating: 4.0 },
+  { name: "Charlie", tasksCompleted: 6, rating: 3.5 },
+  { name: "David", tasksCompleted: 10, rating: 4.9 },
+  { name: "Eve", tasksCompleted: 7, rating: 2.8 }
+]
+
+Output:
+[
+  { name: "David", performance: "Excellent" },
+  { name: "Alice", performance: "Excellent" },
+  { name: "Charlie", performance: "Good" }
+]
+</code></pre>
+
+</body>
+
+</html>

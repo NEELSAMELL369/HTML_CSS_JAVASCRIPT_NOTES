@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sentence Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>L2 - Dynamic Object Methods for Sentence Generation</h2>
+
+    <h2>Problem Statement:</h2>
+    <p>You are tasked with building an object called <code>sentenceBuilder</code> that dynamically generates a sentence
+        based on its properties and methods. The object should have the following structure:</p>
+
+    <h3>1. Properties:</h3>
+    <ul>
+        <li><strong>subject</strong>: A string representing the subject of the sentence (e.g., <code>"I"</code>,
+            <code>"The cat"</code>).</li>
+        <li><strong>verb</strong>: A string representing the action (e.g., <code>"am"</code>,
+            <code>"is running"</code>).</li>
+        <li><strong>object</strong>: A string representing the object of the sentence (e.g., <code>"coding"</code>,
+            <code>"on the roof"</code>).</li>
+    </ul>
+
+    <h3>2. Methods:</h3>
+    <ul>
+        <li><code>buildSentence()</code>: This method should return a full sentence in the format:
+            <code>"subject verb object"</code>. If any of the properties (<code>subject</code>, <code>verb</code>,
+            <code>object</code>) are missing, it should return a default sentence: <code>"Incomplete sentence"</code>.
+        </li>
+        <li><code>updateProperty(property, value)</code>: This method should allow the user to update any of the
+            properties (<code>subject</code>, <code>verb</code>, or <code>object</code>) dynamically using string
+            concatenation. It should check if the property exists and update it, otherwise return
+            <code>"Invalid property"</code>.</li>
+    </ul>
+
+    <h3>3. Additional Constraints:</h3>
+    <ul>
+        <li>Use ternary operators to check if properties are present when building the sentence.</li>
+        <li>Use string concatenation to form the sentence.</li>
+    </ul>
+</body>
+
+</html>

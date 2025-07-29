@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L1 - Encapsulating Bank Account using Closures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    .container {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    code {
+      background-color: #f0f0f0;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 12px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Q13 - L1: Encapsulating Bank Account using Closures</h1>
+
+    <div class="section">
+      <h2>Problem Statement:</h2>
+      <p>
+        Create a closure that represents a bank account. Implement a function <code>createBankAccount</code> that initializes an account with a balance (input by the user) and returns methods to <code>deposit</code>, <code>withdraw</code>, and <code>getBalance</code>. Ensure that the balance cannot be accessed or modified directly from outside the closure.
+      </p>
+      <ul>
+        <li><code>deposit(amount)</code>: Increases the balance by the given amount.</li>
+        <li><code>withdraw(amount)</code>: Decreases the balance by the given amount, if there are sufficient funds.</li>
+        <li><code>getBalance()</code>: Returns the current balance.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Example:</h2>
+      <pre><code>
+const account = createBankAccount(100);
+
+console.log(account.deposit(50));    // Output: 150
+console.log(account.withdraw(30));   // Output: 120
+console.log(account.getBalance());   // Output: 120
+      </code></pre>
+    </div>
+
+    <div class="section">
+      <h2>Objective:</h2>
+      <p>Use JavaScript closures to encapsulate private variables and expose public methods, demonstrating data privacy.</p>
+    </div>
+  </div>
+</body>
+</html>

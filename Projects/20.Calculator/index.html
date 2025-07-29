@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="display" disabled>
+        <div class="buttons">   
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendVal('(')">(</button>
+            <button onclick="appendVal(')')">)</button>
+            <button onclick="appendVal('-')">-</button>
+    
+            <button onclick="appendVal('1')">1</button>
+            <button onclick="appendVal('4')">4</button>
+            <button onclick="appendVal('7')">7</button>
+            <button onclick="appendVal('+')">+</button>
+    
+            <button onclick="appendVal('2')">2</button>
+            <button onclick="appendVal('5')">5</button>
+            <button onclick="appendVal('8')">8</button>
+            <button onclick="appendVal('/')">/</button>
+
+            <button onclick="appendVal('3')">3</button>
+            <button onclick="appendVal('6')">6</button>
+            <button onclick="appendVal('9')">9</button>
+            <button onclick="appendVal('*')">*</button>
+
+            <button onclick="appendVal('0')">0</button>
+            <button onclick="appendVal('%')">%</button>
+            <button onclick="appendVal('.')">.</button>
+            <button onclick="displayResult()">=</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"> </script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q12 - L0: Fixing Array and Object Operations</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 30px;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code, pre {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      display: block;
+      overflow-x: auto;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Q: 12 - L0: Fixing Array and Object Operations</h1>
+
+  <div class="section">
+    <h2>🧠 Problem Statement:</h2>
+    <p>
+      You have been provided with a script that is intended to handle a system for tracking book collections in a small library. The script uses arrays and objects to manage information but contains logical errors and syntax misuse, especially around ES6 features.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>💻 Code Sample:</h2>
+    <pre><code>const library = {
+  books: [{ title: "The Hobbit", author: "J.R.R. Tolkien", year: 1937 }],
+
+  addBook(book) {
+    if (!book.title || !book.author || !book.year) {
+      console.log("Book information is incomplete.");
+      return;
+    }
+    this.books.push(book);
+  },
+
+  findBookByTitle(title) {
+    return this.books.find(book => book.title === title);
+  },
+
+  removeBook(title) {
+    const index = this.books.findIndex(book => book.title === title);
+    if (index !== -1) {
+      this.books.splice(index, 1);
+    } else {
+      console.log("Book not found.");
+    }
+  }
+};
+
+library.addBook({ author: "George Orwell", year: 1949 });
+
+console.log(library.books.length);
+</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>📝 Tasks:</h2>
+    <ol>
+      <li>🔍 <strong>Debug and improve</strong> the <code>addBook</code> method to ensure all books added are valid and fully specified.</li>
+      <li>📚 <strong>Read about</strong> <code>Array.prototype.find</code> and <code>findIndex</code> methods on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN Web Docs</a>.</li>
+      <li>✅ <strong>Review and correct</strong> the output of the system based on operations performed (e.g., failed insertions).</li>
+      <li>🛠️ <strong>Refactor the code</strong> for better error handling and data integrity. Consider using try/catch or validations.</li>
+    </ol>
+  </div>
+
+</body>
+</html>

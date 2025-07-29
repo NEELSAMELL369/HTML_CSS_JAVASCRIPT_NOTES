@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Title</h2>
+        <hr>
+        <p>Higher-Order Functions Assignmentx`</p>
+        <h2>Level</h2>
+        <p>Level 1</p>
+        <hr>
+
+        <h2>Overview</h2>
+        <hr>
+        <p>In this assignment, you will explore higher-order functions in JavaScript. Higher-order functions are
+            functions that can take other functions as arguments or return functions as values. You will implement
+            various higher-order functions to solve specific tasks, including reduce, filter, map, and forEach
+            functions.</p>
+        <h2>Detailed Explanation</h2>
+        <hr>
+        <p>Setup Guidelines and Instructions: Initial Setup: Begin by creating a JavaScript file to write your code. You
+            can use any text editor or IDE of your choice for editing.</p>
+        <p>Running Your Code: You can run your JavaScript code in any modern browser's developer console or using
+            Node.js.</p>
+
+        <h2>Problem statement (complete the following functions).</h2>
+        <hr>
+        <h3>Implementation</h3>
+
+        <p>Input</p>
+        <p style="border: 1px solid black;background-color: rgb(231, 231, 231); padding: 30px;">
+            let subjectsHash = { <br>
+            1: "Javascript", <br>
+            2: "HTML", <br>
+            3: "CSS", <br>
+            4: "Java", <br>
+            5: "Rust", <br>
+            }; <br>
+
+            let students = [ <br>
+            { id: 1, name: "Prateek", subjectID: 5 }, <br>
+            { id: 2, name: "Yogesh", subjectID: 2 }, <br>
+            { id: 3, name: "Nrupul", subjectID: 4 }, <br>
+            { id: 4, name: "Prateek", subjectID: 1 }, <br>
+            ]; <br>
+
+
+        </p>
+        <p>Output</p>
+        <p style="border: 1px solid black;background-color: rgb(231, 231, 231); padding: 30px;">
+            { <br>
+            Prateek: ["Rust", "Javascript"], <br>
+            Yogesh: ["HTML"], <br>
+            Nrupul: ["Java"], <br>
+            }
+
+        </p>
+
+        <ul>
+            <li>create a new object called newObj using the students array &
+                the subjectsHash object.</li>
+            <li>newObj contains unique students as key and an array of subjects as value.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

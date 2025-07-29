@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Title</h2>
+    <hr>
+    <p>School information on school.js</p>
+    <h2>Level</h2>
+    <hr>
+    <p>Level 1 </p>
+    <h2>Overview </h2>
+    <hr>
+    <p>You are responsible for managing student enrollment and generating statistics for a school using multilevel
+        destructuring and other JavaScript concepts.</p>
+
+
+    <p style="border: 1px solid black; padding: 30px; background-color: gray;">Example Invocation: <br>
+        const school = { <br>
+        name: "XYZ School",<br>
+        establishYear: 1990,<br>
+        departments: {<br>
+        math: { teachers: 5, students: 150 },<br>
+        science: { teachers: 4, students: 120 },<br>
+        history: { teachers: 3, students: 100 },<br>
+        english: { teachers: 4, students: 130 },<br>
+        },<br>
+        courses: ["math", "science", "history", "english"],<br>
+        students: [<br>
+        {<br>
+        name: "Alice",<br>
+        className: "Grade 5",<br>
+        scores: { math: 95, science: 88, history: 85, english: 92 },<br>
+        },<br>
+        {<br>
+        name: "Bob",<br>
+        className: "Grade 4",<br>
+        scores: { math: 80, science: 78, history: 92, english: 85 },<br>
+        },<br>
+        {<br>
+        name: "Charlie",<br>
+        className: "Grade 5",<br>
+        scores: { math: 88, science: 90, history: 78, english: 88 },<br>
+        },<br>
+        {<br>
+        name: "Diana",<br>
+        className: "Grade 4",<br>
+        scores: { math: 92, science: 85, history: 88, english: 90 },<br>
+        },<br>
+        ],<br>
+        };<br>
+        console.log(highestStudentCountDepartment(school))
+    </p>
+    <h3>Problem: highestStudentCountDepartment</h3>
+    <ul>
+        <li>highestStudentCountDepartment that returns the department (name) with the highest number of students.
+
+        </li>
+        <li>define a highestStudentCountDepartment function that takes input as </li>
+        <ul>
+            <li>school (Object)
+            </li>
+        </ul>
+        <li>highestStudentCountDepartment return string as ${highest count dept}</li>
+    </ul>
+    <p style="border: 1px solid black; padding: 30px; background-color: gray;">
+        console.log(highestStudentCountDepartment(school));//math
+
+
+    </p>
+</body>
+
+</html>

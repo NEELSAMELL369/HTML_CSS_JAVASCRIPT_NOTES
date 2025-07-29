@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Statement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .problem-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="problem-container">
+        <h1>Title: Filter and Sort Data with Higher-Order Functions</h1>
+        <h2>Problem Statement:</h2>
+        <p>
+            You are given an array of student objects. Each student object contains a <code>name</code> and
+            <code>marks</code>.
+            Write a function <strong>processStudents</strong> that performs the following steps:
+        </p>
+        <ul>
+            <li>Filter the students who scored above 60 marks.</li>
+            <li>Sort the filtered array in descending order of marks.</li>
+            <li>Map the sorted array to extract only the names of the students.</li>
+            <li>Return the array of sorted names.</li>
+        </ul>
+
+        <h3>Example Input:</h3>
+        <pre>
+[
+  { "name": "Alice", "marks": 58 },
+  { "name": "Bob", "marks": 85 },
+  { "name": "Charlie", "marks": 92 },
+  ...
+]
+    </pre>
+
+        <h3>Expected Output:</h3>
+        <pre>
+["Hannah", "Charlie", "Mia", "Grace", "Leo", "Bob", "Olivia", "Jack", "Emma", "Nathan", "Kate", "Frank"]
+    </pre>
+    </div>
+
+</body>
+
+</html>

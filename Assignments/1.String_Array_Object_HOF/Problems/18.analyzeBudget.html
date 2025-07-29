@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            Problem : Budget Tracker with Category & Subcategory Analysis</h2>
+        <p>Description:</p>
+        <p>Given an array of transactions, each with a category, subCategory, and amount (as string with ₹), return:
+        </p>
+        <ul>
+            <li>Total spending per category</li>
+            <li>The subCategory with the highest total spend</li>
+        </ul>
+        <p>Input:</p>
+        <div style="border: 1px solid black;padding: 20px;background-color: rgb(235, 235, 235);">
+            const transaction = [ <br>
+            { name: "Rent", category: "Housing", subCategory: "Fixed", amount: "₹20000" }, <br>
+            { name: "Groceries", category: "Food", subCategory: "Essentials", amount: "₹3500" }, <br>
+            { name: "Electricity", category: "Housing", subCategory: "Utilities", amount: "₹3000" }, <br>
+            { name: "Dining Out", category: "Food", subCategory: "Leisure", amount: "₹1200" }, <br>
+            { name: "Netflix", category: "Entertainment", subCategory: "Subscriptions", amount: "₹500" }, <br>
+            { name: "Internet", category: "Housing", subCategory: "Utilities", amount: "₹999" } <br>
+            ]; <br>
+
+            console.log(analyzeBudget(input)); <br>
+
+
+        </div>
+
+        <p>Expected Output:</p>
+
+        <div style="border: 1px solid black;padding: 20px;background-color: rgb(235, 235, 235);">
+            { <br>`
+            categoryTotals: { <br>`
+            Housing: 23999, <br>`
+            Food: 4700, <br>`
+            Entertainment: 500 <br>`
+            }, <br>`
+            maxSubCategory: "Fixed", <br>`
+            maxSubAmount: 20000 <br>`
+            } <br>`
+
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>

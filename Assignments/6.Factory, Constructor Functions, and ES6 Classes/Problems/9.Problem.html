@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+
+            padding-inline: 300px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <div>
+            <h2>Problem Statement</h2>
+            <p>You are tasked with developing a car simulation system in JavaScript. The system should manage a car
+                object with various properties and methods to simulate its behavior. Specifically, you need to create a
+                Car class using the ES6 class syntax with properties for the car's name, accelerationPower (a numerical
+                value representing the car's ability to increase its speed over time, measured in meters per second
+                squared), brakingPower (a numerical value representing the car's ability to decrease its speed
+                effectively, measured in meters per second squared), and speed (the current speed of the car, which
+                starts at 0, measured in meters per second). <br>  <br>
+
+                The class should include methods to accelerate and brake the car. The accelerate method should increase
+                the car's speed based on its accelerationPower and log "Accelerating" along with the current speed to
+                the console. The brake method should decrease the car's speed based on its brakingPower, ensuring the
+                speed does not go below zero, and log "Brakes applied" along with the current speed to the console.
+                Additionally, implement methods to check the car's current speed, refuel the car (assuming a maximum
+                fuel capacity and a method to consume fuel while driving), and simulate a driving session over a period
+                of time where the car accelerates and brakes at certain intervals.  <br>  <br>
+
+                Your task is to implement the Car class with the following methods:  <br>  <br>
+
+                accelerate: Increase the speed by accelerationPower and log "Accelerating" along with the current speed.
+                brake: Decrease the speed by brakingPower, ensuring the speed does not drop below zero, and log "Brakes
+                applied" along with the current speed. checkSpeed: Return the current speed of the car. refuel: Increase
+                the fuel level to its maximum capacity and log "Refueled to maximum capacity". drive: Simulate a driving
+                session where the car accelerates and brakes at specified intervals, logging the car's speed and fuel
+                level at each step. Ensure that the car's speed cannot be negative and the fuel level is managed
+                appropriately. Create instances of the Car class and test these methods to ensure proper functionality.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

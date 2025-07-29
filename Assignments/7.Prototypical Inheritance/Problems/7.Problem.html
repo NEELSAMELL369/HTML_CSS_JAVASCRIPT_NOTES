@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Title</h2>
+        <p>Book Management System</p>
+        <h2>Level</h2>
+        <p>Medium</p>
+        <h2>Overview</h2>
+        <p>In this problem, you will design and implement a simple library system that manages books and library
+            members. The system will distinguish between regular members and premium members, allowing premium members
+            to borrow more books and access special collections. This problem will test your understanding of JavaScript
+            constructor functions, prototypes, inheritance, and the use of call, apply, and bind.</p>
+        <h2>Detailed Explanation</h2>
+        <h3>Topics</h3>
+        <ul>
+            <li>JavaScript Constructor Functions</li>
+            <li>Prototypes and Inheritance</li>
+            <li>Method Overriding</li>
+            <li>Function Context (call, apply, bind)</li>
+        </ul>
+        <h2>Setup Guidelines and Instructions</h2>
+        <ol>
+            <li>Use any JavaScript environment or IDE to implement the solution.</li>
+            <li>Create separate JavaScript files or use modules to organize your code for better readability.</li>
+            <li>Write comments to explain the logic and flow of your code.</li>
+        </ol>
+        <h2>Problem Statement</h2>
+        <p>You are tasked with designing a simple library system for a small community library. The system should track
+            books and the members who borrow them. The library should have two types of members: regular members and
+            premium members. Premium members have additional privileges, such as borrowing more books and accessing
+            special collections.</p>
+        <p>To implement this system, follow these steps:</p>
+        <h3>Book Constructor:</h3>
+        <p><b>Book Constructor: </b>Create a constructor function for Book that takes the following parameters: </p>
+        <ul>
+            <li>title: the title of the book</li>
+            <li>author: the author of the book</li>
+            <li>isAvailable: a boolean indicating if the book is available for borrowing (default is true)</li>
+        </ul>
+        <p><b>Member Constructor: </b>Create a constructor function for Member that takes the following parameters:</p>
+        <ul>
+            <li>name: the name of the member</li>
+            <li>borrowedBooks: an array to store the titles of books borrowed by the member (default is an empty array)
+            </li>
+        </ul>
+        <p><b>Borrow Book Method: </b>Add a method to the Member prototype to allow members to borrow a book. This
+            method should:</p>
+        <ul>
+            <li>Take a Book object as an argument.</li>
+            <li>Check if the book is available.</li>
+            <li>If the book is available, mark it as not available and add the book's title to the member's
+                borrowedBooks array.</li>
+            <li>If the book is not available, log a message saying the book is already borrowed.</li>
+            <li>Ensure that a member can borrow no more than 3 books at a time.</li>
+        </ul>
+        <p><b>Premium Member Constructor:</b> Create a constructor function for PremiumMember that inherits from Member
+            and
+            takes the same parameters. Additionally, PremiumMember should have:</p>
+        <ul>
+            <li>A specialCollectionAccess property set to true.</li>
+        </ul>
+        <p><b>Override Borrow Book Method:</b> Override the borrowBook method in PremiumMember to allow borrowing of
+            special
+            collection books. Use call or apply to reuse the Member borrowBook method as appropriate. Also, premium
+            members can borrow up to 5 books at a time.</p>
+        <p><b>Demonstrate the Functionality:</b></p>
+        <ul>
+            <li>Create several book objects.</li>
+            <li>Create a regular member and a premium member.</li>
+            <li>Show borrowing books and the difference in behavior between regular and premium members.</li>
+            <li>Use bind to create a bound function for borrowing books for a member.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

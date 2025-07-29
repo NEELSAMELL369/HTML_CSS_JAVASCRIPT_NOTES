@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Card 2D Product Slider</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f5;
+            font-family: Arial, sans-serif;
+        }
+        .card-slider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 800px;
+        }
+        .arrow-btn {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 24px;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.2s;
+            z-index: 1;
+        }
+        .arrow-btn:hover {
+            background-color: #0056b3;
+        }
+        .arrow-btn.disabled {
+            background-color: #d1d1d1;
+            cursor: not-allowed;
+        }
+        #prevBtn {
+            left: -50px;
+        }
+        #nextBtn {
+            right: -50px;
+        }
+        .cards-container {
+            overflow: hidden;
+            width: 750px;
+            display: flex;
+            position: relative;
+        }
+        .cards {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .card {
+            width: 140px;
+            margin: 0 5px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+        .card-details {
+            padding: 10px;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .card-description {
+            font-size: 12px;
+            color: #666;
+            margin: 8px 0;
+        }
+        .card-price {
+            font-size: 14px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-slider">
+        <button class="arrow-btn" id="prevBtn">&lt;</button>
+        <div class="cards-container">
+            <div class="cards" id="cards">
+                <!-- Product cards with images and details -->
+                <div class="card">
+                    <img src="https://picsum.photos/140/100?random=1" alt="Product 1">
+                    <div class="card-details">
+                        <div class="card-title">Product 1</div>
+                        <div class="card-description">Great for daily use.</div>
+                        <div class="card-price">$29.99</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/140/100?random=2" alt="Product 2">
+                    <div class="card-details">
+                        <div class="card-title">Product 2</div>
+                        <div class="card-description">Ideal for everyone.</div>
+                        <div class="card-price">$49.99</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/140/100?random=3" alt="Product 3">
+                    <div class="card-details">
+                        <div class="card-title">Product 3</div>
+                        <div class="card-description">Experience quality.</div>
+                        <div class="card-price">$19.99</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/140/100?random=4" alt="Product 4">
+                    <div class="card-details">
+                        <div class="card-title">Product 4</div>
+                        <div class="card-description">Perfect for outdoors.</div>
+                        <div class="card-price">$39.99</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/140/100?random=5" alt="Product 5">
+                    <div class="card-details">
+                        <div class="card-title">Product 5</div>
+                        <div class="card-description">Must-have item.</div>
+                        <div class="card-price">$59.99</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/140/100?random=5" alt="Product 5">
+                    <div class="card-details">
+                        <div class="card-title">Product 5</div>
+                        <div class="card-description">Must-have item.</div>
+                        <div class="card-price">$59.99</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <button class="arrow-btn" id="nextBtn">&gt;</button>
+    </div>
+
+    <script>
+        const cards = document.getElementById('cards');
+        const cardWidth = 140 + 5 * 2; // card width (140px) + margin (5px) on each side
+        const cardCountPerView = 5;  // Number of cards visible at once
+        let currentIndex = 0;
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Function to update the slider position and button states
+        function updateSlider() {
+            // Move the cards left/right by one card width
+            cards.style.transform = `translateX(${-cardWidth * currentIndex}px)`;  
+
+            // Disable/Enable previous button
+            if (currentIndex === 0) {
+                prevBtn.classList.add('disabled');
+                prevBtn.disabled = true;
+            } else {
+                prevBtn.classList.remove('disabled');
+                prevBtn.disabled = false;
+            }
+
+            // Disable/Enable next button
+            if (currentIndex >= cards.children.length - cardCountPerView) {
+                nextBtn.classList.add('disabled');
+                nextBtn.disabled = true;
+            } else {
+                nextBtn.classList.remove('disabled');
+                nextBtn.disabled = false;
+            }
+        }
+
+        // Move to the previous card (slide one at a time)
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex -= 1;  // Slide one image at a time
+                updateSlider();
+            }
+        });
+
+        // Move to the next card (slide one at a time)
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < cards.children.length - cardCountPerView) {  // Check to avoid sliding beyond last image
+                currentIndex += 1;  // Slide one image at a time
+                updateSlider();
+            }
+        });
+
+        // Initial setup of the slider
+        updateSlider();
+    </script>
+</body>
+</html>

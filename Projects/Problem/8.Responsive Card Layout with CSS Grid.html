@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L2 - Responsive Card Layout</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f2f5;
+        }
+
+        /* Problem Box */
+        .problem-box {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .problem-box h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .problem-box h2 {
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .problem-box ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .problem-box li {
+            margin-bottom: 6px;
+        }
+
+        /* Card Layout */
+        .card-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 1024px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="problem-box">
+        <h1>L2 - Create a Responsive Card Layout with CSS Grid</h1>
+
+        <h2>Problem Statement:</h2>
+        <p>
+            Design a fully responsive card layout using CSS Grid. The layout should display cards in a grid format,
+            adjusting the number of columns based on the screen width. For example:
+        </p>
+        <ul>
+            <li><strong>Desktop:</strong> 4 columns</li>
+            <li><strong>Tablet:</strong> 2 columns</li>
+            <li><strong>Mobile:</strong> 1 column</li>
+        </ul>
+        <p>Each card should contain an image, a title, and a description.</p>
+
+        <h2>Requirements:</h2>
+        <ul>
+            <li>Use <code>display: grid</code> to create the card layout.</li>
+            <li>Define a grid template that adjusts based on the screen size using media queries.</li>
+            <li>Each card should:
+                <ul>
+                    <li>Have a fixed height and width (adjustable for smaller screens).</li>
+                    <li>Include a background color, border, and padding for spacing.</li>
+                </ul>
+            </li>
+            <li>Ensure the layout is fully responsive and visually appealing.</li>
+        </ul>
+
+        <h2>Expected Output:</h2>
+        <p>
+            A responsive card layout that adapts seamlessly to various screen sizes.
+        </p>
+    </section>
+
+
+</body>
+
+</html>

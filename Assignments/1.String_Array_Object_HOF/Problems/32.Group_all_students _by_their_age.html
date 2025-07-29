@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Group Users by Age - Problem Statement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        h3 {
+            color: #34495e;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>👥 Group Users by Age</h1>
+
+        <p>
+            Given a list of user objects where each object contains a <code>user</code> (string) and an <code>age</code>
+            (number), write a function that groups users by their age. The output should be an object where:
+        </p>
+        <ul>
+            <li>Each key is an age (as a number).</li>
+            <li>The corresponding value is an array of usernames who have that age.</li>
+        </ul>
+
+        <h3>🔍 Input Format:</h3>
+        <p>An array of objects, each with a <code>user</code> and <code>age</code> property.</p>
+
+        <h3>🎯 Output Format:</h3>
+        <p>An object where keys are ages and values are arrays of usernames.</p>
+
+        <h3>💡 Example:</h3>
+        <pre>
+Input:
+const arr = [
+    { user: "Alice", age: 25 },
+    { user: "Bob", age: 30 },
+    { user: "Charlie", age: 25 },
+    { user: "David", age: 30 },
+    { user: "Eve", age: 35 }
+];
+
+console.log(groupUsersByAge(arr));
+
+Output:
+{
+  25: ["Alice", "Charlie"],
+  30: ["Bob", "David"],
+  35: ["Eve"]
+}
+    </pre>
+
+        <h3>✅ Constraints:</h3>
+        <ul>
+            <li>1 ≤ number of users ≤ 10⁴</li>
+            <li>Usernames are non-empty strings.</li>
+            <li>Age is a positive integer.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

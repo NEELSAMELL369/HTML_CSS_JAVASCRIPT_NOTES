@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paragraph Adder and Remover</title>
+    <style>
+        #paragraph-container {
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 5px 0;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button onclick="addParagraph()">Add Paragraph</button>
+    <button onclick="removeLastParagraph()">Remove Last Paragraph</button>
+
+    <div id="paragraph-container"></div>
+
+    <script>
+
+        const container = document.getElementById('paragraph-container');
+
+
+        function addParagraph() {
+
+            const newPara = document.createElement('p');
+
+            newPara.textContent = 'This is a new paragraph.';
+
+            container.appendChild(newPara);
+        }
+
+
+        function removeLastParagraph() {
+
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

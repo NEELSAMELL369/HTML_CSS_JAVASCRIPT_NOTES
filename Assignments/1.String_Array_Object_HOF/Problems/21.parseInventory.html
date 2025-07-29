@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-inline: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Problem : Strings × Arrays × Objects × Destructuring</h2>
+        <hr>
+        <h3>Task </h3>
+        <hr>
+        <p>Write parseInventory(csv) where csv is a newline-delimited string:</p>
+        <p> "Item,Category,Qty\nKeyboard,Electronics,12\nPen,Stationery,30"</p>
+        <p>Steps: </p>
+        <ol>
+            <li>Split the string into rows & columns.</li>
+            <li>Return two results in an array via array-destructuring:</li>
+            <li>A list of objects { item, category, qty } (with qty as number).</li>
+            <li>The total quantity of all items.</li>
+        </ol>
+
+
+
+        <p>Example Input</p>
+        <div style="background-color: silver;padding: 20px;">
+            let csv = "Item,Category,Qty\nKeyboard,Electronics,12\nPen,Stationery,30" <br>
+            let res = parseInventory(csv) <br>
+            console.log(res) <br>
+
+
+
+        </div>
+        <p>​Expected Output </p>
+        <div style="background-color: silver;padding: 20px;">[
+            [ <br>
+            { item: "Keyboard", category: "Electronics", qty: 12 }, <br>
+            { item: "Pen", category: "Stationery", qty: 30 } <br>
+            ], <br>
+            42 <br>
+            ] <br>
+
+        </div>
+    </div>
+</body>
+
+</html>
