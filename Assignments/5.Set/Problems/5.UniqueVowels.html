@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Count Unique Vowels</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1,
+    h2 {
+      color: #333;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🔠 Problem: Count Unique Vowels</h1>
+
+    <h2>📖 Description</h2>
+    <p>
+      Write a function that counts the number of <strong>unique vowels</strong> present in a given string.
+      The comparison should be <strong>case-insensitive</strong>, meaning 'A' and 'a' are treated the same.
+    </p>
+    <p>
+      The valid vowels are: <code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>.
+    </p>
+
+    <h2>📥 Input Format</h2>
+    <ul>
+      <li>A single line containing the input string <code>str</code>.</li>
+    </ul>
+
+    <h2>📤 Output Format</h2>
+    <ul>
+      <li>A single integer — the count of distinct vowels present in the string.</li>
+    </ul>
+
+    <h2>🔒 Constraints</h2>
+    <ul>
+      <li><code>0 ≤ str.length ≤ 10⁴</code></li>
+    </ul>
+
+    <h2>🧪 Sample Input 1</h2>
+    <pre><code>
+let s = "Hello World"
+let res = countUniqueVowels(s)
+console.log(res);
+    </code></pre>
+
+    <h2>✅ Sample Output 1</h2>
+    <pre><code>2</code></pre>
+
+
+
+    <h2>💡 Explanation</h2>
+    <ul>
+      <li>In "Hello World", the vowels are: <code>e</code>, <code>o</code> → total = 2</li>
+      <li>In "education", all vowels <code>a, e, i, o, u</code> are present → total = 5</li>
+    </ul>
+  </div>
+</body>
+
+</html>

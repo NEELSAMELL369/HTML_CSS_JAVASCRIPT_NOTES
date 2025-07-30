@@ -6,7 +6,7 @@ function massageArray(exampleInputArray, typeOfCourse, CourseDurationDirectory, 
         // Map Category
         const category = Category[course.Category] || "";
 
-        // Map type
+        // Map type 
         const type = (typeOfCourse.find(t => t.id === course.type) || {}).name || "";
 
         // Map techTools and techdetails, filter out empty or null entries

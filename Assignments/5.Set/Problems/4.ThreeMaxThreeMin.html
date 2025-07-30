@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Three Max, Three Min Please</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 0 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .note {
+            color: #c00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔢 Problem: Three Max, Three Min Please</h1>
+
+        <h2>📝 Description</h2>
+        <p>
+            Given an array of <code>N</code> integers, print the 3 distinct maximum and 3 distinct minimum elements of
+            the array.
+        </p>
+
+        <h2>📥 Input Description</h2>
+        <p><strong>Input Format:</strong></p>
+        <ul>
+            <li>The first line contains an integer <code>N</code>.</li>
+            <li>The second line contains <code>N</code> space-separated integers — elements of the array.</li>
+        </ul>
+
+        <h2>📉 Constraints</h2>
+        <ul>
+            <li>0 ≤ <code>N</code> ≤ 100</li>
+            <li>Values in the array can be negative or positive.</li>
+        </ul>
+
+        <h2>📤 Output Description</h2>
+        <ul>
+            <li>In the first line, print the 3 <strong>least distinct</strong> values (sorted).</li>
+            <li>In the second line, print the 3 <strong>greatest distinct</strong> values (sorted).</li>
+            <li>If there are fewer than 3 distinct min or max values, print <code>Not Possible</code> instead (once for
+                each).</li>
+            <li>If both are not possible, print <code>Not Possible</code> twice (once per line).</li>
+        </ul>
+        <p class="note">Note: If there are only 2 distinct min and 2 distinct max values, print <strong>Not
+                Possible</strong> twice.</p>
+
+        <h2>🔢 Sample Input 1</h2>
+        <pre><code>
+const n = 6;
+const arr = [1,2,3,4,2,1,6,5];</code></pre>
+
+        <h2>✅ Sample Output 1</h2>
+        <pre><code>1 2 3
+4 5 6</code></pre>
+
+        <h2>📉 Example Explanation</h2>
+        <p>
+            The 3 smallest distinct values are 1, 2, 3. The 3 largest distinct values are 4, 5, 6. Both conditions are
+            satisfied.
+        </p>
+    </div>
+</body>
+
+</html>

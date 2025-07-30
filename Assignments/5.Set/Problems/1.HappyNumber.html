@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Number Problem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #d63384;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧠 Problem: Happy Number</h1>
+
+        <h2>🔍 Description</h2>
+        <p>
+            You are given an integer <code>n</code>. Your task is to determine if this number is a <strong>happy
+                number</strong>.
+        </p>
+        <p>
+            A <strong>happy number</strong> is defined as follows:
+        </p>
+        <ul>
+            <li>Start with any positive integer.</li>
+            <li>Replace the number with the <strong>sum of the squares of its digits</strong>.</li>
+            <li>Repeat the process until the number:
+                <ul>
+                    <li>Becomes <code>1</code> (it will stay there), <strong>OR</strong></li>
+                    <li><strong>Loops endlessly</strong> in a cycle that does <strong>not</strong> include
+                        <code>1</code>.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            If the number eventually becomes <code>1</code>, it is considered a <strong>happy number</strong>.
+        </p>
+
+        <h2>📥 Input Format</h2>
+        <ul>
+            <li>The first line contains an integer <code>t</code> — the number of test cases.</li>
+            <li>Each of the next <code>t</code> lines contains a single integer <code>n</code>.</li>
+        </ul>
+
+        <h2>📤 Output Format</h2>
+        <p>
+            For each test case, print:
+        </p>
+        <ul>
+            <li><code>Yes</code> if the number is a happy number.</li>
+            <li><code>No</code> otherwise.</li>
+        </ul>
+        <p>Each output should be on a new line.</p>
+
+        <h2>🔒 Constraints</h2>
+        <ul>
+            <li>1 ≤ <code>t</code> ≤ 30</li>
+            <li>1 ≤ <code>n</code> ≤ 2<sup>31</sup> − 1</li>
+        </ul>
+
+        <h2>✅ Sample Input</h2>
+        <pre>let n = 29
+let res = happyNumber(n)
+console.log(res)</pre>
+
+        <h2>📘 Sample Output</h2>
+        <pre><code>Yes</code></pre>
+
+        <h2>💡 Explanation</h2>
+        <ul>
+            <li><strong>19</strong> is a happy number:
+                <ul>
+                    <li>1² + 9² = 82</li>
+                    <li>8² + 2² = 68</li>
+                    <li>6² + 8² = 100</li>
+                    <li>1² + 0² + 0² = 1 ✅</li>
+                </ul>
+            </li>
+            <li><strong>2</strong> is not a happy number: it enters a cycle witho

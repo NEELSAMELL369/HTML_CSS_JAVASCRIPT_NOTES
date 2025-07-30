@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feel Good Strings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎵 Problem: Feel Good Strings</h1>
+
+        <h2>📖 Description</h2>
+        <p>
+            Tom loves vowels. Any string that has half or more of its characters as vowels makes him feel good.
+            You are given a string of length <code>N</code>, where <code>N</code> is an even number.
+        </p>
+        <p>
+            If the number of vowels in the string is <strong>greater than or equal to</strong> <code>N / 2</code>, print
+            <strong>"Feel good!"</strong>.
+            Otherwise, print <strong>"Feel bad!"</strong>.
+        </p>
+        <p><strong>Note:</strong> All letters are lowercase. The vowels are: <code>a</code>, <code>e</code>,
+            <code>i</code>, <code>o</code>, <code>u</code>.
+        </p>
+
+        <h2>📥 Input Description</h2>
+        <ul>
+            <li>The first line contains an integer <code>N</code> — the length of the string.</li>
+            <li>The second line contains a string of size <code>N</code>.</li>
+        </ul>
+
+        <h2>🔒 Constraints</h2>
+        <ul>
+            <li>1 ≤ <code>N</code> ≤ 50</li>
+        </ul>
+
+        <h2>📤 Output Description</h2>
+        <p>
+            Print <strong>"Feel good!"</strong> if vowels in the string are ≥ <code>N/2</code>, else print <strong>"Feel
+                bad!"</strong>
+        </p>
+
+        <h2>🧪 Sample Input 1</h2>
+        <pre>
+let n = 6;
+let s = "uuuu";
+res = checkVowelMood(n, s); 
+console.log(res)
+        </pre>
+
+        <h2>✅ Sample Output 1</h2>
+        <pre><code>Feel good!</code></pre>
+    </div>
+</body>
+
+</html>

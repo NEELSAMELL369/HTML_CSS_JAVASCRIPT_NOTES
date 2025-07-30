@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cards and Values</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🃏 Problem: Cards and Values</h1>
+
+        <h2>📖 Description</h2>
+        <p>
+            Chunnu has a collection of cards. Each card has a value assigned to it. He wants to check if there exist two
+            cards <code>N</code> and <code>M</code> such that <code>N</code> is double the value of <code>M</code>
+            (i.e., <code>N = 2 × M</code>).
+        </p>
+        <p>
+            Print "<strong>Yes</strong>" without quotes if such a pair exists, otherwise print "<strong>No</strong>"
+            without quotes.
+        </p>
+        <p>
+            The values of all the cards are stored in an array <code>arr</code> of length <code>n</code>.
+        </p>
+
+        <h2>📥 Input Description</h2>
+        <p>The first and only line contains the values of all the cards:</p>
+        <ul>
+            <li>The first number is <code>n</code> — the number of cards.</li>
+            <li>The next <code>n</code> space-separated integers represent the values of the cards.</li>
+        </ul>
+
+        <h2>📤 Output Description</h2>
+        <p>
+            Print "<strong>Yes</strong>" if a solution exists, otherwise print "<strong>No</strong>". Do not include
+            quotes in the output.
+        </p>
+
+        <h2>🧪 Sample Input 1</h2>
+        <pre><code>
+N = 4
+cards = [1,2,3,4]
+res = checkDoubleExists(cards)
+console.log(res)
+        </code></pre>
+
+        <h2>✅ Sample Output 1</h2>
+        <pre><code>Yes</code></pre>
+
+    </div>
+</body>
+
+</html>

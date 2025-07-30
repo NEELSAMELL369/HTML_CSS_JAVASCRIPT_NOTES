@@ -1,19 +1,23 @@
 const flattenNestedArray = (arr) => {
-    const result = {};
 
-    const extractValues = (obj) => {
-        for (let key in obj) {
-            if (typeof obj[key] === 'object') {
-                extractValues(obj[key]); // Recursively flatten
-            } else {
-                result[key] = obj[key]; // Store key-value
+    const flatten = (obj) => {
+        const result = {};
+        const extractValues = (o) => {
+            for (let key in o) {
+                if (typeof o[key] === 'object') {
+                    extractValues(o[key]);
+                } else {
+                    result[key] = o[key];
+                }
             }
-        }
+        };
+        extractValues(obj);
+        return result;
     };
 
-    arr.forEach(item => extractValues(item));
-    return result;
+    return arr.map(item => flatten(item));
 };
+
 
 const data = [
     {
@@ -43,3 +47,5 @@ console.log(flattenNestedArray(data));
 //   age: 30,
 //   city: "Delhi"
 // }
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Second Largest Age</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>👥 Problem: Find the Second Largest Age</h1>
+
+        <h2>📖 Description</h2>
+        <p>
+            You are given an array of objects, where each object represents a person with two properties:
+            <code>name</code> (string) and <code>age</code> (integer).
+            Write a function to compute the **second largest distinct age** among all people.
+        </p>
+        <p>
+            If there is no second distinct age (i.e., all ages are the same, or only one person), the function should
+            return <code>null</code>.
+        </p>
+
+        <h2>📥 Input Format</h2>
+        <ul>
+            <li>An array of objects, each with:
+                <ul>
+                    <li><code>name</code>: string</li>
+                    <li><code>age</code>: integer</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>📤 Output Format</h2>
+        <ul>
+            <li>An integer representing the second largest distinct age, or <code>null</code> if it does not exist.</li>
+        </ul>
+
+        <h2>🔒 Constraints</h2>
+        <ul>
+            <li>Each object has a valid integer age.</li>
+            <li>Array may contain duplicates in ages.</li>
+            <li>There can be any number of people (including 0 or 1).</li>
+        </ul>
+
+        <h2>🧪 Sample Input</h2>
+        <pre><code>
+const people = [
+    { name: "A", age: 30 },
+    { name: "B", age: 25 },
+    { name: "C", age: 30 },
+    { name: "D", age: 22 }
+];
+let res = secondLargestAge(people)
+console.log(res);
+        </code></pre>
+
+        <h2>✅ Sample Output</h2>
+        <pre><code>25</code></pre>
+
+        <h2>💡 Explanation</h2>
+        <p>
+            The distinct ages are <code>30</code>, <code>25</code>, <code>22</code>.
+            The largest age is <code>30</code>, so the second largest distinct age is <code>25</code>.
+        </p>
+
+        <h2>🧪 Edge Cases</h2>
+        <ul>
+            <li>If ages = [30, 30, 30] → no second distinct age → output: <code>null</code></li>
+            <li>If array is empty → output: <code>null</code></li>
+            <li>If there is only one person → output: <code>null</code></li>
+        </ul>
+
+    </div>
+</body>
+
+</html>
