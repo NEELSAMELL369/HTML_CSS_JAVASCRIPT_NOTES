@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1 - Simulating Asynchronous Data Fetching</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .steps {
+            background: #e9f5ff;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+        }
+
+        .note {
+            background: #fff8e1;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>L1 - Simulating Asynchronous Data Fetching with Error Handling Using Async/Await</h1>
+
+        <h3>📌 Problem Statement:</h3>
+        <p>
+            You are tasked with simulating a data fetching function that occasionally fails. The goal is to:
+        </p>
+        <ul>
+            <li>Write a function <b>fetchData</b> that simulates data fetching using a Promise with a 50% chance of
+                success or failure.</li>
+            <li>Think of a way in JavaScript where you can randomly generate a number between 0 and 1 and based on that
+                you assign truthy and falsy values.</li>
+            <li>Write an async function <b>fetchDataHandler</b> to handle the result of the fetchData function.</li>
+            <li>Log <i>"Fetched data successfully!"</i> if the fetch is successful, otherwise log <i>"Error fetching
+                    data"</i> along with the error message.</li>
+        </ul>
+
+        <h3>📝 Steps to Solve:</h3>
+        <div class="steps">
+            <ol>
+                <li>Create a function <b>fetchData</b> that simulates an asynchronous operation using <b>setTimeout</b>.
+                </li>
+                <li>Use <b>Math.random()</b> to introduce a 50% chance of failure:
+                    <ul>
+                        <li>If the number is greater than 0.5 → Resolve the promise with success message.</li>
+                        <li>Else → Reject the promise with an error message.</li>
+                    </ul>
+                </li>
+                <li>Create an async handler function <b>fetchDataHandler</b> using <b>async/await</b>.</li>
+                <li>Use <b>try...catch</b> to handle both success and error cases.</li>
+                <li>Call the function multiple times to observe both outcomes.</li>
+            </ol>
+        </div>
+
+        <h3>💻 Example Solution:</h3>
+        <pre>
+
+    </pre>
+
+       
+    </div>
+</body>
+
+</html>

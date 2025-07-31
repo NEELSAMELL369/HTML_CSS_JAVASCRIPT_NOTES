@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q11 - Asynchronous Timer with Callback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .steps {
+            background: #e9f5ff;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Asynchronous Timer with Callback</h1>
+
+        <h3>📌 Problem Statement:</h3>
+        <p>
+            Create a function <b>timer</b> that takes a duration in milliseconds and a callback function
+            <b>onComplete</b>. The function should use <b>setTimeout</b> to simulate a countdown, and
+            when the timer ends, it should execute the <b>onComplete</b> callback with a message:
+            <i>"Timer of &lt;duration&gt; ms finished"</i>.
+        </p>
+
+        <h3>📝 Steps:</h3>
+        <div class="steps">
+            <ol>
+                <li>Define <b>timer</b> that accepts <b>duration</b> and <b>onComplete</b>.</li>
+                <li>Use <b>setTimeout</b> to delay for the given duration.</li>
+                <li>After the timer ends, call <b>onComplete</b> with the finish message.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

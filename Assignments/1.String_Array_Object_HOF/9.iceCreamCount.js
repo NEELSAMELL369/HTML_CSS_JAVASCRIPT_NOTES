@@ -41,9 +41,11 @@ const data = [
 ];
 
 const iceCreamCount = data.reduce((acc, person) => {
+
   person.favoriteIceCreams.forEach((flavor) => {
     acc[flavor] = (acc[flavor] || 0) + 1;
   });
+  
   return acc;
 }, {});
 

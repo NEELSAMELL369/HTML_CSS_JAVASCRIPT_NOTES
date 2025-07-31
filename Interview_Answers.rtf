@@ -369,9 +369,9 @@ greet("Neel") \f8\u8594?\f7  \f5 "Neel" is an argument\par
 \b\fs32\lang9 Intermediate Level JavaScript Interview Questions\par
 \b0\fs24\lang16393\par
 
-\pard\sa200\sl276\slmult1\b\fs22\lang9 1. \fs28 How do you handle errors in JavaScript?\fs22\par
+\pard\sa200\sl276\slmult1\b\lang9 1. How do you handle errors in JavaScript?\par
 
-\pard\sl240\slmult1\b0\fs24\lang16393 In JavaScript, errors can be handled using several techniques to ensure your application doesn't crash and behaves predictably. The most common methods include:\line\line\f6\u9989? Handling Asynchronous Errors (Promises)\line Use .catch() for promise-based error handling.\line\cf3\f5 fetch('{\cf0{\field{\*\fldinst{HYPERLINK https://api.example.com/data }}{\fldrslt{https://api.example.com/data\ul0\cf0}}}}\f5\fs24 ')\par
+\pard\sl240\slmult1\b0\lang16393 In JavaScript, errors can be handled using several techniques to ensure your application doesn't crash and behaves predictably. The most common methods include:\line\line\f6\u9989? Handling Asynchronous Errors (Promises)\line Use .catch() for promise-based error handling.\line\cf3\f5 fetch('{\cf0{\field{\*\fldinst{HYPERLINK https://api.example.com/data }}{\fldrslt{https://api.example.com/data\ul0\cf0}}}}\f5\fs24 ')\par
  .then(res => res.json())\par
  .then(data => console.log(data))\par
  .catch(error => console.error("Fetch error:", error));\line\cf0\f2\line\f6\u9989?\f4  \f2 Using async/await with try...catch\line\cf3\f5 async function getData() \{\par
@@ -392,49 +392,301 @@ greet("Neel") \f8\u8594?\f7  \f5 "Neel" is an argument\par
 \b ReferenceError \b0\endash  Happens when referencing a variable that hasn\rquote t been declared. Example: console.log(x); // x is not defined\par
 \b TypeError \b0\endash  Triggered when a value is not of the expected type. Example: null.f(); // Cannot read property 'f' of null\par
 \b RangeError \b0\endash  Occurs when a value is not within an acceptable range. Example: new Array(-1);\par
-\b EvalError \b0\endash  Related to improper use of eval() (rarely used now). Example: throw new EvalError("Eval error occurred");\par
-\b URIError \b0\endash  Raised when URI functions are used incorrectly. Example: decodeURIComponent('%'); // URI malformed\par
 \par
 
-\pard\sa200\sl276\slmult1\b\f2\lang9 3. What is \lang16393 Prototype \lang9 inheritance in JavaScript?\par
+\pard\sa200\sl276\slmult1\b\f2\lang9 3. What is ES6, and what are its key features?\par
 
-\pard\sl276\slmult1\b0\lang16393 Prototypal inheritance is a feature in JavaScript where objects can inherit properties and methods from other objects via the prototype chain.\line\par
-In JavaScript, every object has a hidden property called [[Prototype]] accessible via\line 1. __proto__  \line 2.Object.getPrototypeOf()\par
-\line\b Creating Inheritance using Object\cf3\b0\f5\line const animal = \{\par
-  eats: true,\par
-  walk() \{\par
-    console.log("Animal walks");\par
-  \}\par
-\};\par
-const dog = Object.create(animal); // dog inherits from animal\par
-dog.barks = true;\par
-console.log(dog.eats); // true (inherited from animal)\par
-dog.walk();            // "Animal walks" (inherited)\line\line\cf0\b\f2 Creating Inheritance using Constructor Functions:\f13\line\cf3\b0\f5 function Person(name) \{\par
-  this.name = name;\par
-\}\par
-\par
-Person.prototype.sayHello = function () \{\par
-  console.log(`Hello, I'm $\{this.name\}`);\par
-\};\par
-\par
-const john = new Person("John");\par
-john.sayHello(); // Hello, I'm John\line\cf0\f13\line\b\f2 Creating Inheritance using Modern Syntax (ES6 Classes):\f13\par
-\cf3\b0\f5 class Animal \{\par
-  speak() \{\par
-    console.log("Animal speaks");\par
-  \}\par
-\}\par
-\par
-class Dog extends Animal \{\par
-  bark() \{\par
-    console.log("Dog barks");\par
-  \}\par
-\}\par
-\par
-const pet = new Dog();\par
-pet.speak(); // Animal speaks\par
+\pard\sl276\slmult1\b0\lang16393 ES6 (ECMAScript 2015) is a major update to JavaScript that introduced modern syntax and powerful features to make code more readable, maintainable, and efficient.\line\line\b Key Features of ES6:\par
+\b0 let and const \f4\endash  Block-scoped variable declarations.\par
+Arrow Functions (=>) \endash  Shorter syntax for functions with lexical this.\par
+Template Literals \endash  String interpolation using backticks (`Hello $\{name\}`).\par
+Destructuring \endash  Unpack values from arrays or objects into variables.\par
+Default Parameters \endash  Assign default values to function parameters.\par
+Rest & Spread Operators (...) \endash  Handle variable-length arguments and expand arrays/objects.\par
+Classes \endash  Cleaner, class-based syntax for OOP.\par
+Modules \endash  import and export for modular code.\par
+Promises \endash  Native support for asynchronous programming.\par
 
-\pard\sa200\sl276\slmult1 pet.bark();  // Dog barks\line\line\cf0\b\f2\lang9 4. What are JavaScript classes?\par
+\pard\sa200\sl276\slmult1 Enhanced Object Literals \endash  Shorter syntax for defining objects.\line\line\line\b\f2\lang9 4. Define a transpiler and a compiler in the context of JavaScript.\par
+\b0\lang16393 A transpiler converts JavaScript code from one version to another (e.g., ES6 to ES5), \line while a compiler translates code from one language to another (e.g., TypeScript to JavaScript).\line\line\b\lang9 5. What is memoization?\par
+
+\pard\sl276\slmult1\b0\lang16393 Memoization is an optimization technique used to cache the results of expensive function calls so that future calls with the same arguments return the cached result instantly, rather than recalculating.\par
+It\f4\rquote\f2 s commonly used in recursive functions or functions with repeated inputs, improving performance.\par
+\line\b Example Without Memoization:\line\cf3\b0\f5 function slowSquare(n) \{\par
+  console.log("Calculating..." );\par
+  return n * n;\par
+\}\par
+\par
+console.log(slowSquare(5)); // Calculates\par
+console.log(slowSquare(5)); // Calculates again\line\cf0\f13\line\b\f2 Example With Memoization:\line\cf3\b0\f5 function memoizedSquare() \{\par
+  const cache = \{\};\par
+\par
+  return function(n) \{\par
+   console.log("Calculating...");\par
+    cache[n] = n * n;\par
+    return cache[n];\par
+  \};\par
+\}\par
+\par
+const square = memoizedSquare();\par
+\par
+console.log(square(5)); // Calculating... 25\par
+console.log(square(5)); // Fetching from cache... 25\line\cf0\f2\line\b Real-World Use Cases:\b0\par
+Recursive problems like Fibonacci, Factorial\par
+API call result caching\par
+
+\pard\sa200\sl276\slmult1 Expensive calculations in UI (e.g., React useMemo)\line\line\b\lang9 6. What are pure and impure functions?\par
+
+\pard\sl276\slmult1\b0\lang16393 In JavaScript (and functional programming), pure and impure functions are classified based on side effects and input-output consistency.\line\line\b Pure Function\par
+\b0 A pure function always:\par
+Returns the same output for the same input\par
+Does not cause any side effects (like modifying global variables, DOM, or external state)\line\cf3\f5 function add(a, b) \{\par
+  return a + b;\par
+\}\par
+console.log(add(2, 3)); // 5\par
+console.log(add(2, 3)); // Always 5\line\cf0\f2 It doesn\f4\rquote\f2 t change external data, and its output only depends on the inputs.\line\line\b Impure Function\line\b0 An impure function:\par
+May return different results for the same input\par
+May cause side effects, such as modifying global variables, logs, API calls, DOM manipulation, etc.\par
+\par
+\cf3\f5 let count = 0;\par
+\par
+function increment() \{\par
+  count++;\par
+  return count;\par
+\}\par
+\par
+console.log(increment()); // 1\par
+
+\pard\sa200\sl276\slmult1 console.log(increment()); // 2\line\line\cf0\f6\u10060?\f7  \f5 It relies on and modifies a global variable (count), making it impure.\line\line\b\f2\lang9 7. What is currying in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 Currying is the technique of transforming a function with multiple arguments into a sequence of functions\line\line Example (Normal Function):\line\cf3\f5 function add(a, b) \{\par
+  return a + b;\par
+\}\par
+\par
+add(2, 3); // 5\line\cf0\f2\line Curried Version:\line\cf3\f5 function curriedAdd(a) \{\par
+  return function(b) \{\par
+    return a + b;\par
+  \};\par
+\}\par
+
+\pard\sa200\sl276\slmult1 curriedAdd(2)(3); // 5\line\line\cf0\f2\line 8\b\lang9 . What is the difference between the rest (...args) and spread (...array) operators?\par
+
+\pard\sl276\slmult1\b0\lang16393 Though rest and spread use the same ... syntax, they serve opposite purposes in JavaScript:\line\line\b Rest Operator (...args)\par
+\b0 Gathers multiple values into a single array\par
+Used in function parameters\par
+Used to collect remaining elements\line\cf3\f5\line function sum(...numbers) \{\par
+  return numbers.reduce((acc, num) => acc + num, 0);\par
+\}\par
+\cf0\f2\par
+\cf3\f5 sum(1, 2, 3); // 6\line\cf0 Here, ...numbers collects all arguments into an array.\line\f2\line\cf3\f5 function greet(greeting, ...names) \{\par
+  names.forEach(name => console.log(`$\{greeting\}, $\{name\}`));\par
+\}\par
+\cf0\f2\line\line\b Spread Operator (...array)\line\b0 Expands (spreads) elements of an array or object into individual elements\par
+Used in function calls, arrays, and object literals\line Example (Array):\line\cf3\f5 const nums = [1, 2, 3];\par
+
+\pard\sa200\sl276\slmult1 console.log(...nums); // 1 2 3\line\cf0\f2\line\b\lang9 9. What is the purpose of the defer keyword in a <script> tag?\par
+
+\pard\sl276\slmult1\b0\lang16393 The defer keyword is used in the <script> tag to delay the execution of the JavaScript code until after the HTML document has been fully parsed.\par
+
+\pard\sa200\sl276\slmult1\line\b\lang9 10. What is the difference between local storage, session storage, and cookies?\par
+
+\pard\sl276\slmult1\b0\lang16393 These are all ways to store data in the browser, but they differ in storage capacity, lifetime, accessibility, and use cases.\line\line\b Storage Limit\b0 : localStorage (~5\f4\endash 10 MB), sessionStorage (~5 MB), cookies (~4 KB).\par
+\b Lifetime\b0 : localStorage (until manually cleared), sessionStorage (until tab/window closes), cookies (based on expiry or session).\par
+\b Accessibility\b0 : localStorage and sessionStorage (JavaScript, same origin), cookies (sent with every HTTP request).\par
+\b Use Case\b0 : localStorage (long-term client data), sessionStorage (tab-specific temporary data), cookies (authentication, server communication).\line\line\b\f2\lang9 11. Explain JavaScript's single-threaded model\line\b0\f9\fs22\line\f2\fs24 JavaScript uses a single-threaded model, meaning it can execute one command at a time in a single thread \f4\par
+\b\f2\line 12.What is the call stack and the task queue?\par
+\lang16393 Call Stack\par
+\b0 The Call Stack is where JavaScript keeps track of the functions that are currently being called.\par
+\par
+\b Key Points:\par
+\b0 Works in LIFO (Last In, First Out) order.\par
+Every time a function is called, it's pushed to the stack.\par
+When the function finishes, it's popped off the stack.\par
+JavaScript is single-threaded, so only one task runs at a time in the call stack.\par
+\par
+\cf3\f10\u-10179?\u-8921?\f7  \f5 Example:\par
+function greet() \{\par
+  console.log("Hello");\par
+\}\par
+greet();\par
+greet() is pushed to the stack \f8\u8594?\f7  \f5 runs \f8\u8594?\f7  \f5 logs "Hello" \f8\u8594?\f7  \f5 popped off the stack.\par
+\cf0\f2\par
+\b Task Queue (Event Queue)\par
+\b0 The Task Queue is where asynchronous callbacks wait to be executed after the call stack is empty.\par
+\par
+\b Key Points:\par
+\b0 Holds things like setTimeout, DOM events, and message events.\par
+The Event Loop checks the queue and moves tasks to the call stack when it's free.\par
+\par
+\cf3\f10\u-10179?\u-8921?\f7  \f5 Example:\par
+console.log("A");\par
+\par
+setTimeout(() => \{\par
+  console.log("B");\par
+\}, 0);\par
+\par
+console.log("C");\par
+\cf0\f2\par
+\b Execution:\par
+\b0 "A" \f8\u8594?\f4  \f2 printed from stack.\par
+setTimeout callback \f8\u8594?\f4  \f2 goes to Task Queue.\par
+"C" \f8\u8594?\f4  \f2 printed from stack.\par
+Stack is now empty \f8\u8594?\f4  \f2 Event Loop moves "B" to stack \f8\u8594?\f4  \f2 printed.\par
+\par
+Output:\par
+A\par
+C\par
+B\par
+
+\pard\sa200\sl276\slmult1\f4\lang16393\line\b\f2\lang9 13. What is the difference between the call stack and the event queue?\par
+
+\pard\sl276\slmult1\b0\lang16393 The call stack holds and executes synchronous functions in a LIFO manner, while the event queue holds asynchronous callbacks waiting to be pushed into the call stack when it's empty.\line\par
+\b Purpose\b0 : Call Stack executes synchronous code, while Event Queue stores async callbacks (e.g., setTimeout).\par
+\b Order\b0 : Call Stack follows LIFO (Last In, First Out); Event Queue follows FIFO (First In, First Out).\par
+\b Triggered By\b0 : Call Stack is triggered by function calls; Event Queue by Web APIs and async operations.\par
+\b When Processed\b0 : Call Stack runs code immediately; Event Queue is processed when the call stack is empty (via event loop).\par
+
+\pard\sa200\sl276\slmult1\b Example Use Case\b0 : Call Stack \f4\endash  console.log(), function calls; Event Queue \endash  setTimeout, fetch, event listeners.\b\f2\lang9\line\line\b0\f14\fs22\line\b\f9\fs24 14. What is the event loop in JavaScript?\par
+
+\pard\sl276\slmult1\b0\f2\lang16393 The event loop pushes tasks from the task queue into the call stack once the stack is empty, allowing asynchronous operations like setTimeout, fetch, and event listeners to execute after synchronous code.\line How It Works:\par
+Synchronous code runs in the call stack.\par
+Asynchronous operations (e.g., setTimeout) are handled by Web APIs.\par
+Their callbacks go to the task queue once completed.\par
+The event loop checks if the call stack is empty.\par
+If empty, it moves a task from the task queue to the call stack for execution.\line\f10\u-10179?\u-8986?\f4  \f2 Example:\line\cf3\f5 console.log("A");\par
+\par
+setTimeout(() => \{\par
+  console.log("B");\par
+\}, 0);\par
+\par
+console.log("C");\line\line\f10\u-10179?\u-8947?\f7  \f5 Output:\line A\par
+C\par
+B\line\line "A" and "C" run synchronously.\par
+
+\pard\sa200\sl276\slmult1 "B" is queued and executed later by the event loop.\line\cf0\f4\line\f2\line\b\lang9 15.What is event bubbling and event capturing?\par
+
+\pard\sl276\slmult1\b0\lang16393 Event bubbling propagates the event from the target element up to the root, while event capturing (also called trickling) propagates the event from the root down to the target element.\line\line\b Direction\b0 : Event Capturing flows from top to target (outer \f8\u8594?\f4  \f2 inner), while Event Bubbling flows from target to top (inner \f8\u8594?\f4  \f2 outer).\par
+\b Order of Handling\b0 : Capturing handles parent first then child, bubbling handles child first then parent.\par
+\b Default Behavior\b0 : Capturing is not default; bubbling is the default in JavaScript.\par
+
+\pard\sa200\sl276\slmult1\line\line\b\lang9 16. What is event delegation in JavaScript?\par
+\b0 Event delegation is a technique where a single event listener is added to a parent element to handle events on its child elements using event bubbling.\line\f9\fs22\line\b\f2\fs24 17. How does event delegation improve performance?\line\b0 Event delegation improves performance by reducing the number of event listeners, handling all child events with a single listener on the parent, which minimizes memory usage and speeds up event handling\f4\emdash\f2 especially for dynamic or many elements.\line\f14\fs22\line\b\f2\fs24 18. Why do we use callbacks?\par
+\b0 We use callbacks to handle asynchronous operations and ensure that a function is executed only after another function finishes, \par
+\line\cf3\f5\fs22 function fetchData(callback) \{\par
+  setTimeout(() => \{\par
+    console.log("Data fetched");\par
+    callback();\par
+  \}, 1000);\par
+\}\par
+fetchData(() => \{\par
+  console.log("Callback executed");\par
+\});\par
+\cf0\f2\fs24\lang16393\line\b\lang9 19. \lang16393 What are Promises and Why Do We Need Them\par
+
+\pard\sl240\slmult1\b0 A Promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation. \par
+It\f4\rquote\f2 s like a placeholder for a value we don\f4\rquote\f2 t know yet but will receive later. Promises help us manage async tasks like \par
+fetching data, reading files, or performing long calculations without blocking the entire program.\par
+\par
+- Promises represent the future result of an asynchronous task.\par
+- We handle success and errors using then and catch.\par
+- Promises solve the callback hell problem, making code cleaner and more manageable.\par
+
+\pard\sa200\sl276\slmult1\par
+\b 20. \f4 How to Execute and Handle Promises\f2  ?\f4\par
+
+\pard\sl240\slmult1\cf3\b0\f5 const myPromise = new Promise((resolve, reject) => \{\par
+    const success = Math.random() > 0.5;\par
+    setTimeout(() => \{\par
+        if (success) \{\par
+            resolve("\f6\u9989?\f7  \f5 Data fetched successfully!");\par
+        \} else \{\par
+            reject("\f6\u10060?\f7  \f5 Error fetching data.");\par
+        \}\par
+    \}, 2000);\par
+\});\par
+\cf0\f13\par
+\cf3\f5 myPromise\par
+    .then(result => console.log(result))     // Handles success\par
+    .catch(error => console.error(error))   // Handles error\par
+    .finally(() => console.log("Promise completed"));\par
+
+\pard\sa200\sl276\slmult1\cf0\f13\par
+
+\pard\sl240\slmult1\b - .then() \f8\u8594? Runs on success.\par
+- .catch() \u8594? Runs on failure.\par
+- .finally() \u8594? Runs regardless of outcome.\par
+
+\pard\sa200\sl276\slmult1\b0\f2\lang16393\line\b\lang9 21. What are the different states of a promise?\par
+
+\pard\sl276\slmult1\f12\lang16393\u-10178?\u-8736?\f4  \f2 States of a Promise:\par
+\b0 Pending \f4\endash  initial state, not yet resolved or rejected.\par
+Fulfilled \endash  operation completed successfully.\par
+Rejected \endash  operation failed with an error.\line\par
+
+\pard\sa200\sl276\slmult1\b\f2\lang9 22. What is the difference between Promise.all() and Promise.allSettled()?\par
+\b0\lang16393 Promise.all() waits for all promises to fulfill and rejects if any one fails. \line Promise.allSettled() waits for all promises to settle (either fulfilled or rejected) and returns their status.\par
+\b\lang9 23. What is callback hell, and how do we avoid it?\par
+
+\pard\sl276\slmult1\b0\lang16393 Callback hell is a situation where callbacks are nested deeply and unreadably, making code hard to maintain; we avoid it using Promises, async/await, or modularizing functions.\line\par
+\b Explain \f4 Callback Hell and How Promises Help\f2  ?\f4\par
+\b0 Before promises, async tasks were handled using nested callbacks, leading to "Callback Hell\par
+\par
+\par
+\b Callback Hell example\par
+
+\pard\sl240\slmult1\cf3\b0\f5 getUserData(1, (user) => \{\par
+    getPosts(user.id, (posts) => \{\par
+        getComments(posts[0].id, (comments) => \{\par
+            console.log(comments);\par
+        \});\par
+    \});\par
+\});\par
+
+\pard\sl276\slmult1\cf0\f4\par
+\b Promises make this cleaner:\par
+\b0\par
+
+\pard\sl240\slmult1\cf3\f5 getUserData(1)\par
+    .then(user => getPosts(user.id))\par
+    .then(posts => getComments(posts[0].id))\par
+    .then(comments => console.log(comments))\par
+    .catch(err => console.error(err));\par
+
+\pard\sl276\slmult1\cf0\f2\par
+
+\pard\sa200\sl276\slmult1\b\lang9 24. How does JavaScript handle asynchronous operations?\par
+\b0\lang16393 JavaScript handles asynchronous operations using Web APIs to process tasks in the background, placing their callbacks in the event queue, which are executed by the event loop when the call stack is empty.\f15\par
+
+\pard\sl276\slmult1\f16\lang9\line\b\f2 25. What is the difference between promise chaining and async/await?\line\b0 Promise chaining uses .then() for sequential async operations, while async/await uses a more readable, synchronous-like syntax built on top of promises.\par
+\line\b Syntax\b0 : Promise chaining uses .then() and .catch(), while async/await uses async functions with await.\par
+\b Readability\b0 : Promise chaining can become nested and harder to follow, async/await is cleaner and easier to read.\par
+\b Error Handling\b0 : Promise chaining uses .catch(), async/await uses try...catch.\par
+
+\pard\sa200\sl276\slmult1 Underlying Mechanism: Both are based on Promises, with async/await offering syntactic sugar.\par
+\b 26. What are closures in JavaScript?\par
+
+\pard\sl276\slmult1\b0\lang16393 A closure happens when a function remembers the variables from its outer scope, even after the outer function has finished executing.\line\cf3\f5\line function outer() \{\par
+  let count = 0;\par
+\par
+  function inner() \{\par
+    count++;\par
+    console.log("Count:", count);\par
+  \}\par
+\par
+  return inner;\par
+\}\par
+\par
+const counter = outer(); // outer() returns inner\par
+counter(); // Count: 1\par
+counter(); // Count: 2\line\cf0 counter still has access to count even though outer() has finished. That\f7\rquote\f5 s a closure in action!\cf3\line\par
+\cf0\b Closure Useful\cf3\b0\line\cf0\f2 Data privacy/encapsulation\cf3\f5\line\cf0\f2 Maintaining state in async code (e.g., setTimeout, event listeners)\par
+\line\f11\line\b\f2\lang9 27. What is a polyfill in JavaScript?\par
+\b0\lang16393 A polyfill is a piece of code (usually JavaScript) that implements modern features in older browsers that do not natively support them.\par
+
+\pard\sa200\sl276\slmult1\b\lang9\par
+28. What is OOP (Object-Oriented Programming) in JavaScript?\par
+\b0\lang16393 OOP in JavaScript means writing code using objects that have data and actions, making it easier to build programs.\line\f11\par
+\b\f2\lang9 29. What are JavaScript classes?\par
 
 \pard\sl276\slmult1\b0\lang16393 JavaScript classes are blueprints for creating objects with shared properties and methods. They were introduced in ES6 (ES2015) to provide a cleaner and more familiar syntax for object creation and inheritance, compared to the older prototype-based approach.\line\cf3\f13\line\cf0\b\f2 Key Features of Classes:\par
 \b0 constructor() \f4\emdash  \f2 special method for initializing new objects.\par
@@ -443,8 +695,7 @@ Supports inheritance using the extends keyword.\par
 Use super() to call the parent class constructor.\par
 \par
 
-\pard\sa200\sl276\slmult1\b\lang9 5. What is OOP (Object-Oriented Programming) in JavaScript?\par
-\b0\lang16393 OOP in JavaScript means writing code using objects that have data and actions, making it easier to build programs.\line\cf3\f5\line\cf0\b\f2\lang9 6. What are the possible ways to create objects in JavaScript?\par
+\pard\sa200\sl276\slmult1\cf3\f5\line\cf0\b\f2\lang9 30. What are the possible ways to create objects in JavaScript?\par
 
 \pard\sl276\slmult1\b0\lang16393 JavaScript provides multiple ways to create objects, each serving different use cases.\line\line\b Using Object Literals\line\b0 The most common and simplest way.\par
 \cf3\f5 const person = \{\par
@@ -491,239 +742,8 @@ const user = new Person("Neel");\line\par
 const person = Object.create(proto);\par
 person.name = "Neel";\par
 
-\pard\sa200\sl276\slmult1 person.greet(); // Hello!\line\cf0\f2\line\cf3\f5\line\cf0\b\f2\lang9 7. What are closures in JavaScript?\par
-
-\pard\sl276\slmult1\b0\lang16393 A closure happens when a function remembers the variables from its outer scope, even after the outer function has finished executing.\line\cf3\f5\line function outer() \{\par
-  let count = 0;\par
-\par
-  function inner() \{\par
-    count++;\par
-    console.log("Count:", count);\par
-  \}\par
-\par
-  return inner;\par
-\}\par
-\par
-const counter = outer(); // outer() returns inner\par
-counter(); // Count: 1\par
-counter(); // Count: 2\line\cf0 counter still has access to count even though outer() has finished. That\f7\rquote\f5 s a closure in action!\cf3\line\par
-\cf0\b Closure Useful\cf3\b0\line\cf0\f2 Data privacy/encapsulation\cf3\f5\line\cf0\f2 Maintaining state in async code (e.g., setTimeout, event listeners)\par
-
-\pard\sa200\sl276\slmult1\line\line\b\lang9 8. What is memoization?\par
-
-\pard\sl276\slmult1\b0\lang16393 Memoization is an optimization technique used to cache the results of expensive function calls so that future calls with the same arguments return the cached result instantly, rather than recalculating.\par
-It\f4\rquote\f2 s commonly used in recursive functions or functions with repeated inputs, improving performance.\par
-\line\b Example Without Memoization:\line\cf3\b0\f5 function slowSquare(n) \{\par
-  console.log("Calculating..." );\par
-  return n * n;\par
-\}\par
-\par
-console.log(slowSquare(5)); // Calculates\par
-console.log(slowSquare(5)); // Calculates again\line\cf0\f13\line\b\f2 Example With Memoization:\line\cf3\b0\f5 function memoizedSquare() \{\par
-  const cache = \{\};\par
-\par
-  return function(n) \{\par
-   console.log("Calculating...");\par
-    cache[n] = n * n;\par
-    return cache[n];\par
-  \};\par
-\}\par
-\par
-const square = memoizedSquare();\par
-\par
-console.log(square(5)); // Calculating... 25\par
-console.log(square(5)); // Fetching from cache... 25\line\cf0\f2\line\b Real-World Use Cases:\b0\par
-Recursive problems like Fibonacci, Factorial\par
-API call result caching\par
-
-\pard\sa200\sl276\slmult1 Expensive calculations in UI (e.g., React useMemo)\line\line\b\lang9 9. What are pure and impure functions?\par
-
-\pard\sl276\slmult1\b0\lang16393 In JavaScript (and functional programming), pure and impure functions are classified based on side effects and input-output consistency.\line\line\b Pure Function\par
-\b0 A pure function always:\par
-Returns the same output for the same input\par
-Does not cause any side effects (like modifying global variables, DOM, or external state)\line\cf3\f5 function add(a, b) \{\par
-  return a + b;\par
-\}\par
-console.log(add(2, 3)); // 5\par
-console.log(add(2, 3)); // Always 5\line\cf0\f2 It doesn\f4\rquote\f2 t change external data, and its output only depends on the inputs.\line\line\b Impure Function\line\b0 An impure function:\par
-May return different results for the same input\par
-May cause side effects, such as modifying global variables, logs, API calls, DOM manipulation, etc.\par
-\par
-\cf3\f5 let count = 0;\par
-\par
-function increment() \{\par
-  count++;\par
-  return count;\par
-\}\par
-\par
-console.log(increment()); // 1\par
-
-\pard\sa200\sl276\slmult1 console.log(increment()); // 2\line\line\cf0\f6\u10060?\f7  \f5 It relies on and modifies a global variable (count), making it impure.\line\line\b\f2\lang9 10. What is currying in JavaScript?\par
-
-\pard\sl276\slmult1\b0\lang16393 Currying is the technique of transforming a function with multiple arguments into a sequence of functions\line\line Example (Normal Function):\line\cf3\f5 function add(a, b) \{\par
-  return a + b;\par
-\}\par
-\par
-add(2, 3); // 5\line\cf0\f2\line Curried Version:\line\cf3\f5 function curriedAdd(a) \{\par
-  return function(b) \{\par
-    return a + b;\par
-  \};\par
-\}\par
-
-\pard\sa200\sl276\slmult1 curriedAdd(2)(3); // 5\line\line\cf0\b\f2\lang9 11. What are call(), apply(), and bind() methods?\par
-
-\pard\sl276\slmult1\b0\lang16393 These three methods are used to set the this context explicitly in JavaScript functions.They allow functions to be reused across different objects.\par
-
-\pard\sa200\sl276\slmult1\line\line\b\lang9 12. What is the difference between the rest (...args) and spread (...array) operators?\par
-
-\pard\sl276\slmult1\b0\lang16393 Though rest and spread use the same ... syntax, they serve opposite purposes in JavaScript:\line\line\b Rest Operator (...args)\par
-\b0 Gathers multiple values into a single array\par
-Used in function parameters\par
-Used to collect remaining elements\line\cf3\f5\line function sum(...numbers) \{\par
-  return numbers.reduce((acc, num) => acc + num, 0);\par
-\}\par
-\cf0\f2\par
-\cf3\f5 sum(1, 2, 3); // 6\line\cf0 Here, ...numbers collects all arguments into an array.\line\f2\line\cf3\f5 function greet(greeting, ...names) \{\par
-  names.forEach(name => console.log(`$\{greeting\}, $\{name\}`));\par
-\}\par
-\cf0\f2\line\line\b Spread Operator (...array)\line\b0 Expands (spreads) elements of an array or object into individual elements\par
-Used in function calls, arrays, and object literals\line Example (Array):\line\cf3\f5 const nums = [1, 2, 3];\par
-
-\pard\sa200\sl276\slmult1 console.log(...nums); // 1 2 3\line\cf0\f2\line\b\lang9 13. What is the purpose of the defer keyword in a <script> tag?\par
-
-\pard\sl276\slmult1\b0\lang16393 The defer keyword is used in the <script> tag to delay the execution of the JavaScript code until after the HTML document has been fully parsed.\par
-
-\pard\sa200\sl276\slmult1\line\b\lang9 14. What is the difference between local storage, session storage, and cookies?\par
-
-\pard\sl276\slmult1\b0\lang16393 These are all ways to store data in the browser, but they differ in storage capacity, lifetime, accessibility, and use cases.\line\line\b Storage Limit\b0 : localStorage (~5\f4\endash 10 MB), sessionStorage (~5 MB), cookies (~4 KB).\par
-\b Lifetime\b0 : localStorage (until manually cleared), sessionStorage (until tab/window closes), cookies (based on expiry or session).\par
-\b Accessibility\b0 : localStorage and sessionStorage (JavaScript, same origin), cookies (sent with every HTTP request).\par
-\b Use Case\b0 : localStorage (long-term client data), sessionStorage (tab-specific temporary data), cookies (authentication, server communication).\line\line\b\f2\lang9 15. Explain JavaScript's single-threaded model\line\b0\f9\fs22\line\f2\fs24 JavaScript uses a single-threaded model, meaning it can execute one command at a time in a single thread \f4\par
-\b\f2\line 16.What is the call stack and the task queue?\par
-\lang16393 Call Stack\par
-\b0 The Call Stack is where JavaScript keeps track of the functions that are currently being called.\par
-\par
-\b Key Points:\par
-\b0 Works in LIFO (Last In, First Out) order.\par
-Every time a function is called, it's pushed to the stack.\par
-When the function finishes, it's popped off the stack.\par
-JavaScript is single-threaded, so only one task runs at a time in the call stack.\par
-\par
-\cf3\f10\u-10179?\u-8921?\f7  \f5 Example:\par
-function greet() \{\par
-  console.log("Hello");\par
-\}\par
-greet();\par
-greet() is pushed to the stack \f8\u8594?\f7  \f5 runs \f8\u8594?\f7  \f5 logs "Hello" \f8\u8594?\f7  \f5 popped off the stack.\par
-\cf0\f2\par
-\b Task Queue (Event Queue)\par
-\b0 The Task Queue is where asynchronous callbacks wait to be executed after the call stack is empty.\par
-\par
-\b Key Points:\par
-\b0 Holds things like setTimeout, DOM events, and message events.\par
-The Event Loop checks the queue and moves tasks to the call stack when it's free.\par
-\par
-\cf3\f10\u-10179?\u-8921?\f7  \f5 Example:\par
-console.log("A");\par
-\par
-setTimeout(() => \{\par
-  console.log("B");\par
-\}, 0);\par
-\par
-console.log("C");\par
-\cf0\f2\par
-\b Execution:\par
-\b0 "A" \f8\u8594?\f4  \f2 printed from stack.\par
-setTimeout callback \f8\u8594?\f4  \f2 goes to Task Queue.\par
-"C" \f8\u8594?\f4  \f2 printed from stack.\par
-Stack is now empty \f8\u8594?\f4  \f2 Event Loop moves "B" to stack \f8\u8594?\f4  \f2 printed.\par
-\par
-Output:\par
-A\par
-C\par
-B\par
-
-\pard\sa200\sl276\slmult1\f4\lang16393\line\b\f2\lang9 17. What is the difference between the call stack and the event queue?\par
-
-\pard\sl276\slmult1\b0\lang16393 The call stack holds and executes synchronous functions in a LIFO manner, while the event queue holds asynchronous callbacks waiting to be pushed into the call stack when it's empty.\line\par
-\b Purpose\b0 : Call Stack executes synchronous code, while Event Queue stores async callbacks (e.g., setTimeout).\par
-\b Order\b0 : Call Stack follows LIFO (Last In, First Out); Event Queue follows FIFO (First In, First Out).\par
-\b Triggered By\b0 : Call Stack is triggered by function calls; Event Queue by Web APIs and async operations.\par
-\b When Processed\b0 : Call Stack runs code immediately; Event Queue is processed when the call stack is empty (via event loop).\par
-
-\pard\sa200\sl276\slmult1\b Example Use Case\b0 : Call Stack \f4\endash  console.log(), function calls; Event Queue \endash  setTimeout, fetch, event listeners.\b\f2\lang9\line\line\b0\f14\fs22\line\b\f9\fs24 18. What is the event loop in JavaScript?\par
-
-\pard\sl276\slmult1\b0\f2\lang16393 The event loop pushes tasks from the task queue into the call stack once the stack is empty, allowing asynchronous operations like setTimeout, fetch, and event listeners to execute after synchronous code.\line How It Works:\par
-Synchronous code runs in the call stack.\par
-Asynchronous operations (e.g., setTimeout) are handled by Web APIs.\par
-Their callbacks go to the task queue once completed.\par
-The event loop checks if the call stack is empty.\par
-If empty, it moves a task from the task queue to the call stack for execution.\line\f10\u-10179?\u-8986?\f4  \f2 Example:\line\cf3\f5 console.log("A");\par
-\par
-setTimeout(() => \{\par
-  console.log("B");\par
-\}, 0);\par
-\par
-console.log("C");\line\line\f10\u-10179?\u-8947?\f7  \f5 Output:\line A\par
-C\par
-B\line\line "A" and "C" run synchronously.\par
-
-\pard\sa200\sl276\slmult1 "B" is queued and executed later by the event loop.\line\cf0\f4\line\line\b\f2\lang9 19. How does JavaScript handle asynchronous operations?\par
-\b0\lang16393 JavaScript handles asynchronous operations using Web APIs to process tasks in the background, placing their callbacks in the event queue, which are executed by the event loop when the call stack is empty.\line\line\b\lang9 20.What is event bubbling and event capturing?\par
-
-\pard\sl276\slmult1\b0\lang16393 Event bubbling propagates the event from the target element up to the root, while event capturing (also called trickling) propagates the event from the root down to the target element.\line\line\b Direction\b0 : Event Capturing flows from top to target (outer \f8\u8594?\f4  \f2 inner), while Event Bubbling flows from target to top (inner \f8\u8594?\f4  \f2 outer).\par
-\b Order of Handling\b0 : Capturing handles parent first then child, bubbling handles child first then parent.\par
-\b Default Behavior\b0 : Capturing is not default; bubbling is the default in JavaScript.\par
-
-\pard\sa200\sl276\slmult1\line\line\b\lang9 21. What is event delegation in JavaScript?\par
-\b0 Event delegation is a technique where a single event listener is added to a parent element to handle events on its child elements using event bubbling.\line\f9\fs22\line\b\f2\fs24 22. How does event delegation improve performance?\line\b0 Event delegation improves performance by reducing the number of event listeners, handling all child events with a single listener on the parent, which minimizes memory usage and speeds up event handling\f4\emdash\f2 especially for dynamic or many elements.\line\f14\fs22\line\b\f2\fs24 23. Why do we use callbacks?\par
-\b0 We use callbacks to handle asynchronous operations and ensure that a function is executed only after another function finishes, \par
-\line\cf3\f5\fs22 function fetchData(callback) \{\par
-  setTimeout(() => \{\par
-    console.log("Data fetched");\par
-    callback();\par
-  \}, 1000);\par
-\}\par
-fetchData(() => \{\par
-  console.log("Callback executed");\par
-\});\par
-\cf0\f2\fs24\lang16393\line\b\lang9 24. What are promises in JavaScript?\par
-
-\pard\sl276\slmult1\b0\lang16393 A Promise is like a placeholder for a value that will get in the future\line\f4\line\f10\u-10179?\u-8986?\f4  \f2 Example:\line\cf3\f5\lang9 const customPromise = new Promise((resolve, reject) => \{\par
-  const success = true;\par
-\par
-  setTimeout(() => \{\par
-    if (success) \{\par
-      resolve("\f6\u9989?\f7  \f5 Promise resolved successfully!");\par
-    \} else \{\par
-      reject("\f6\u10060?\f7  \f5 Promise rejected with an error!");\par
-    \}\par
-  \}, 1000);\par
-\});\par
-\cf0\f2\par
-\cf3\f5 customPromise\par
-  .then((result) => console.log(result))\par
-
-\pard\sa200\sl276\slmult1   .catch((error) => console.error(error));\line\cf0\f2\lang16393\line\b\lang9 25. What are the different states of a promise?\par
-
-\pard\sl276\slmult1\f12\lang16393\u-10178?\u-8736?\f4  \f2 States of a Promise:\par
-\b0 Pending \f4\endash  initial state, not yet resolved or rejected.\par
-Fulfilled \endash  operation completed successfully.\par
-Rejected \endash  operation failed with an error.\line\par
-
-\pard\sa200\sl276\slmult1\b\f2\lang9 26. What is the difference between Promise.all() and Promise.allSettled()?\par
-\b0\lang16393 Promise.all() waits for all promises to fulfill and rejects if any one fails. \line Promise.allSettled() waits for all promises to settle (either fulfilled or rejected) and returns their status.\f15\par
-\b\f2\lang9 27. What is callback hell, and how do we avoid it?\par
-
-\pard\sl276\slmult1\b0\lang16393 Callback hell is a situation where callbacks are nested deeply and unreadably, making code hard to maintain; we avoid it using Promises, async/await, or modularizing functions.\line\par
-\b\lang9 28. How do async and await work? Provide an example.\par
-\b0\f16\line\b\f2 29. What is the difference between promise chaining and async/await?\line\b0 Promise chaining uses .then() for sequential async operations, while async/await uses a more readable, synchronous-like syntax built on top of promises.\par
-\line\b Syntax\b0 : Promise chaining uses .then() and .catch(), while async/await uses async functions with await.\par
-\b Readability\b0 : Promise chaining can become nested and harder to follow, async/await is cleaner and easier to read.\par
-\b Error Handling\b0 : Promise chaining uses .catch(), async/await uses try...catch.\par
-
-\pard\sa200\sl276\slmult1 Underlying Mechanism: Both are based on Promises, with async/await offering syntactic sugar.\par
-\lang16393\line\b\lang9 30. What is a WeakMap in JavaScript?\par
+\pard\sa200\sl276\slmult1 person.greet(); // Hello!\line\par
+\cf0\b\f2\lang9 31. What is a WeakMap in JavaScript?\par
 
 \pard\sl276\slmult1\b0\lang16393 A WeakMap in JavaScript is a collection of key-value pairs where keys must be objects and are weakly referenced, meaning they don't prevent garbage collection.\line\line\f12\u-10179?\u-8986?\f11  Example:\line\cf3\f5 let obj = \{\};\par
 const map = newMap();\line weakMap.set(obj, "Hello");\par
@@ -736,7 +756,7 @@ const weakMap = new WeakMap();\line weakMap.set(obj, "Hello");\par
 \par
 console.log(weakMap)\par
 
-\pard\sa200\sl276\slmult1\line\cf0\f11\line\b\f2\lang9 31. What is a WeakSet in JavaScript?\par
+\pard\sa200\sl276\slmult1\line\cf0\f11\line\b\f2\lang9 32. What is a WeakSet in JavaScript?\par
 
 \pard\sl276\slmult1\b0\lang16393 A WeakSet in JavaScript is a collection of objects only, where each object is weakly referenced \f4\emdash  they do not prevent garbage collection.\par
 \f2\par
@@ -750,25 +770,53 @@ let user = \{ name: "Neel" \};\par
 const weakSet = new WeakSet();\line weakSet.add(user);\par
 \par
 console.log(weakSet )\par
-\cf0\f11\line\line\b\f2\fs22\lang9 32. What is a polyfill in JavaScript?\par
-\b0\fs24\lang16393 A polyfill is a piece of code (usually JavaScript) that implements modern features in older browsers that do not natively support them.\par
 
-\pard\sa200\sl276\slmult1\f11\line\b\f2\lang9 33. What is ES6, and what are its key features?\par
+\pard\sa200\sl276\slmult1\par
+\cf0\b\f2\lang9 33. What are call(), apply(), and bind() methods?\par
 
-\pard\sl276\slmult1\b0\lang16393 ES6 (ECMAScript 2015) is a major update to JavaScript that introduced modern syntax and powerful features to make code more readable, maintainable, and efficient.\line\line\b Key Features of ES6:\par
-\b0 let and const \f4\endash  Block-scoped variable declarations.\par
-Arrow Functions (=>) \endash  Shorter syntax for functions with lexical this.\par
-Template Literals \endash  String interpolation using backticks (`Hello $\{name\}`).\par
-Destructuring \endash  Unpack values from arrays or objects into variables.\par
-Default Parameters \endash  Assign default values to function parameters.\par
-Rest & Spread Operators (...) \endash  Handle variable-length arguments and expand arrays/objects.\par
-Classes \endash  Cleaner, class-based syntax for OOP.\par
-Modules \endash  import and export for modular code.\par
-Promises \endash  Native support for asynchronous programming.\par
+\pard\sl276\slmult1\b0\lang16393 These three methods are used to set the this context explicitly in JavaScript functions.They allow functions to be reused across different objects.\par
 
-\pard\sa200\sl276\slmult1 Enhanced Object Literals \endash  Shorter syntax for defining objects.\line\line\line\b\f2\lang9 34. Define a transpiler and a compiler in the context of JavaScript.\par
+\pard\sa200\sl276\slmult1\f11\line\f2\line 34. \b\lang9 What is \lang16393 Prototype \lang9 inheritance in JavaScript?\par
 
-\pard\keep\keepn\sb200\sl276\slmult1\b0\lang16393 A transpiler converts JavaScript code from one version to another (e.g., ES6 to ES5), \line while a compiler translates code from one language to another (e.g., TypeScript to JavaScript).\line\line\line\cf1\b\f1\fs26\lang9 Advanced Level JavaScript Interview Questions\par
+\pard\sl276\slmult1\b0\lang16393 Prototypal inheritance is a feature in JavaScript where objects can inherit properties and methods from other objects via the prototype chain.\line\par
+In JavaScript, every object has a hidden property called [[Prototype]] accessible via\line 1. __proto__  \line 2.Object.getPrototypeOf()\par
+\line\b Creating Inheritance using Object\cf3\b0\f5\line const animal = \{\par
+  eats: true,\par
+  walk() \{\par
+    console.log("Animal walks");\par
+  \}\par
+\};\par
+const dog = Object.create(animal); // dog inherits from animal\par
+dog.barks = true;\par
+console.log(dog.eats); // true (inherited from animal)\par
+dog.walk();            // "Animal walks" (inherited)\line\line\cf0\b\f2 Creating Inheritance using Constructor Functions:\f13\line\cf3\b0\f5 function Person(name) \{\par
+  this.name = name;\par
+\}\par
+\par
+Person.prototype.sayHello = function () \{\par
+  console.log(`Hello, I'm $\{this.name\}`);\par
+\};\par
+\par
+const john = new Person("John");\par
+john.sayHello(); // Hello, I'm John\line\cf0\f13\line\b\f2 Creating Inheritance using Modern Syntax (ES6 Classes):\f13\par
+\cf3\b0\f5 class Animal \{\par
+  speak() \{\par
+    console.log("Animal speaks");\par
+  \}\par
+\}\par
+\par
+class Dog extends Animal \{\par
+  bark() \{\par
+    console.log("Dog barks");\par
+  \}\par
+\}\par
+\par
+const pet = new Dog();\par
+pet.speak(); // Animal speaks\par
+
+\pard\keep\keepn\sb200\sl276\slmult1 pet.bark();  // Dog barks\cf0\f2\line\par
+\par
+\cf1\b\f1\fs26\lang9 Advanced Level JavaScript Interview Questions\par
 
 \pard\sa200\sl276\slmult1\cf0\b0\f9\fs22\par
 \f2\fs24\lang16393\line\b\lang9 1. What is debouncing and how does it work?\line\line\b0 Debouncing means doing something only after a short wait, \line to avoid multiplecalls.\line\line we are typing in a search box. Without debouncing, it might search every time you type a letter. \line\line\cf3\f5 function debounce(func, delay) \{\par

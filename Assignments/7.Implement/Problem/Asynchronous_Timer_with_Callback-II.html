@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L0 - Asynchronous Timer with Callback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 850px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 15px;
+        }
+
+        .steps {
+            background: #e9f5ff;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+        }
+
+        .note {
+            background: #fff8e1;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>L0 - Asynchronous Timer with Callback</h1>
+
+        <h3>📌 Problem Statement:</h3>
+        <p>
+            Create a function <b>timer</b> that takes a duration in milliseconds and a callback function
+            <b>onComplete</b>. The function should use <code>setTimeout</code> to simulate a countdown, and when the
+            timer ends, it should execute the callback with the message:
+            <br>
+            <i>"Timer of &lt;duration&gt; ms finished"</i>.
+        </p>
+
+        <h3>📝 Steps to Solve:</h3>
+        <div class="steps">
+            <ol>
+                <li>Define a function <b>timer</b> that accepts <code>duration</code> and <code>onComplete</code> as
+                    parameters.</li>
+                <li>Use <code>setTimeout</code> to create a delay for the specified duration.</li>
+                <li>After the timer completes, call <code>onComplete</code> with the finish message.</li>
+            </ol>
+        </div>
+
+        <h3>📌 Example Usage:</h3>
+        <pre>
+timer(2000, (message) => {
+  console.log(message);
+});
+// Expected Output (after 2 seconds):
+// "Timer of 2000 ms finished"
+    </pre>
+
+        <div class="note">
+            🔹 <b>Tip:</b> This problem helps you understand how callbacks work in asynchronous JavaScript operations.
+        </div>
+    </div>
+</body>
+
+</html>
