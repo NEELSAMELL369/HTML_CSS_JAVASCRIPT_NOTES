@@ -626,21 +626,21 @@ Promise.allSettled([p1, p2, p3])\par
 
 \pard\sl240\slmult1\cf3 function orderPizza(callback) \{\par
     setTimeout(() => \{\par
-        console.log("\f10\u-10180?\u-8363? Pizza ordered");\par
+        console.log("\f10\u-10180?\u-8363?\f13  Pizza ordered");\par
         callback();\par
     \}, 1000);\par
 \}\par
 \par
 function bakePizza(callback) \{\par
     setTimeout(() => \{\par
-        console.log("\u-10179?\u-8923? Pizza baked");\par
+        console.log("\f10\u-10179?\u-8923?\f13  Pizza baked");\par
         callback();\par
     \}, 1000);\par
 \}\par
 \par
 function deliverPizza(callback) \{\par
     setTimeout(() => \{\par
-        console.log("\u-10179?\u-8550? Pizza delivered");\par
+        console.log("\f10\u-10179?\u-8550?\f13  Pizza delivered");\par
         callback();\par
     \}, 1000);\par
 \}\par
@@ -708,7 +708,7 @@ orderPizza()\par
 \pard\sa200\sl276\slmult1 Underlying Mechanism: Both are based on Promises, with async/await offering syntactic sugar.\par
 \b 24. What are closures in JavaScript?\par
 
-\pard\sl276\slmult1\b0\lang16393 A closure happens when a function remembers the variables from its outer scope, even after the outer function has finished executing.\line\cf3\f5\line function outer() \{\par
+\pard\sl240\slmult1\b0\lang16393 A closure happens when a function remembers the variables from its outer scope, even after the outer function has finished executing.\line\cf3\f5\line function outer() \{\par
   let count = 0;\par
 \par
   function inner() \{\par
@@ -722,7 +722,8 @@ orderPizza()\par
 const counter = outer(); // outer() returns inner\par
 counter(); // Count: 1\par
 counter(); // Count: 2\line\cf0 counter still has access to count even though outer() has finished. That\f7\rquote\f5 s a closure in action!\cf3\line\par
-\cf0\b Closure Useful\cf3\b0\line\cf0\f2 Data privacy/encapsulation\cf3\f5\line\cf0\f2 Maintaining state in async code (e.g., setTimeout, event listeners)\par
+
+\pard\sl276\slmult1\cf0\b Closure Useful\cf3\b0\line\cf0\f2 Data privacy/encapsulation\cf3\f5\line\cf0\f2 Maintaining state in async code (e.g., setTimeout, event listeners)\par
 \line\f11\line\b\f2\lang9 25. What is a polyfill in JavaScript?\par
 \b0\lang16393 A polyfill is a piece of code (usually JavaScript) that implements modern features in older browsers that do not natively support them.\par
 
@@ -740,7 +741,7 @@ Use super() to call the parent class constructor.\par
 
 \pard\sa200\sl276\slmult1\cf3\f5\line\cf0\b\f2\lang9 28. What are the possible ways to create objects in JavaScript?\par
 
-\pard\sl276\slmult1\b0\lang16393 JavaScript provides multiple ways to create objects, each serving different use cases.\line\line\b Using Object Literals\line\b0 The most common and simplest way.\par
+\pard\sl240\slmult1\b0\lang16393 JavaScript provides multiple ways to create objects, each serving different use cases.\line\line\b Using Object Literals\line\b0 The most common and simplest way.\par
 \cf3\f5 const person = \{\par
   name: "Neel",\par
   age: 27,\par
@@ -757,26 +758,21 @@ person.age = 27;\line\line\cf0\b\f2 Using Factory Functions\line\b0 Functions th
       console.log(`Hi, I'm $\{name\}`);\par
     \}\par
   \};\par
-\}\par
-\par
+\}4\par
 const user = createPerson("Neel", 27);\line\line\cf0\b\f2 Using Constructor Functions\line\cf3\b0\f5 function Person(name, age) \{\par
   this.name = name;\par
   this.age = age;\par
 \}\par
-\par
 const user = new Person("Neel", 27);\line\par
 \cf0\b\f2 Using ES6 Classes\line\b0 A modern and cleaner approach to object creation and inheritance.\line\cf3\f5 class Person \{\par
   constructor(name) \{\par
     this.name = name;\par
   \}\par
-\par
   greet() \{\par
     console.log(`Hi, I'm $\{this.name\}`);\par
   \}\par
 \}\par
-\par
-const user = new Person("Neel");\line\par
-\line\cf0\b\f2 Using Object.create()\line\b0 This creates a new object with the specified prototype.\line\cf3\f5 const proto = \{\par
+const user = new Person("Neel");\line\line\cf0\b\f2 Using Object.create()\line\b0 This creates a new object with the specified prototype.\line\cf3\f5 const proto = \{\par
   greet() \{\par
     console.log("Hello!");\par
   \}\par
@@ -785,56 +781,18 @@ const user = new Person("Neel");\line\par
 const person = Object.create(proto);\par
 person.name = "Neel";\par
 
-\pard\sa200\sl276\slmult1 person.greet(); // Hello!\line\par
-\par
-\cf0\b\f2\lang9 29. What are call(), apply(), and bind() methods?\par
+\pard\sa200\sl240\slmult1 person.greet(); // Hello!\par
 
-\pard\sl276\slmult1\b0\lang16393 These three methods are used to set the this context explicitly in JavaScript functions.They allow functions to be reused across different objects.\par
+\pard\sa200\sl276\slmult1\cf0\b\f2\lang9 29. What are call(), apply(), and bind() methods?\par
 
-\pard\sa200\sl276\slmult1\f11\line\f2\line\b 30. \lang9 What is \lang16393 Prototype \lang9 inheritance in JavaScript?\par
+\pard\sl276\slmult1\b0\lang16393 These three methods are used to set the this context explicitly in JavaScript functions.They allow functions to be reused across different objects.\f11\line\f2\line\b 30. \lang9 What is \lang16393 Prototype \lang9 inheritance in JavaScript?\par
+\b0\lang16393 Prototypal inheritance is a feature in JavaScript where objects can inherit properties and methods from other objects via the prototype chain.\line\par
 
-\pard\sl276\slmult1\b0\lang16393 Prototypal inheritance is a feature in JavaScript where objects can inherit properties and methods from other objects via the prototype chain.\line\par
-In JavaScript, every object has a hidden property called [[Prototype]] accessible via\line 1. __proto__  \line 2.Object.getPrototypeOf()\par
-\line\b Creating Inheritance using Object\cf3\b0\f5\line const animal = \{\par
-  eats: true,\par
-  walk() \{\par
-    console.log("Animal walks");\par
-  \}\par
-\};\par
-const dog = Object.create(animal); // dog inherits from animal\par
-dog.barks = true;\par
-console.log(dog.eats); // true (inherited from animal)\par
-dog.walk();            // "Animal walks" (inherited)\line\line\cf0\b\f2 Creating Inheritance using Constructor Functions:\f13\line\cf3\b0\f5 function Person(name) \{\par
-  this.name = name;\par
-\}\par
-\par
-Person.prototype.sayHello = function () \{\par
-  console.log(`Hello, I'm $\{this.name\}`);\par
-\};\par
-\par
-const john = new Person("John");\par
-john.sayHello(); // Hello, I'm John\line\cf0\f13\line\b\f2 Creating Inheritance using Modern Syntax (ES6 Classes):\f13\par
-\cf3\b0\f5 class Animal \{\par
-  speak() \{\par
-    console.log("Animal speaks");\par
-  \}\par
-\}\par
-\par
-class Dog extends Animal \{\par
-  bark() \{\par
-    console.log("Dog barks");\par
-  \}\par
-\}\par
-\par
-const pet = new Dog();\par
-pet.speak(); // Animal speaks\par
-
-\pard\keep\keepn\sb200\sl276\slmult1 pet.bark();  // Dog barks\cf0\f2\line\par
-\par
-\cf1\b\f1\fs26\lang9 Advanced Level JavaScript Interview Questions\par
+\pard\keep\keepn\sb200\sl276\slmult1\cf1\b\f1\fs26\lang9 Advanced Level JavaScript Interview Questions\par
 
 \pard\sa200\sl276\slmult1\cf0\b0\f9\fs22\par
-\f2\fs24\lang16393\line\b\lang9 1. What is debouncing and how does it work?\line\line\b0 Debouncing means doing something only after a short wait, \line to avoid multiplecalls.\line\line we are typing in a search box. Without debouncing, it might search every time you type a letter. \line\line\cf3\f5 function debounce(func, delay) \{\par
+
+\pard\sl240\slmult1\f2\fs24\lang16393\line\b\lang9 1. What is debouncing and how does it work?\line\line\b0 Debouncing means doing something only after a short wait, \line to avoid multiplecalls.\line\line we are typing in a search box. Without debouncing, it might search every time you type a letter. \line\line\cf3\f5 function debounce(func, delay) \{\par
   let timer;\par
   return function () \{\par
     clearTimeout(timer);\par
@@ -847,7 +805,8 @@ function sayHello() \{\par
 const debouncedHello = debounce(sayHello, 1000);\line debounceFunc()\par
 \cf0 // Now if you call debouncedHello many times quickly,\par
 // "Hello!" will only print once, after 1 second of no calls.\par
-\f2\lang16393\line\b\lang9 2. What is throttling and how does it work?\par
+
+\pard\sa200\sl276\slmult1\f2\lang16393\line\b\lang9 2. What is throttling and how does it work?\par
 \b0 Throttling means limiting how often a function runs \f4\emdash  even if it\rquote s called many times quickly, it will run only once every set time\f2\lang16393\par
 
 \pard\sl276\slmult1 Without throttling: it may run the scroll function 100s of times per second (bad for performance).\par
@@ -866,21 +825,7 @@ With throttling: it runs the function once every 500ms, no matter how fast you s
 \b Use case:\par
 \b0 Debouncing is great for search inputs; throttling is best for scroll or resize.\par
 \b Goal:\par
-\b0 Debouncing avoids too many calls; throttling limits how often calls happen.\line\line\b 4.\lang9 How to create a custom promise?\line\b0\f9\fs22\line\f2\fs24 we can create a custom promise using the new Promise() constructor, which takes a function with resolve and reject parameters to control the async result.\line\line Example: Basic Custom Promise\line\line\cf3\f5 const customPromise = new Promise((resolve, reject) => \{\par
-  const success = true;\par
-\par
-  setTimeout(() => \{\par
-    if (success) \{\par
-      resolve("\f6\u9989?\f7  \f5 Promise resolved successfully!");\par
-    \} else \{\par
-      reject("\f6\u10060?\f7  \f5 Promise rejected with an error!");\par
-    \}\par
-  \}, 1000);\par
-\});\par
-\cf0\f2\par
-\cf3\f5 customPromise\par
-  .then((result) => console.log(result))\par
-  .catch((error) => console.error(error));\line\par
+\b0 Debouncing avoids too many calls; throttling limits how often calls happen.\line\line\cf3\f5\lang9\par
 \par
 \par
 \par
