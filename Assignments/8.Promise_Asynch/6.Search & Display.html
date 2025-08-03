@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Filter</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
         .book-list {
             list-style-type: none;
             padding: 0;
@@ -14,71 +19,92 @@
         .book-item {
             padding: 5px;
         }
+
+        .error {
+            color: red;
+        }
+
+        .loading {
+            color: blue;
+        }
     </style>
 </head>
 
 <body>
     <h1>Book Filter by Author</h1>
-    <input type="text" id="authorSearch" placeholder="Enter author's name">
+    <label for="authorSearch">Author Name:</label>
+    <input type="text" id="authorSearch" placeholder="Enter author's name" aria-label="Author Search">
     <button onclick="filterBooks()">Search</button>
 
     <ul id="bookList" class="book-list"></ul>
 
+    <script>
+        const books = [
+            { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+            { title: "To Kill a Mockingbird", author: "Harper Lee" },
+            { title: "1984", author: "George Orwell" },
+            { title: "Moby Dick", author: "Herman Melville" },
+            { title: "The Catcher in the Rye", author: "J.D. Salinger" },
+        ];
 
-</body>
-<script src="script.js">
-    // Sample array of books
-    const books = [
-        { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
-        { title: "To Kill a Mockingbird", author: "Harper Lee" },
-        { title: "1984", author: "George Orwell" },
-        { title: "Moby Dick", author: "Herman Melville" },
-        { title: "The Catcher in the Rye", author: "J.D. Salinger" },
-    ];
+        const bookListElement = document.getElementById("bookList");
+        const authorInput = document.getElementById("authorSearch");
 
-    // Function to filter books by author
-    function filterBooks() {
-        const authorName = document.getElementById("authorSearch").value.trim();
-
-        // Promise to simulate asynchronous operation
-        const filteredBooksPromise = new Promise((resolve, reject) => {
-            if (authorName) {
-                const filteredBooks = books.filter(book => book.author.toLowerCase().includes(authorName.toLowerCase()));
-                setTimeout(() => {
-                    resolve(filteredBooks); // Simulate delay before resolving the promise
-                }, 1000); // 1-second delay
-            } else {
-                reject("Please enter an author name.");
+        // Trigger search on Enter key
+        authorInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+                filterBooks();
             }
         });
 
-        // Handle promise resolution and display filtered books 
-        filteredBooksPromise
-            .then(filteredBooks => {
-                displayBooks(filteredBooks);
-            })
-            .catch(error => {
-                alert(error); // Display error if the promise is rejected
-            });
-    }
+        // Filter books by author name
+        function filterBooks() {
+            const authorName = authorInput.value.trim();
 
-    // Function to display books on the page
-    function displayBooks(filteredBooks) {
-        const bookListElement = document.getElementById("bookList");
-        bookListElement.innerHTML = ""; // Clear previous list
+            bookListElement.innerHTML = '<li class="loading">Loading...</li>';
 
-        if (filteredBooks.length === 0) {
-            bookListElement.innerHTML = "<li>No books found by this author.</li>";
-        } else {
-            filteredBooks.forEach(book => {
-                const listItem = document.createElement("li");
-                listItem.classList.add("book-item");
-                listItem.textContent = `${book.title} by ${book.author}`;
-                bookListElement.appendChild(listItem);
+            const filteredBooksPromise = new Promise((resolve, reject) => {
+                if (authorName) {
+                    const filtered = books.filter(book =>
+                        book.author.toLowerCase().includes(authorName.toLowerCase())
+                    );
+                    setTimeout(() => resolve(filtered), 1000);
+                } else {
+                    setTimeout(() => reject("Please enter an author name."), 500);
+                }
             });
+            
+            filteredBooksPromise
+                .then(filteredBooks => {
+                    displayBooks(filteredBooks); // Display the filtered list of books
+                })
+                .catch(errorMessage => {
+                    showError(errorMessage); // Show error message if input is empty
+                });
         }
-    }
 
-</script>
+        // Display list of books
+        function displayBooks(filteredBooks) {
+            bookListElement.innerHTML = "";
+
+            if (filteredBooks.length === 0) {
+                bookListElement.innerHTML = "<li>No books found by this author.</li>";
+            } else {
+                filteredBooks.forEach(book => {
+                    const listItem = document.createElement("li");
+                    listItem.classList.add("book-item");
+                    listItem.textContent = `${book.title} by ${book.author}`;
+                    bookListElement.appendChild(listItem);
+                });
+            }
+        }
+
+        // Display error on the page
+        function showError(message) {
+            bookListElement.innerHTML = `<li class="error">${message}</li>`;
+        }
+    </script>
+
+</body>
 
 </html>

@@ -2,9 +2,7 @@ function multiply(a, b) {
   return a * b;
 }
 
-function multiplyNumbers(num1, num2) {
-  return multiply.apply(null, [num1, num2]);
-}
 
-// Example usage
-console.log(multiplyNumbers(4, 5)); // Output: 20
+let obj1 = {}
+const result = multiply.apply(obj1, [4, 5]); // apply used directly
+console.log(result); // Output: 20
