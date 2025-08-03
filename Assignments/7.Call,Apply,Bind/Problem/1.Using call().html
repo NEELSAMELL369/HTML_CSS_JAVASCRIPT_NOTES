@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>L1 - Using call() to Access Object Properties</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 5px;
+      border-left: 5px solid #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>L1 - Using call() to Access Object Properties</h1>
+  
+  <p><strong>Problem Statement:</strong></p>
+  <p>
+    Create a function called <code>personInfo</code> that logs the <code>name</code> and <code>age</code> of a person.
+    Using the <code>call()</code> method, call the function with a specific <code>this</code> context (an object with properties <code>name</code> and <code>age</code>).
+  </p>
+
+  <p><strong>Example:</strong></p>
+  <pre><code>const person = {
+  name: "John",
+  age: 30
+};
+
+personInfo.call(person); // Output: Name: John, Age: 30</code></pre>
+
+  
+  
+</body>
+</html>

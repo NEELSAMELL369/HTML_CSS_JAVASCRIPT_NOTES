@@ -1,9 +1,0 @@
-You have an array of objects representing tasks with their descriptions and completion statuses. Implement JavaScript code to:
-
-Sort the tasks by their completion status, showing incomplete tasks first.
-Filter out the tasks that are already completed.
-Display the sorted and filtered list of tasks on a web page.
-Requirements:
-
-A button to sort and filter the tasks.
-Display the list of tasks with their descriptions and completion statuses.

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Sort and Filter - Problem Statement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+        }
+
+        #taskList {
+            margin-top: 30px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .task {
+            margin: 10px 0;
+            padding: 12px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🧠 Problem Statement: Sort and Filter Tasks</h1>
+
+    <p>
+        You are given an array of task objects. Each task contains the following properties:
+    </p>
+    <ul>
+        <li><code>description</code>: A string describing the task.</li>
+        <li><code>completed</code>: A boolean indicating whether the task is completed (<code>true</code>) or not
+            (<code>false</code>).</li>
+    </ul>
+
+    <p><strong>Your job is to:</strong></p>
+    <ol>
+        <li>Sort the tasks by their completion status so that incomplete tasks appear first.</li>
+        <li>Filter out the tasks that are already completed.</li>
+        <li>Display the sorted and filtered list of tasks on a web page.</li>
+    </ol>
+
+    <p><strong>UI Requirements:</strong></p>
+    <ul>
+        <li>Add a button labeled <strong>"Sort & Filter Tasks"</strong> that triggers the logic when clicked.</li>
+        <li>Display each task's <code>description</code> and <code>completion status</code> on the page.</li>
+        <li>Style the task list using cards or boxes for better readability.</li>
+    </ul>
+
+    <p><strong>Example Input:</strong></p>
+    <pre><code>
+const tasks = [
+  { description: "Buy groceries", completed: true },
+  { description: "Attend stand-up meeting", completed: false },
+  { description: "Pay rent", completed: true },
+  { description: "Go for a run", completed: false }
+];
+  </code></pre>
+
+    <p><strong>Expected Output:</strong></p>
+    <pre><code>
+Attend stand-up meeting - Incomplete
+Go for a run - Incomplete
+  </code></pre>
+
+    <p><strong>Constraints:</strong></p>
+    <ul>
+        <li>Do not modify the original array.</li>
+        <li>Use DOM methods to render tasks dynamically.</li>
+        <li>Ensure the logic runs only when the button is clicked.</li>
+    </ul>
+
+
+</body>
+
+</html>

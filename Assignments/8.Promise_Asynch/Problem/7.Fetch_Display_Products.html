@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1 - Fetch and Display Products with Error Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 850px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 15px;
+        }
+
+        .steps {
+            background: #e9f5ff;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+        }
+
+        .note {
+            background: #fff8e1;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>L1 - Fetch and Display Products with Error Handling</h1>
+
+        <h3>📌 Problem Statement:</h3>
+        <p>
+            Create a product listing page that fetches data from the API:
+            <br>
+            <code>https://fakestoreapi.com/products</code>
+            <br>
+            and displays the product details in a grid format. Each product should show:
+        </p>
+        <ul>
+            <li>Product image</li>
+            <li>Product title</li>
+            <li>Product price</li>
+            <li>A button labeled <b>"View Details"</b></li>
+        </ul>
+
+        <h3>📝 Key Requirements:</h3>
+        <div class="steps">
+            <ol>
+                <li>Fetch data from the API using the <code>fetch()</code> method with <code>async/await</code>.</li>
+                <li>Display products dynamically in the console and in a grid on the webpage.</li>
+                <li>Implement error handling using a <code>try-catch</code> block.</li>
+                <li>If the API call fails (e.g., wrong URL), display a message:
+                    <br><b>"Failed to fetch products. Please try again later."</b>
+                </li>
+                <li>Use the <code>reduce()</code> method to calculate the total sum of all product prices.</li>
+                <li>Submissions without the use of <code>reduce()</code> for summation will be flagged as <b>Not
+                        Submitted</b>.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

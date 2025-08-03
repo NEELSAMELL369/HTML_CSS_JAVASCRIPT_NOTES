@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Analytics - Problem Statement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        pre {
+            background: #eaeaea;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🧠 Problem Statement: Inventory Analytics Report</h1>
+
+    <p>
+        You are working as a software developer for an e-commerce company.
+        Your task is to analyze a list of products and generate a report that summarizes:
+    </p>
+    <ul>
+        <li>Out-of-stock products</li>
+        <li>Total value of all products in stock</li>
+        <li>Average price of products by category</li>
+    </ul>
+
+
+
+
+    <h2>✅ Example</h2>
+    <p><strong>Input:</strong></p>
+    <pre><code>
+
+function Analytic(products){
+    
+}
+
+const products = [
+  { id: 1, name: "Laptop", price: 72000, category: "Electronics", stock: 4 },
+  { id: 2, name: "Shoes", price: 3500, category: "Fashion", stock: 0 },
+  { id: 3, name: "Phone", price: 48000, category: "Electronics", stock: 7 },
+  { id: 4, name: "T-Shirt", price: 1200, category: "Fashion", stock: 23 },
+  { id: 5, name: "Headphones", price: 2600, category: "Electronics", stock: 0 }
+];
+
+let res = Analytic(products)
+console.log(res)
+</code></pre>
+
+    <p><strong>Output:</strong></p>
+    <pre><code>{
+  outOfStock: [ "Shoes", "Headphones" ],
+  totalStockValue: 651600,
+  avgPriceByCategory: { Electronics: "40866.7", Fashion: "2350.0" }
+}</code></pre>
+
+</body>
+
+</html>

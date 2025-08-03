@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L1 - Grouping and Summing with reduce()</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Title:</h1>
+    <h2>L1 - Grouping and Summing with reduce()</h2>
+
+    <h3>Problem Statement:</h3>
+    <p>
+        You are given an array of strings representing product categories. Your task is to use
+        <code>reduce()</code> to create an object that counts the occurrences of each category in the array.
+    </p>
+
+    <h3>Steps:</h3>
+    <ul>
+        <li>Use <code>reduce()</code> to group the categories and count how many times each category appears.</li>
+        <li>Return the resulting object.</li>
+    </ul>
+
+    <h3>Example:</h3>
+    <p><strong>Input:</strong></p>
+    <pre>
+let products  = ["electronics", "clothing", "electronics", "toys", "clothing", "toys", "toys"]
+  </pre>
+
+    <p><strong>Output:</strong></p>
+    <pre>
+{ electronics: 2, clothing: 2, toys: 3 }
+  </pre>
+
+    <h3>Extra Challenge:</h3>
+    <p>
+        After creating the object, use <code>Object.entries()</code> and <code>sort()</code> to sort the categories
+        by their counts in descending order and return an array of sorted categories.
+    </p>
+</body>
+
+</html>
