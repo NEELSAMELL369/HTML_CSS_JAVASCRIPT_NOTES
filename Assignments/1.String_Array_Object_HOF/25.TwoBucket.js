@@ -19,3 +19,20 @@ const b = [3, 6];
 
 const res = canPourIntoTwoBuckets(a, b);
 console.log(res);
+
+
+
+
+
+//Typescript
+
+// Define the function type and implementation
+// function canPourIntoTwoBuckets(a: number[], b: number[]): boolean {
+//   return a.length === b.length;
+// }
+
+// const a: number[] = [3, 5];
+// const b: number[] = [3, 6];
+
+// const res: boolean = canPourIntoTwoBuckets(a, b);
+// console.log(res);

@@ -1,4 +1,4 @@
-function findTopStudent(school, newDepartment) {
+function AddDepartment(school, newDepartment) {
   return { ...school, departments: { ...school.departments, ...newDepartment } }
 }
 
@@ -38,4 +38,4 @@ const school = {
 
 const newDepartment = { art: { teachers: 2, students: 50 } }
 
-console.log(findTopStudent(school, newDepartment));
+console.log(AddDepartment(school, newDepartment));

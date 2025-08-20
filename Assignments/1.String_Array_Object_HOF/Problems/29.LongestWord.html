@@ -63,39 +63,22 @@
 
         <h3>💡 Examples:</h3>
         <pre>
-Input: "The quick brown fox jumps over the lazy dog"
-Output: "quick"
+function longestword(sentence){
+
+}
+
+let input = "The quick brown fox jumps over the lazy dog"
+let res = longestword(input)
+console.log(res)
 
 Input: "I love programming in JavaScript"
 Output: "programming"
     </pre>
 
-        <h3>🧪 Try it Yourself:</h3>
-        <input type="text" id="sentenceInput" placeholder="Enter a sentence..." />
-        <button onclick="handleCheck()">Find Longest Word</button>
-        <div class="output" id="output"></div>
+
     </div>
 
-    <script>
-        function findLongestWord(str) {
-            let arr = str.trim().split(' ');
-            let maxLen = 0;
-            let maxWord = '';
-            arr.forEach(word => {
-                if (word.length > maxLen) {
-                    maxLen = word.length;
-                    maxWord = word;
-                }
-            });
-            return maxWord;
-        }
 
-        function handleCheck() {
-            const input = document.getElementById("sentenceInput").value;
-            const result = findLongestWord(input);
-            document.getElementById("output").innerText = `Longest Word: ${result}`;
-        }
-    </script>
 </body>
 
 </html>

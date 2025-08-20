@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Filter By Author</h2>
+    <input type="text" id="inputAuthor">
+    <button onclick="filterSearch()">Search</button>
+    <div id="display"></div>
+</body>
+<script>
+    const books = [
+        { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+        { title: "To Kill a Mockingbird", author: "Harper Lee" },
+        { title: "1984", author: "George Orwell" },
+        { title: "Moby Dick", author: "Herman Melville" },
+        { title: "The Catcher in the Rye", author: "J.D. Salinger" },
+    ];
+
+    const inputAuthor = document.getElementById('inputAuthor')
+    const displayContainer = document.getElementById('display')
+
+    inputAuthor.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            filterSearch()
+        }
+    })
+
+
+    const filterSearch = () => {
+        let query = inputAuthor.value.trim()
+        let booksPromise = new Promise((res, rej) => {
+            if (query) {
+                let filterBook = books.filter((book) => book.author.toLowerCase().includes(query.toLowerCase()))
+                setTimeout(() => res(filterBook), 1000)
+            } else {
+                setTimeout(() => { rej("Please Enter valid author name") }, 1000)
+            }
+        })
+
+        booksPromise.then((books) => displayBook(books)).catch((error) => showError(error))
+    }
+
+    const displayBook = (books) => {
+        displayContainer.innerHTML = ''
+
+        if (books.length === 0) {
+            displayContainer.innerHTML = `<p>No Author Found</p>`
+        } else {
+
+            books.forEach((book) => {
+                let listItem = document.createElement('div')
+                listItem.classList.add('book-item')
+                listItem.textContent = `${book.title} - ${book.author}`
+                displayContainer.appendChild(listItem)
+            })
+
+        }
+    }
+
+    const showError = (message) => {
+        display.innerHTML = `<li>Error:- ${message}</li>`
+    }
+</script>
+
+</html>

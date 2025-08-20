@@ -37,3 +37,61 @@ console.log(newObj);
 //     Yogesh: [ 'HTML' ],
 //     Nrupul: [ 'Java' ]
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------TypeScript-----------------------------------------------------
+
+
+
+// type SubjectsHash = {
+//     [id: number]: string;
+// };
+
+// type Student = {
+//     id: number;
+//     name: string;
+//     subjectID: number;
+// };
+
+// type StudentSubjects = {
+//     [name: string]: string[];
+// };
+
+// const subjectsHash: SubjectsHash = {
+//     1: "Javascript",
+//     2: "HTML",
+//     3: "CSS",
+//     4: "Java",
+//     5: "Rust",
+// };
+
+// const students: Student[] = [
+//     { id: 1, name: "Prateek", subjectID: 5 },
+//     { id: 2, name: "Yogesh", subjectID: 2 },
+//     { id: 3, name: "Nrupul", subjectID: 4 },
+//     { id: 4, name: "Prateek", subjectID: 1 },
+// ];
+
+// const newObj: StudentSubjects = {};
+
+// students.forEach((student) => {
+//     const subject = subjectsHash[student.subjectID];
+//     if (!newObj[student.name]) {
+//         newObj[student.name] = [];
+//     }
+//     newObj[student.name].push(subject);
+// });
+
+// console.log(newObj);

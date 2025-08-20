@@ -1,4 +1,4 @@
-{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 @Yu Gothic UI Semibold;}{\f1\fnil\fcharset0 Calibri;}{\f2\fnil\fcharset0 Arial;}{\f3\fnil\fcharset0 @Arial Unicode MS;}{\f4\fnil Arial;}{\f5\fnil\fcharset0 Comic Sans MS;}{\f6\fnil\fcharset1 Segoe UI Symbol;}{\f7\fnil Comic Sans MS;}{\f8\fnil\fcharset1 Cambria Math;}{\f9\fnil\fcharset0 Cambria;}{\f10\fnil\fcharset1 Segoe UI Symbol;}{\f11\fnil Segoe UI Emoji;}{\f12\fnil\fcharset1 Segoe UI Emoji;}{\f13\fnil Segoe UI Symbol;}{\f14\fnil Cambria;}{\f15\fnil\fcharset0 Segoe UI Emoji;}{\f16\fnil\fcharset0 Cambria Math;}}
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 @Yu Gothic UI Semibold;}{\f1\fnil\fcharset0 Calibri;}{\f2\fnil\fcharset0 Arial;}{\f3\fnil\fcharset0 @Arial Unicode MS;}{\f4\fnil Arial;}{\f5\fnil\fcharset0 Comic Sans MS;}{\f6\fnil\fcharset1 Segoe UI Symbol;}{\f7\fnil Comic Sans MS;}{\f8\fnil\fcharset1 Cambria Math;}{\f9\fnil\fcharset0 Cambria;}{\f10\fnil\fcharset1 Segoe UI Symbol;}{\f11\fnil Segoe UI Emoji;}{\f12\fnil\fcharset1 Segoe UI Emoji;}{\f13\fnil Segoe UI Symbol;}{\f14\fnil Cambria;}{\f15\fnil\fcharset0 Cambria Math;}}
 {\colortbl ;\red79\green129\blue189;\red54\green95\blue145;\red255\green0\blue0;\red0\green0\blue255;}
 {\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont8\mwrapIndent1440 }\viewkind4\uc1 
 \pard\keep\keepn\sb480\sl276\slmult1\cf1\b\f0\fs32\lang9 Basic Level JavaScript Interview Questions\cf2\f1\par
@@ -364,7 +364,7 @@ greet("Neel") \f8\u8594?\f7  \f5 "Neel" is an argument\par
 32. What is Execution Context in JavaScript ?\par
 \b0\fs24 An Execution Context is the environment where your JavaScript code is evaluated and executed.\par
 \b\fs28\par
-33. What is Encapsulate ?\b0\fs24  \fs28\par
+\fs22 33. What is Encapsulate ?\b0  \fs28\par
 \fs24\par
 \b\fs32\lang9 Intermediate Level JavaScript Interview Questions\par
 \b0\fs24\lang16393\par
@@ -564,46 +564,21 @@ console.log("C");\par
 
 \pard\sl276\slmult1\b0\lang16393 The call stack holds and executes synchronous functions in a LIFO manner, while the event queue holds asynchronous callbacks waiting to be pushed into the call stack when it's empty.\b\lang9\line\b0\f14\fs22\line\b\f9\fs24 14. What is the event loop in JavaScript?\par
 
-\pard\sa200\sl276\slmult1\b0\f2\lang16393 The event loop pushes tasks from the task queue into the call stack once the stack is empty, allowing asynchronous operations like setTimeout, fetch, and event listeners to execute after synchronous code.\f4\line\f2\line\f14\fs22\lang9\line\b\f2\fs24 16. Explain JavaScript's single-threaded model\line\b0\lang16393\line\b\lang9 17. \lang16393 What are Promises and Why Do We Need Them \b0\par
+\pard\sa200\sl276\slmult1\b0\f2\lang16393 The event loop pushes tasks from the task queue into the call stack once the stack is empty, allowing asynchronous operations like setTimeout, fetch, and event listeners to execute after synchronous code.\f4\line\f2\line\f14\fs22\lang9\line\b\f2\fs24 15. Explain JavaScript's single-threaded model\line\b0\lang16393\line\b\lang9 16. \lang16393 What are Promises and Why Do We Need Them \b0\par
 
 \pard\sl240\slmult1 A Promise in JavaScript is an object that represents a task that will finish in the future, either with a success value or an error.\par
 It is used to handle asynchronous operations without blocking the rest of the program.\par
-\par
+ \par
 Promises solve the callback hell problem, making code cleaner and more manageable.\par
 
-\pard\sa200\sl276\slmult1\par
-\b 18. \f4 How to Execute and Handle Promises\f2  ?\f4\par
-
-\pard\sl240\slmult1\cf3\b0\f5 const myPromise = new Promise((resolve, reject) => \{\par
-    const success = Math.random() > 0.5;\par
-    setTimeout(() => \{\par
-        if (success) \{\par
-            resolve("\f6\u9989?\f7  \f5 Data fetched successfully!");\par
-        \} else \{\par
-            reject("\f6\u10060?\f7  \f5 Error fetching data.");\par
-        \}\par
-    \}, 2000);\par
-\});\par
-\cf0\f13\par
-\cf3\f5 myPromise\par
-    .then(result => console.log(result))     // Handles success\par
-    .catch(error => console.error(error))   // Handles error\par
-    .finally(() => console.log("Promise completed"));\par
-
-\pard\sa200\sl276\slmult1\cf0\f13\par
-
-\pard\sl240\slmult1\b - .then() \f8\u8594? Runs on success.\par
-- .catch() \u8594? Runs on failure.\par
-- .finally() \u8594? Runs regardless of outcome.\par
-
-\pard\sa200\sl276\slmult1\b0\f2\lang16393\line\b\lang9 19. What are the different states of a promise?\par
+\pard\sa200\sl276\slmult1\line\b\lang9 17. What are the different states of a promise?\par
 
 \pard\sl276\slmult1\f12\lang16393\u-10178?\u-8736?\f4  \f2 States of a Promise:\par
 \b0 Pending \f4\endash  initial state, not yet resolved or rejected.\par
 Fulfilled \endash  operation completed successfully.\par
 Rejected \endash  operation failed with an error.\line\par
 
-\pard\sa200\sl276\slmult1\b\f2\lang9 20. What is the difference between Promise.all() and Promise.allSettled()?\par
+\pard\sa200\sl276\slmult1\b\f2\lang9 18. What is the difference between Promise.all() and Promise.allSettled()?\par
 \b0\lang16393 Promise.all() waits for all promises to fulfill and rejects if any one fails. \line Promise.allSettled() waits for all promises to settle (either fulfilled or rejected) and returns their status.\par
 
 \pard\sl240\slmult1\cf3\f5 const p1 = Promise.resolve("\f6\u9989?\f7  \f5 Task 1 done");\par
@@ -619,7 +594,7 @@ Promise.allSettled([p1, p2, p3])\par
   .then(results => console.log("Promise.allSettled results:", results));\par
 
 \pard\sa200\sl276\slmult1\cf0\f2\par
-\b\lang9 21. What is callback hell, and how do we avoid it?\par
+\b\lang9 19. What is callback hell, and how do we avoid it?\par
 
 \pard\sl276\slmult1\b0\lang16393 Callback hell is a situation where callbacks are nested deeply and unreadably, making code hard to maintain; we avoid it using Promises, async/await, or modularizing functions.\par
 \line\b\f4 Callback Hell example\b0\f2\par
@@ -697,16 +672,21 @@ orderPizza()\par
 
 \pard\sl276\slmult1\cf0\f2\par
 
-\pard\sa200\sl276\slmult1\b\lang9 22. How does JavaScript handle asynchronous operations?\par
-\b0\lang16393 JavaScript handles asynchronous operations using Web APIs to process tasks in the background, placing their callbacks in the event queue, which are executed by the event loop when the call stack is empty.\f15\par
+\pard\sa200\sl276\slmult1\f15\lang9\line\b\f2 21. What is the difference between promise chaining and async/await?\line\fs22 Promise Chaining\b0\par
 
-\pard\sl276\slmult1\f16\lang9\line\b\f2 23. What is the difference between promise chaining and async/await?\line\b0 Promise chaining uses .then() for sequential async operations, while async/await uses a more readable, synchronous-like syntax built on top of promises.\par
-\line\b Syntax\b0 : Promise chaining uses .then() and .catch(), while async/await uses async functions with await.\par
-\b Readability\b0 : Promise chaining can become nested and harder to follow, async/await is cleaner and easier to read.\par
-\b Error Handling\b0 : Promise chaining uses .catch(), async/await uses try...catch.\par
+\pard\sa200\sl240\slmult1\f9 Style: Uses .then(), .catch(), and .finally().\par
+Flow: Each .then() returns a new promise, which the next .then() in the chain waits for.\par
+Code readability: Can become messy if there are many dependent async operations ("callback hell v2").\par
+Error handling: Needs .catch() at the end (or after a specific .then()) to catch errors.\par
 
-\pard\sa200\sl276\slmult1 Underlying Mechanism: Both are based on Promises, with async/await offering syntactic sugar.\par
-\b 24. What are closures in JavaScript?\par
+\pard\sa200\sl276\slmult1\b\f2 Async/Await\b0\par
+
+\pard\sa200\sl240\slmult1 Style: Uses async functions and the await keyword.\par
+Flow: Makes async code look synchronous \f4\emdash  easier to read and reason about.\par
+Code readability: Cleaner and more natural when dealing with multiple sequential async operations.\par
+Error handling: Uses standard try...catch blocks, making it familiar and structured.\f2\par
+
+\pard\sa200\sl276\slmult1\b\fs24 22. What are closures in JavaScript?\par
 
 \pard\sl240\slmult1\b0\lang16393 A closure happens when a function remembers the variables from its outer scope, even after the outer function has finished executing.\line\cf3\f5\line function outer() \{\par
   let count = 0;\par
@@ -724,13 +704,13 @@ counter(); // Count: 1\par
 counter(); // Count: 2\line\cf0 counter still has access to count even though outer() has finished. That\f7\rquote\f5 s a closure in action!\cf3\line\par
 
 \pard\sl276\slmult1\cf0\b Closure Useful\cf3\b0\line\cf0\f2 Data privacy/encapsulation\cf3\f5\line\cf0\f2 Maintaining state in async code (e.g., setTimeout, event listeners)\par
-\line\f11\line\b\f2\lang9 25. What is a polyfill in JavaScript?\par
+\line\f11\line\b\f2\lang9 23. What is a polyfill in JavaScript?\par
 \b0\lang16393 A polyfill is a piece of code (usually JavaScript) that implements modern features in older browsers that do not natively support them.\par
 
 \pard\sa200\sl276\slmult1\b\lang9\par
-26. What is OOP (Object-Oriented Programming) in JavaScript?\par
+24. What is OOP (Object-Oriented Programming) in JavaScript?\par
 \b0\lang16393 OOP in JavaScript means writing code using objects that have data and actions, making it easier to build programs.\line\f11\par
-\b\f2\lang9 27. What are JavaScript classes?\par
+\b\f2\lang9 25. What are JavaScript classes?\par
 
 \pard\sl276\slmult1\b0\lang16393 JavaScript classes are blueprints for creating objects with shared properties and methods. They were introduced in ES6 (ES2015) to provide a cleaner and more familiar syntax for object creation and inheritance, compared to the older prototype-based approach.\line\cf3\f13\line\cf0\b\f2 Key Features of Classes:\par
 \b0 constructor() \f4\emdash  \f2 special method for initializing new objects.\par
@@ -739,7 +719,7 @@ Supports inheritance using the extends keyword.\par
 Use super() to call the parent class constructor.\par
 \par
 
-\pard\sa200\sl276\slmult1\cf3\f5\line\cf0\b\f2\lang9 28. What are the possible ways to create objects in JavaScript?\par
+\pard\sa200\sl276\slmult1\cf3\f5\line\cf0\b\f2\lang9 26. What are the possible ways to create objects in JavaScript?\par
 
 \pard\sl240\slmult1\b0\lang16393 JavaScript provides multiple ways to create objects, each serving different use cases.\line\line\b Using Object Literals\line\b0 The most common and simplest way.\par
 \cf3\f5 const person = \{\par
@@ -783,9 +763,9 @@ person.name = "Neel";\par
 
 \pard\sa200\sl240\slmult1 person.greet(); // Hello!\par
 
-\pard\sa200\sl276\slmult1\cf0\b\f2\lang9 29. What are call(), apply(), and bind() methods?\par
+\pard\sa200\sl276\slmult1\cf0\b\f2\lang9 27. What are call(), apply(), and bind() methods?\par
 
-\pard\sl276\slmult1\b0\lang16393 These three methods are used to set the this context explicitly in JavaScript functions.They allow functions to be reused across different objects.\f11\line\f2\line\b 30. \lang9 What is \lang16393 Prototype \lang9 inheritance in JavaScript?\par
+\pard\sl276\slmult1\b0\lang16393 These three methods are used to set the this context explicitly in JavaScript functions.They allow functions to be reused across different objects.\f11\line\f2\line\b 28. \lang9 What is \lang16393 Prototype \lang9 inheritance in JavaScript?\par
 \b0\lang16393 Prototypal inheritance is a feature in JavaScript where objects can inherit properties and methods from other objects via the prototype chain.\line\par
 
 \pard\keep\keepn\sb200\sl276\slmult1\cf1\b\f1\fs26\lang9 Advanced Level JavaScript Interview Questions\par
