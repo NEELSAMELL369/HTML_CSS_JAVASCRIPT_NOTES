@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>L0 – Extracting Leaf Values from Nested Objects</title>
@@ -9,12 +10,14 @@
       margin: 20px;
       line-height: 1.6;
     }
+
     code {
       background-color: #f4f4f4;
       padding: 2px 4px;
       border-radius: 4px;
       font-size: 14px;
     }
+
     pre {
       background-color: #f4f4f4;
       padding: 10px;
@@ -22,27 +25,35 @@
     }
   </style>
 </head>
+
 <body>
 
   <h2>Title: L0 – Extracting Leaf Values from Nested Objects in an Array</h2>
 
-  <p><strong>Problem Statement:</strong>  
-    You are given an <strong>array of objects</strong>, where each object may contain nested objects as values.  
-    Your task is to <strong>traverse through all objects</strong> and extract only the <strong>leaf key-value pairs</strong> 
-    (i.e., keys whose values are not objects).  
-    The extracted pairs should be returned in a single object, where each key corresponds to the leaf key and its value 
-    is the leaf value found during traversal.  
+  <p><strong>Problem Statement:</strong>
+    You are given an <strong>array of objects</strong>, where each object may contain nested objects as values.
+    Your task is to <strong>traverse through all objects</strong> and extract only the <strong>leaf key-value
+      pairs</strong>
+    (i.e., keys whose values are not objects).
+    The extracted pairs should be returned in a single object, where each key corresponds to the leaf key and its value
+    is the leaf value found during traversal.
     <br><br>
     If the same key appears more than once in different objects, the last occurrence should overwrite the previous one.
   </p>
 
   <h3>Example Input:</h3>
   <pre>
+function flattenArray(arr){
+    
+}
 const arr = [
     { a: 1, b: 2 },
     { c: 3 },
     { d: { e: 4 }, f: { g: { h: 4 } }, i: 5 }
 ];
+
+let res = flattenArray(arr)
+console.log(res)
   </pre>
 
   <h3>Expected Output:</h3>
@@ -51,4 +62,5 @@ const arr = [
   </pre>
 
 </body>
+
 </html>
